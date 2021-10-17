@@ -5,9 +5,6 @@ import router from './router';
 import store from "./store/";
 import 'material-icons/iconfont/material-icons.css';
 
-import drizzleVuePlugin from '@drizzle/vue-plugin'
-import drizzleOptions from '@/plugins/drizzle'
-
 import '@/assets/css/base.css';
 import '@/assets/css/display.css';
 import "@/plugins/element/index.js";
@@ -15,8 +12,6 @@ import '@/plugins/vuesax';
 import '@/plugins/apexCharts';
 
 Vue.mixin(mixin);
-
-Vue.use(drizzleVuePlugin, { store, drizzleOptions });
 
 Vue.config.productionTip = false;
 

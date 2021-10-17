@@ -20,6 +20,7 @@ const actions = {
   async fetchDaiBalance ({ commit, rootState }) {
     let drizzleInstance = rootState.drizzle.drizzleInstance;
     let activeAccount = rootState.accounts.activeAccount;
+    console.log('active acc', activeAccount)
 
     // get token balance for the active user
     const daiBalance = await drizzleInstance.contracts.TestErc20.methods.balanceOf(activeAccount).call();

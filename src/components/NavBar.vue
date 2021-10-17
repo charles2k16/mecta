@@ -1,81 +1,21 @@
 <template>
   <div>
-    <vs-navbar
-      text-black
-      color="#0F121E"
-      center-collapsed
-      fixed
-      square
-      v-model="active"
-    >
-      <template #left>
-        <img
-          src="../assets/images/sld.png"
-          alt="logo"
-          width="50px"
-          @click="goHome"
-        />
-      </template>
-      <!-- to="/solidfoundry" -->
-      <!-- @click="showComingSoon = true" -->
-      <template #right>
-        <vs-button
-          v-if="routeName == 'Home'"
-          class="airdrop_btn"
-          id="airdrop_btn_nav"
-          blank
-          to="/solidfoundry"
-        >
-          <b>Join Contest</b>
-        </vs-button>
-        <!-- <vs-button
-          v-if="routeName == 'Foundry'"
-          class="airdrop_btn"
-          blank
-          to="/presale"
-        >
-          <b>Go to Presale</b>
-        </vs-button> -->
-        <vs-button
-          v-if="routeName == 'Presale'"
-          class="airdrop_btn"
-          blank
-          to="/airdrop"
-          id="airdrop_btn_nav"
-        >
-          <b>AirDrop</b>
-        </vs-button>
-        <vs-button
-          blank
-          class="medium_button btn_hover"
-          href="https://soliddefi.medium.com/"
-          icon
-          id="medium_btn"
-        >
-          <img
-            src="../assets/images/medium_icon.png"
-            alt="medium"
-            style="width:18px !important"
-          />
-        </vs-button>
-        <vs-button
-          class="def_button btn_hover"
-          blank
-          href="https://soliddefi.gitbook.io/solid-whitepaper/"
-        >
-          <b>Read Whitepaper</b>
-        </vs-button>
-      </template>
-    </vs-navbar>
+    <div class="header_nav">
+      <div class="nav flex-justify-between-center">
+        <h2>CRYPTO MECH</h2>
 
-    <vs-dialog v-model="showComingSoon" width="420px" class="_dialog">
-      <template #header>
-        <h4 class="not-margin">Solid Foundry</h4>
-      </template>
-      <div>
-        <h1>Coming Soon</h1>
+        <div class="flex-justify-between-center h_staking">
+          <h3>Staking</h3>
+          <el-button type="info" icon="el-icon-message" circle></el-button>
+          <el-button type="info" icon="el-icon-message" circle></el-button>
+          <el-button type="info" icon="el-icon-message" circle></el-button>
+        </div>
+
+        <div>
+          <button>Read Whitepaper</button>
+        </div>
       </div>
-    </vs-dialog>
+    </div>
   </div>
 </template>
 
@@ -97,3 +37,34 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.header_nav {
+  height: 70px;
+  background: #171a2d;
+
+  .nav {
+    width: 940px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 70px;
+
+    .h_staking {
+      border: 2px solid grey;
+      border-radius: 20px;
+      padding: 0 0 0 15px;
+
+      h3 {
+        font-size: 14px;
+        margin-right: 15px;
+        color: red;
+        font-weight: bold;
+      }
+
+      el-button {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+</style>
