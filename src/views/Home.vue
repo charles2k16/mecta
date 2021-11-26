@@ -9,55 +9,11 @@
       </div>
     </div>
 
-    <div class="hero2">
-      <div class="wrap" style="margin-bottom:100px;">
-        <el-row :gutter="10">
-          <el-col :md="12">
-            <h2 class="white">THE FIRST</h2>
-            <p class="lead_text_inf mt-20">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Perferendis deserunt reiciendis dolorum blanditiis suscipit
-              sapiente earum quis, quas et omnis amet. Doloremque minima ut
-              inventore sequi, corrupti quo reprehenderit fugit. Lorem ipsum
-              dolor sit, amet consectetur adipisicing elit. Laboriosam quis
-              ratione modi numquam at. Minima nesciunt nemo enim cupiditate odio
-              impedit, voluptate repellat, quos aliquam asperiores facere libero
-              sed non.
-            </p>
-          </el-col>
-
-          <el-col :md="12">
-            <div style="height: 280px; border:1px solid grey"></div>
-          </el-col>
-        </el-row>
-      </div>
+    <div class="why_merch">
+      <why-us />
     </div>
 
-    <div class="sec_div">
-      <div
-        class="wrap_blog"
-        style="z-index: 2; position:relative; margin-top:-250px;"
-      >
-        <div class="blog_div mt-120">
-          <div class="team_div" id="blog1"></div>
-
-          <div class="team_div"></div>
-
-          <div class="team_div"></div>
-
-          <div class="team_div"></div>
-        </div>
-      </div>
-
-      <div class="mt-50" style="display:flex; justify-content:center;">
-        <button class="mr-10">
-          METAVERSE
-        </button>
-        <button>
-          DISCORD CHAT
-        </button>
-      </div>
-
+    <div class="merch_img_div">
       <div class="wrap mt-100">
         <el-tabs type="card">
           <el-tab-pane>
@@ -147,6 +103,7 @@
 import NavBar from '@/components/NavBar';
 import Header from './sections/Header.vue';
 import Footer from './sections/Footer.vue';
+import WhyUs from './sections/WhyUs.vue';
 
 export default {
   name: 'Home',
@@ -154,6 +111,7 @@ export default {
     NavBar,
     Header,
     Footer,
+    WhyUs,
   },
   data() {
     return {
@@ -184,5 +142,20 @@ export default {
     0 100%,
     0% 20%
   );
+}
+.team_div {
+  width: 350px;
+  height: 200px;
+  border: 1px solid rgb(55, 54, 82);
+  flex: 0 0 auto;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  background: #2d294b;
+}
+.tabs_div {
+  width: 100%;
+  height: 100px;
+  background-color: #414141;
+  padding: 20px;
 }
 </style>

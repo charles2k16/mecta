@@ -5,14 +5,13 @@
         <h2>CRYPTO MECH</h2>
 
         <div class="flex-justify-between-center h_staking">
-          <h3>Staking</h3>
           <el-button type="info" icon="el-icon-message" circle></el-button>
           <el-button type="info" icon="el-icon-message" circle></el-button>
           <el-button type="info" icon="el-icon-message" circle></el-button>
         </div>
 
         <div>
-          <button>Read Whitepaper</button>
+          <button class="">Read Whitepaper</button>
         </div>
       </div>
     </div>
@@ -50,7 +49,6 @@ export default {
     height: 70px;
 
     .h_staking {
-      border: 2px solid grey;
       border-radius: 20px;
       padding: 0 0 0 15px;
 
