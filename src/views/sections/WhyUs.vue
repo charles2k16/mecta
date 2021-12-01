@@ -36,8 +36,8 @@
         <p class="lead_text_inf mt-20">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis
           deserunt reiciendis dolorum blanditiis suscipit sapiente earum quis,
-          quas et omnis amet. Doloremque minima ut inventore sequi, corrupti quo
-          reprehenderit fugit. Lorem ipsum dolor sit, amet consectetur
+          quas et omnis amet. Doloremque minima utr inventore sequi, corrupti
+          quo reprehenderit fugit. Lorem ipsum dolor sit, amet consectetur
           adipisicing elit. Laboriosam quis ratione modi numquam at. Minima
           nesciunt nemo enim cupiditate odio impedit, voluptate repellat, quos
           aliquam asperiores facere libero sed non. Lorem ipsum dolor sit amet

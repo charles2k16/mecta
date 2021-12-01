@@ -12,6 +12,7 @@ h5 {
 
 body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  /* cursor: none; */
 }
 
 *,
@@ -47,19 +48,15 @@ hr.sales_hr {
 .mt-120 {
   margin-top: 120px;
 }
-
 .mt-20 {
   margin-top: 20px;
 }
-
 .mt-10 {
   margin-top: 10px;
 }
-
 .mt-12 {
   margin-top: 12px;
 }
-
 .mt-5 {
   margin-top: 5px;
 }
@@ -98,6 +95,9 @@ hr.sales_hr {
 }
 .mt-60 {
   margin-top: 60px;
+}
+.mt--10 {
+  margin-top: -10px;
 }
 .mx-10 {
   margin-left: 10px;
@@ -164,6 +164,10 @@ hr.sales_hr {
 .p-15-c {
   padding: 5px 10px 5px 15px;
 }
+.py-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
 
 .flex-justify-between-center {
   display: flex;
@@ -220,6 +224,9 @@ hr.sales_hr {
 .white {
   color: rgb(245, 245, 245);
 }
+.d-block {
+  display: block;
+}
 .main_container {
   display: flex;
   flex-direction: column;
@@ -247,7 +254,7 @@ hr.sales_hr {
   width: 100%;
 }
 .wrap {
-  width: 940px;
+  width: 900px;
   height: auto;
   margin-right: auto;
   margin-left: auto;
@@ -256,41 +263,22 @@ hr.sales_hr {
 .merch_img_div {
   background-color: #2d2b3d;
   padding-bottom: 30px;
-  background-image: linear-gradient(160deg, #2d2b3d 39%, #3c3a63 65%);
+  background-image: linear-gradient(160deg, #380f3d 39%, #24233d 65%);
 }
-.merch_img_div_wrap {
-  width: 960px;
-  height: auto;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: transparent;
-}
-.merch_img_cont {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  width: 100%;
-  margin-bottom: 20px;
-  -webkit-overflow-scrolling: touch;
-}
-
-.merch_img_cont::-webkit-scrollbar {
-  display: none;
-}
-
-#merch_img_cont1 {
-  margin-left: 20px;
+.faqs_bg {
+  background-color: #380f3d;
+  padding-bottom: 30px;
 }
 
 /* button */
 button {
   text-align: center;
   cursor: default;
-  padding: 1px 6px;
+  padding: 1px 15px;
   word-spacing: normal;
-  width: 100%;
-  max-width: 160px;
   height: 48px;
+  font-size: 15px;
+  letter-spacing: 0.1em;
 }
 .btn_flex_btn {
   display: flex;
@@ -299,15 +287,11 @@ button {
   -webkit-box-pack: center;
   justify-content: center;
   position: relative;
-  width: 100%;
-  max-width: 160px;
-  height: 48px;
   text-transform: uppercase;
   font-weight: 800;
-  font-size: 15px;
   line-height: 24px;
-  letter-spacing: 0.2em;
   text-decoration: none;
+  padding: 1px 30px;
   color: rgb(255, 255, 255);
   text-shadow: rgb(0 0 0 / 30%) 0px 2px 3px;
   border: 0px;
@@ -315,36 +299,66 @@ button {
   z-index: auto;
   transition: text-shadow 0.4s ease-in-out 0s;
 }
-
-/* .btn_flex_btn::before {
-  background-color: rgb(145, 72, 206);
-  transform: translate(10px, -12px);
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  content: '';
-  z-index: 1;
-} */
 .btn_flex_btn:hover {
   cursor: pointer;
   text-shadow: rgb(145 72 206) -1px 0px, rgb(76 232 190) 1px 0px,
     rgb(0 0 0 / 30%) 0px 2px 3px;
 }
+.btn_flex_btn.round {
+  border-radius: 30px;
+  font-size: 13px;
+}
+.btn_flex_btn.rgb {
+  background: rgb(103, 189, 218);
+  background: linear-gradient(
+    90deg,
+    rgba(103, 189, 218, 1) 24%,
+    rgba(159, 84, 237, 0.788953081232493) 48%,
+    rgba(221, 85, 221, 1) 81%
+  );
+}
+.btn_flex_btn.dark {
+  background: rgb(68, 117, 182);
+  background: linear-gradient(
+    90deg,
+    rgba(68, 117, 182, 1) 24%,
+    rgba(7, 13, 22, 1) 81%
+  );
+}
 
-/* .btn_flex_btn::before,
-.btn_flex_btn::after {
+.merch_tab_bg {
+  padding: 20px;
+  margin: 30px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='849.246' height='813.391' viewBox='0 0 849.246 813.391'%3E%3Cdefs%3E%3ClinearGradient id='linear-gradient' x1='-0.28' y1='-4.143' x2='-0.312' y2='-4.177' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%2333334d'/%3E%3Cstop offset='1' stop-color='%2327272e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath id='Union_1' data-name='Union 1' d='M-5589.884 813.391c-7.806 0-14.116-6.778-14.116-14.355V31.77a14.535 14.535 0 0 1 .349-3.186V13.164A13.129 13.129 0 0 1-5590.658 0h148.726l17.791 17.805h655.246a13.4 13.4 0 0 1 10 3.984 14.667 14.667 0 0 1 4.14 9.98V799.036a14.481 14.481 0 0 1-14.14 14.355ZM-5590.685 0h.027Z' transform='translate(5604)' fill='url(%23linear-gradient)'/%3E%3C/svg%3E");
+}
+#cursor {
+  width: 50px;
+  height: 50px;
   position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  content: '';
-  z-index: -1;
+  pointer-events: none;
+  transition: all 0.1s linear, top 0ms linear, left 0ms ease-in-out;
+  z-index: 15;
+  transition: transform 2s;
+}
+/* .cursor .outline {
+  z-index: 10;
+  transform: translate(-60%, -50%);
+  opacity: 1;
 } */
-
-/* .btn_flex_btn::after {
-  transform: translate(10px);
-  background-color: rgb(76, 232, 190);
+/* #cursor .dot_wrapper {
+  z-index: 10;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+} */
+/* #cursor .dot {
+  z-index: 10;
+  height: 10px;
+  width: 10px;
+  background-color: rgb(247, 247, 247);
+  border-radius: 50%;
+  display: inline-block;
+  transform: translate(-50%, -50%);
 } */

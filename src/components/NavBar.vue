@@ -43,7 +43,7 @@ export default {
   background: #171a2d;
 
   .nav {
-    width: 940px;
+    width: 900px;
     margin-right: auto;
     margin-left: auto;
     height: 70px;
