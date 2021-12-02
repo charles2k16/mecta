@@ -1,12 +1,9 @@
 <template>
   <div>
     <div class="merch_card_div">
-      <div class="merch_card"></div>
-      <div class="merch_card"></div>
-      <div class="merch_card"></div>
-      <div class="merch_card"></div>
-      <div class="merch_card"></div>
-      <div class="merch_card"></div>
+      <div v-for="(pic, index) in gallery" :key="index" class="merch_card">
+        <img :src="getImgUrl(pic)" v-bind:alt="pic" />
+      </div>
     </div>
 
     <div class="mt-40 flex-center">
@@ -23,6 +20,27 @@
 <script>
 export default {
   name: 'MerchCards',
+  data() {
+    return {
+      gallery: [
+        'CM_gallery_Avatar.png',
+        'CM_gallery_MiningMech_backview.png',
+        'CM_gallery_Pilot.png',
+        'CM_Gallery_RedMech_backview.png',
+        'CM_gallery_corridor.png',
+        'CM_gallery_DataRoom.png',
+        'CM_gallery_CyberWall.png',
+        'CM_gallery_Pilot_walkingout.png',
+        'CM_gallery_RedMech_beautyshot.png',
+        'CM_gallery_RedMech_cockpit.png',
+      ],
+    };
+  },
+  methods: {
+    getImgUrl(pic) {
+      return require('../../assets/images/gallery/' + pic);
+    },
+  },
 };
 </script>
 
@@ -40,14 +58,14 @@ export default {
   }
 
   .merch_card {
-    width: 408px;
-    height: 250px;
-    background: black;
-    border-radius: 5px;
-    border: 1px solid black;
     flex: 0 0 auto;
     margin-right: 40px;
     margin-bottom: 30px;
+
+    img {
+      width: 406px;
+      border-radius: 5px;
+    }
   }
 }
 </style>

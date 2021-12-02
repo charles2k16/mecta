@@ -4,6 +4,11 @@
       <el-col :md="12">
         <div class="why_bg_rgb">
           <h2 class="white">IT PAYS TO PLAY</h2>
+          <img
+            src="../../assets/images/cm/cm_p2e_icon_lab.png"
+            alt=""
+            class="iptp_img"
+          />
         </div>
 
         <p class="lead_text_inf mt-20">
@@ -41,8 +46,13 @@
         </div>
       </el-col>
       <el-col :md="12">
-        <div class="why_bg_rgb">
+        <div class="why_bg_rgb flex-justify-around-center">
           <h2 class="white">MIND GAME</h2>
+          <img
+            src="../../assets/images/cm/cm_text_icon_lab.png"
+            alt="lab"
+            class="mindg_img"
+          />
         </div>
 
         <p class="lead_text_inf mt-20">
@@ -61,12 +71,18 @@
 
     <el-row :gutter="50" class="mt-100">
       <el-col :md="12">
-        <div>
-          <h2 class="white">PARTICIPATE IN OUR VERY FIRAT NFT PRESALE NOW</h2>
+        <div style="height:300px" class="flex-align-center ">
+          <h1 class="white">PARTICIPATE IN OUR VERY FIRST NFT PRESALE NOW</h1>
         </div>
-        <el-col :md="12">
-          <!-- <div style="height: 380px; border:1px solid grey"></div> -->
-        </el-col>
+      </el-col>
+      <el-col :md="12">
+        <div>
+          <img
+            src="../../assets/images/cm/cm_particle_sphere.jpg"
+            alt="sphere"
+            height="300px"
+          />
+        </div>
       </el-col>
     </el-row>
   </div>
@@ -82,9 +98,21 @@ export default {
 .why_bg_rgb {
   // background-image: url('../../assets/images/cm/cm_text_deco.png');
   // width: 100%;
+  // clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+  // border-top: 5px solid green;
+  // border-left: 5px solid green;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
   h2 {
     font-size: 30px;
+  }
+  img {
+    width: 50px;
+  }
+  .iptp_img {
+    height: 25px;
   }
 }
 .lead_text_inf {

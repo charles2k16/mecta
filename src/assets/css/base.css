@@ -236,7 +236,7 @@ hr.sales_hr {
   width: 100%;
 }
 .hero {
-  background: #171717;
+  background: #212121;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -249,7 +249,7 @@ hr.sales_hr {
 .why_merch {
   padding-top: 30px;
   padding-bottom: 100px;
-  background: #171717;
+  background: #212121;
   display: block;
   align-items: center;
   margin: 0 auto;

@@ -11,11 +11,11 @@
 
     <div class="why_merch">
       <WhyUs />
+
+      <MerchCards />
     </div>
 
     <div class="merch_img_div py-100">
-      <MerchCards />
-
       <div class="wrap mt-100">
         <MerchTabs />
       </div>
