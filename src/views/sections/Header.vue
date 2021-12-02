@@ -2,7 +2,7 @@
   <div>
     <vs-row>
       <vs-col :w="12" :xs="12" :sm="12">
-        <div style="height:150px;">
+        <div>
           <div class="mt-150 hero_btn_group">
             <button class="mr-10 btn_flex_btn purple">
               Register

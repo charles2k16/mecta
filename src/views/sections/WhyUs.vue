@@ -1,5 +1,5 @@
 <template>
-  <div class="wrap" style="margin-bottom:100px;">
+  <div class="wrap py-100">
     <el-row :gutter="50">
       <el-col :md="12">
         <div class="why_bg_rgb">
@@ -20,13 +20,25 @@
       </el-col>
 
       <el-col :md="12">
-        <div style="height: 380px; border:1px solid grey"></div>
+        <div>
+          <img
+            src="../../assets/images/cm/cm_cockpit.png"
+            alt="cockpit"
+            height="390px"
+          />
+        </div>
       </el-col>
     </el-row>
 
     <el-row :gutter="50" class="mt-100">
       <el-col :md="12">
-        <div style="height: 380px; border:1px solid grey"></div>
+        <div>
+          <img
+            src="../../assets/images/cm/cm_mechlab.png"
+            alt="mechlab"
+            height="390px"
+          />
+        </div>
       </el-col>
       <el-col :md="12">
         <div class="why_bg_rgb">
@@ -49,7 +61,7 @@
 
     <el-row :gutter="50" class="mt-100">
       <el-col :md="12">
-        <div class="why_bg_rgb">
+        <div>
           <h2 class="white">PARTICIPATE IN OUR VERY FIRAT NFT PRESALE NOW</h2>
         </div>
         <el-col :md="12">
@@ -68,11 +80,11 @@ export default {
 
 <style lang="scss" scoped>
 .why_bg_rgb {
-  // background-image: url('../../assets/images/whybg.png');
-  // height: 100px;
+  // background-image: url('../../assets/images/cm/cm_text_deco.png');
+  // width: 100%;
 
   h2 {
-    font-size: 15px;
+    font-size: 30px;
   }
 }
 .lead_text_inf {

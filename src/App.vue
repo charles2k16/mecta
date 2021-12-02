@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="cursor">
+    <div class="cursor">
       <svg
         width="50"
         height="50"
@@ -16,9 +16,8 @@
           fill-rule="evenodd"
         ></path>
       </svg>
-
-      <!-- <div class="dot"></div> -->
     </div>
+    <div class="cursor2"></div>
     <router-view />
   </div>
 </template>
@@ -34,32 +33,29 @@ export default {
   },
   methods: {
     onMouseMove() {
-      var cursor = document.getElementById('cursor');
-      document.addEventListener('mousemove', getMouse);
+      var cursor = document.querySelector('.cursor');
+      var cursorinner = document.querySelector('.cursor2');
 
-      var cursorpos = { x: 0, y: 0 };
+      document.addEventListener('mousemove', function(e) {
+        cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`;
+      });
 
-      setInterval(followMouse, 50);
+      document.addEventListener('mousemove', function(e) {
+        var x = e.clientX;
+        var y = e.clientY;
+        cursorinner.style.left = x + 'px';
+        cursorinner.style.top = y + 'px';
+      });
 
-      var mouse = { x: 0, y: 0 }; //mouse.x, mouse.y
+      document.addEventListener('mousedown', function() {
+        cursor.classList.add('click');
+        cursorinner.classList.add('cursorinnerhover');
+      });
 
-      function getMouse(e) {
-        mouse.x = e.pageX - 20;
-        mouse.y = e.pageY - 20;
-      }
-
-      function followMouse() {
-        //1. find distance X , distance Y
-        var distX = mouse.x - cursorpos.x;
-        var distY = mouse.y - cursorpos.y;
-        //Easing motion
-        //Progressive reduction of distance
-        cursorpos.x += distX / 5;
-        cursorpos.y += distY / 2;
-
-        cursor.style.left = cursorpos.x + 'px';
-        cursor.style.top = cursorpos.y + 'px';
-      }
+      document.addEventListener('mouseup', function() {
+        cursor.classList.remove('click');
+        cursorinner.classList.remove('cursorinnerhover');
+      });
     },
   },
 };
