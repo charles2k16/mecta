@@ -7,7 +7,7 @@
             <button class="mr-10 btn_flex_btn purple">
               Register
             </button>
-            <button class="btn_flex_btn">
+            <button class="btn_flex_btn trans">
               Trailer
             </button>
           </div>
@@ -38,5 +38,8 @@ export default {
     rgb(76, 232, 190) -125.56%,
     rgb(133, 67, 194) 116.11%
   );
+}
+.btn_flex_btn.trans {
+  background: transparent;
 }
 </style>
