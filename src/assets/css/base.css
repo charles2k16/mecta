@@ -291,7 +291,7 @@ button {
   text-shadow: rgba(0, 0, 0, 0.3) 0px 2px 3px;
   border: 0px;
   border-radius: 0px;
-  /* transition: text-shadow 0.4s ease-in-out 0s; */
+  transition: text-shadow 0.4s ease-in-out 0s;
   position: relative;
   z-index: 1000;
 }
@@ -303,24 +303,41 @@ button {
   position: absolute;
   transition: all 0.25s ease-out;
   z-index: -1;
+  top: 0px;
+  left: 0px;
 }
 .btn_flex_btn::before {
   top: -3px;
   left: -3px;
+  z-index: -1;
 }
 .btn_flex_btn::after {
   bottom: -5px;
   right: -5px;
+  z-index: -1;
 }
 .btn_flex_btn:hover::before {
   top: 3px;
   left: 3px;
-  border: 2px solid yellow;
+  transform: translate(0px, 0px);
+  background-color: rgb(76, 232, 190);
 }
 .btn_flex_btn:hover::after {
   bottom: 5px;
   right: 5px;
-  background-color: yellow;
+  border-top: 3px solid rgb(145, 72, 206);
+  border-left: 3px solid rgb(145, 72, 206);
+  background: linear-gradient(
+    76.91deg,
+    rgb(76, 232, 190) -125.56%,
+    rgb(133, 67, 194) 116.11%
+  );
+  transform: translate(0px, 0px);
+}
+.btn_flex_btn:hover {
+  z-index: 1000;
+  cursor: pointer;
+  text-shadow: rgb(145 72 206) -1px 0px, rgb(76 232 190) 1px 0px;
 }
 .btn_flex_btn.round {
   border-radius: 30px;
