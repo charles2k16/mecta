@@ -33,6 +33,9 @@ export default {
         'CM_gallery_Pilot_walkingout.png',
         'CM_gallery_RedMech_beautyshot.png',
         'CM_gallery_RedMech_cockpit.png',
+        'CM_Gallery_RedMech_control_03.jpg',
+        'CM_gallery_RedMech_FRAME.png',
+        'CM_gallery_RedMech_Neeling.png',
       ],
     };
   },
