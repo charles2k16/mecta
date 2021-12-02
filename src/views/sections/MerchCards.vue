@@ -24,6 +24,7 @@ export default {
     return {
       gallery: [
         'CM_gallery_Avatar.png',
+        'CM_gallery_RedMech_FRAME.png',
         'CM_gallery_MiningMech_backview.png',
         'CM_gallery_Pilot.png',
         'CM_Gallery_RedMech_backview.png',
@@ -34,7 +35,6 @@ export default {
         'CM_gallery_RedMech_beautyshot.png',
         'CM_gallery_RedMech_cockpit.png',
         'CM_Gallery_RedMech_control_03.jpg',
-        'CM_gallery_RedMech_FRAME.png',
         'CM_gallery_RedMech_Neeling.png',
       ],
     };
@@ -65,8 +65,12 @@ export default {
     margin-right: 40px;
     margin-bottom: 30px;
 
+    // :hover {
+    //   cursor: pointer;
+    // }
+
     img {
-      width: 406px;
+      width: 410px;
       border-radius: 5px;
     }
   }

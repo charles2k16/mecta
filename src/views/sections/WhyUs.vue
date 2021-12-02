@@ -96,11 +96,9 @@ export default {
 
 <style lang="scss" scoped>
 .why_bg_rgb {
-  // background-image: url('../../assets/images/cm/cm_text_deco.png');
-  // width: 100%;
-  // clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
-  // border-top: 5px solid green;
-  // border-left: 5px solid green;
+  background-image: url('../../assets/images/cm/cm_text_deco_s.png');
+  background-repeat: no-repeat;
+  height: 90px;
   display: flex;
   justify-content: space-around;
   align-items: center;

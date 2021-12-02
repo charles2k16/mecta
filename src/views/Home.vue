@@ -16,8 +16,10 @@
     </div>
 
     <div class="merch_img_div py-100">
-      <div class="wrap mt-100">
+      <div class="wrap">
         <MerchTabs />
+
+        <MerchSkins />
       </div>
     </div>
 
@@ -37,6 +39,7 @@ import WhyUs from './sections/WhyUs.vue';
 import MerchCards from './sections/MerchCards.vue';
 import MerchTabs from './sections/MerchTabs.vue';
 import Faqs from './sections/Faqs.vue';
+import MerchSkins from './sections/MerchSkins.vue';
 
 export default {
   name: 'Home',
@@ -48,6 +51,7 @@ export default {
     MerchCards,
     MerchTabs,
     Faqs,
+    MerchSkins,
   },
   data() {
     return {
