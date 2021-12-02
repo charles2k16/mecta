@@ -33,6 +33,15 @@ export default {
   }
 }
 .btn_flex_btn.purple {
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-width: 2px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    76.91deg,
+    rgb(76, 232, 190) -125.56%,
+    rgb(133, 67, 194) 116.11%
+  );
   background: linear-gradient(
     76.91deg,
     rgb(76, 232, 190) -125.56%,
@@ -41,5 +50,6 @@ export default {
 }
 .btn_flex_btn.trans {
   background: transparent;
+  border: 2px solid white;
 }
 </style>
