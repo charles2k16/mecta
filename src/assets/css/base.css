@@ -293,7 +293,7 @@ button {
   border-radius: 0px;
   transition: text-shadow 0.4s ease-in-out 0s;
   position: relative;
-  z-index: 1000;
+  z-index: 1;
 }
 .btn_flex_btn::before,
 .btn_flex_btn::after {
@@ -309,12 +309,10 @@ button {
 .btn_flex_btn::before {
   top: -3px;
   left: -3px;
-  z-index: -1;
 }
 .btn_flex_btn::after {
   bottom: -5px;
   right: -5px;
-  z-index: -1;
 }
 .btn_flex_btn:hover::before {
   top: 3px;
@@ -335,7 +333,7 @@ button {
   transform: translate(0px, 0px);
 }
 .btn_flex_btn:hover {
-  z-index: 1000;
+  /* z-index: 1000; */
   cursor: pointer;
   text-shadow: rgb(145 72 206) -1px 0px, rgb(76 232 190) 1px 0px;
 }
