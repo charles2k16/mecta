@@ -1,10 +1,18 @@
 <template>
   <div>
-    <div class="merch_card_div">
+    <!-- <div class="merch_card_div">
       <div v-for="(pic, index) in gallery" :key="index" class="merch_card">
         <img :src="getImgUrl(pic)" v-bind:alt="pic" />
       </div>
-    </div>
+    </div> -->
+
+    <el-carousel :interval="4000" type="card">
+      <el-carousel-item v-for="(pic, index) in gallery" :key="index">
+        <div class="merch_card">
+          <img :src="getImgUrl(pic)" v-bind:alt="pic" />
+        </div>
+      </el-carousel-item>
+    </el-carousel>
 
     <div class="mt-40 flex-center">
       <button class="mr-10 btn_flex_btn round rgb">
@@ -59,20 +67,20 @@ export default {
   ::-webkit-scrollbar {
     display: none;
   }
+}
 
-  .merch_card {
-    flex: 0 0 auto;
-    margin-right: 40px;
-    margin-bottom: 30px;
+.merch_card {
+  flex: 0 0 auto;
+  // margin-right: 40px;
+  // margin-bottom: 30px;
 
-    // :hover {
-    //   cursor: pointer;
-    // }
+  // :hover {
+  //   cursor: pointer;
+  // }
 
-    img {
-      width: 410px;
-      border-radius: 5px;
-    }
+  img {
+    width: 410px;
+    border-radius: 5px;
   }
 }
 </style>

@@ -24,7 +24,7 @@
     </div>
 
     <div class="faqs_bg">
-      <Faqs />
+      <RoadMap />
     </div>
 
     <Footer />
@@ -38,7 +38,7 @@ import Footer from './sections/Footer.vue';
 import WhyUs from './sections/WhyUs.vue';
 import MerchCards from './sections/MerchCards.vue';
 import MerchTabs from './sections/MerchTabs.vue';
-import Faqs from './sections/Faqs.vue';
+import RoadMap from './sections/RoadMap.vue';
 import MerchSkins from './sections/MerchSkins.vue';
 
 export default {
@@ -50,7 +50,7 @@ export default {
     WhyUs,
     MerchCards,
     MerchTabs,
-    Faqs,
+    RoadMap,
     MerchSkins,
   },
   data() {

@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <el-tabs type="card">
+  <div class="tabs_div">
+    <el-tabs type="card" class="el-tab_div">
       <el-tab-pane>
         <span slot="label">WEAPON</span>
-        <div class="tabs_div">
+        <div style="paddinng: 50px;">
           <div class="mt-20 merch_tab_bg">
             <h5>Genesis Unit</h5>
             <div class="mt-50 flex-justify-evenly-center">
@@ -130,8 +130,57 @@ export default {
 
 <style lang="scss" scoped>
 .tabs_div {
-  background-color: #0c0f20;
-  padding: 20px;
+  padding: 1px;
+  box-sizing: border-box;
+  position: relative;
+  background: grey;
+  -webkit-clip-path: polygon(
+    0 0,
+    96% 0,
+    100% 5%,
+    100% 100%,
+    83% 100%,
+    4% 100%,
+    0 94%,
+    0 20%
+  );
+  clip-path: polygon(
+    0 0,
+    96% 0,
+    100% 5%,
+    100% 100%,
+    83% 100%,
+    4% 100%,
+    0 94%,
+    0 20%
+  );
+}
+.el-tab_div {
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: #0c0f20;
+  -webkit-clip-path: polygon(
+    0 0,
+    96% 0,
+    100% 5%,
+    100% 100%,
+    83% 100%,
+    4% 100%,
+    0 94%,
+    0 20%
+  );
+  clip-path: polygon(
+    0 0,
+    96% 0,
+    100% 5%,
+    100% 100%,
+    83% 100%,
+    4% 100%,
+    0 94%,
+    0 20%
+  );
 }
 .merch_nft {
   cursor: url(https://abs.twimg.com/emoji/v2/72x72/1f525.png) 36 36, auto;

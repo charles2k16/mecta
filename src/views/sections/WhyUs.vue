@@ -113,10 +113,4 @@ export default {
     height: 25px;
   }
 }
-.lead_text_inf {
-  font-size: 1.1rem;
-  text-align: justify;
-  line-height: 1.7rem;
-  color: #c4d0fa;
-}
 </style>
