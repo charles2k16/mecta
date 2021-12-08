@@ -54,20 +54,21 @@ export default {
 
 <style lang="scss" scoped>
 .header_nav {
-  background: #171a2d;
+  background: #110e23ff;
 
   .nav {
-    width: 900px;
+    width: 940px;
     margin-right: auto;
     margin-left: auto;
-    height: 70px;
+    height: 80px;
 
     h2 {
       color: white;
     }
 
     .h_staking {
-      border: 1px solid grey;
+      border: 1px solid #434343;
+      background: #161616ff;
       border-radius: 20px;
       padding: 1px 0 1px 15px;
       display: flex;
@@ -75,7 +76,7 @@ export default {
       h3 {
         font-size: 14px;
         margin-right: 15px;
-        color: #8e83bb;
+        color: #a895ff;
         font-weight: bold;
       }
     }
@@ -83,8 +84,8 @@ export default {
 }
 
 .whitepaper_btn {
-  background: rgb(20, 19, 19);
-  color: whitesmoke;
+  background: #424242ff;
+  color: #d9d9d9;
   font-size: 14px;
   padding: 1px 20px;
 }
@@ -110,10 +111,10 @@ ul li a {
   height: 40px;
   text-align: center;
   line-height: 43px;
-  background: #333;
+  background: #434343;
   border-radius: 50%;
   font-size: 20px;
-  color: #666;
+  color: #0f121eff;
   transition: 0.5s;
 }
 ul li a::before {

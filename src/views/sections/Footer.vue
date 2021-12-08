@@ -1,11 +1,24 @@
 <template>
   <div class="footer_container">
     <div class="wrap">
-      <div class="center mt-40">
-        <p class="p_link" style="text-decoration: none; margin-right:10px;">
+      <div class="d-flex-center footer_div">
+        <p>
           Copyright © 2021 Crypto Mech Token. All rights reserved
         </p>
       </div>
     </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.footer_container {
+  background: #110e23ff;
+}
+.footer_div {
+  height: 60px;
+
+  p {
+    color: whitesmoke;
+  }
+}
+</style>

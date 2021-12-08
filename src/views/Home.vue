@@ -23,7 +23,7 @@
       </div>
     </div>
 
-    <div class="faqs_bg">
+    <div class="roadmap_bg">
       <RoadMap />
     </div>
 

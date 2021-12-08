@@ -80,3 +80,21 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
 .el-tabs--card>.el-tabs__header .el-tabs__nav {
   border: none !important;
 }
+
+.el-carousel__item--card.is-active {
+  z-index: 2;
+  // width: 615px;
+}
+// .el-carousel__item--card.is-active:hover {
+//   border-left: 5px solid #7c4aa5;
+//   border-top: 5px solid #7f48ac;
+//   border-right: 2px solid rgb(213, 173, 247);
+//   border-bottom: 1px solid rgb(167, 164, 164);
+// }
+
+.el-carousel__indicators--outside {
+  margin-top: 40px;
+}
+.el-carousel__mask {
+  height: 0px;
+}

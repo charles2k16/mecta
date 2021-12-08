@@ -116,7 +116,7 @@
       >
       <el-tab-pane>
         <span slot="label">AUCTIONNS</span>
-        AUCTIONNS
+        AUCTIONS
       </el-tab-pane>
     </el-tabs>
   </div>

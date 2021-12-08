@@ -12,15 +12,13 @@
         </div>
 
         <p class="lead_text_inf mt-20">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis
-          deserunt reiciendis dolorum blanditiis suscipit sapiente earum quis,
-          quas et omnis amet. Doloremque minima ut inventore sequi, corrupti quo
-          reprehenderit fugit. Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit. Laboriosam quis ratione modi numquam at. Minima
-          nesciunt nemo enim cupiditate odio impedit, voluptate repellat, quos
-          aliquam asperiores facere libero sed non. Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Ducimus, numquam architecto nisi autem
-          veritatis consectetur aspernatur esse mollitia modi voluptatibus.
+          After landing on Planet X, gather resources around you to build your
+          camp. With the starter units and a bit of creativity, you can rival
+          nearby colonies and fight for their land resources. Use your units to
+          attack, defend and drill down into the planet's’ core. The longer you
+          defend the land, the deeper you can mine - find better minerals and
+          artifacts. Upgrade your units with the resources and trade them in for
+          higher rarity units.
         </p>
       </el-col>
 
@@ -29,7 +27,7 @@
           <img
             src="../../assets/images/cm/cm_cockpit.png"
             alt="cockpit"
-            height="390px"
+            height="360px"
           />
         </div>
       </el-col>
@@ -41,7 +39,7 @@
           <img
             src="../../assets/images/cm/cm_mechlab.png"
             alt="mechlab"
-            height="390px"
+            height="370px"
           />
         </div>
       </el-col>
@@ -56,15 +54,14 @@
         </div>
 
         <p class="lead_text_inf mt-20">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis
-          deserunt reiciendis dolorum blanditiis suscipit sapiente earum quis,
-          quas et omnis amet. Doloremque minima utr inventore sequi, corrupti
-          quo reprehenderit fugit. Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit. Laboriosam quis ratione modi numquam at. Minima
-          nesciunt nemo enim cupiditate odio impedit, voluptate repellat, quos
-          aliquam asperiores facere libero sed non. Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Ducimus, numquam architecto nisi autem
-          veritatis consectetur aspernatur esse mollitia modi voluptatibus.
+          Witness the newest applications of real science and breakthroughs in
+          terraforming robots
+          <br /><br />
+          Vote on new mechs that will be created, designers will work from the
+          most inspirational mechanical / robotics engineering papers.
+          <br /><br />
+          Learn about our design process and the top notch team behind each
+          mech.
         </p>
       </el-col>
     </el-row>

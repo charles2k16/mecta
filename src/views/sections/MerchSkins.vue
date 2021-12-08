@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-100 py-100">
+  <div class="mt-100">
     <el-row :gutter="20">
       <el-col :md="12">
         <div
@@ -21,19 +21,26 @@
       </el-col>
     </el-row>
 
-    <div class="mt-70">
+    <div class="mt-70 py-100">
       <el-row :gutter="50">
-        <el-col v-for="skin in 8" :key="skin" :xs="12" :sm="12" :md="6">
-          <div
-            style="width:200px; border:1px solid red; height:200px;margin-top:60px;background:black;"
-          >
-            <h2>Skin</h2>
+        <!-- <el-col v-for="skin in 8" :key="skin" :xs="12" :sm="12" :md="6">
+          <div class="skins">
+            <img
+              src="https://i.picsum.photos/id/21/200/200.jpg?hmac=a2iQ6UhOjpU6jn7QSsCpk1CiiKTxmW1R4UivDsv-n8o"
+              alt="pic"
+            />
+          </div> -->
+        <el-col :xs="24" :sm="24" :md="24">
+          <div class="image-container">
+            <div
+              v-for="(skin, index) in skins"
+              :key="index"
+              class="image"
+              style="--clip-start: ellipse(0 0 at 0 0); --clip-end: ellipse(150% 150% at 0 0);"
+            >
+              <img :src="skin" /><img :src="skin" />
+            </div>
           </div>
-
-          <!-- <div
-            style="height:200px;width:200px;background:black;border:1px solid
-          red;"
-          ></div> -->
         </el-col>
       </el-row>
     </div>
@@ -45,7 +52,18 @@ export default {
   name: 'MerchSkins',
   data() {
     return {
-      skis: ['CM_gallery_Avatar.png'],
+      skins: [
+        'https://i.picsum.photos/id/21/200/200.jpg?hmac=a2iQ6UhOjpU6jn7QSsCpk1CiiKTxmW1R4UivDsv-n8o',
+        'https://i.picsum.photos/id/988/200/200.jpg?hmac=-lwK-i6PssD9WlUeVPDIhOxDVxlzJKeM4MgEx_fIqJg',
+        'https://i.picsum.photos/id/119/200/200.jpg?hmac=JGrHG7yCKfebsm5jJSWw7F7x2oxeYnm5YE_74PhnRME',
+        'https://i.picsum.photos/id/604/200/200.jpg?hmac=qgFjxODI1hMBMfHo68VvLeji-zvG9y-iPYhyW0EkvOs',
+        'https://i.picsum.photos/id/253/200/200.jpg?hmac=_dceojr9yz5ZIKoye8I9HOqPCBHfn-jT9aRYdoLx1kQ',
+        'https://i.picsum.photos/id/988/200/200.jpg?hmac=-lwK-i6PssD9WlUeVPDIhOxDVxlzJKeM4MgEx_fIqJg',
+        'https://i.picsum.photos/id/119/200/200.jpg?hmac=JGrHG7yCKfebsm5jJSWw7F7x2oxeYnm5YE_74PhnRME',
+        'https://i.picsum.photos/id/604/200/200.jpg?hmac=qgFjxODI1hMBMfHo68VvLeji-zvG9y-iPYhyW0EkvOs',
+        'https://i.picsum.photos/id/21/200/200.jpg?hmac=a2iQ6UhOjpU6jn7QSsCpk1CiiKTxmW1R4UivDsv-n8o',
+        'https://i.picsum.photos/id/988/200/200.jpg?hmac=-lwK-i6PssD9WlUeVPDIhOxDVxlzJKeM4MgEx_fIqJg',
+      ],
     };
   },
 };
@@ -63,5 +81,45 @@ export default {
     line-height: 2.7rem;
     color: #c4d0fa;
   }
+}
+// .skins {
+//   width: 200px;
+//   height: 200px;
+//   margin-top: 60px;
+//   // background:black;
+// }
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  width: 100%;
+  grid-gap: 0.8rem;
+}
+.image-container .image {
+  position: relative;
+  padding-bottom: 100%;
+}
+.image-container .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.image-container .image img:nth-of-type(1) {
+  filter: grayscale(1) brightness(40%);
+}
+.image-container .image img:nth-of-type(2) {
+  -webkit-clip-path: var(--clip-start);
+  clip-path: var(--clip-start);
+  transition: -webkit-clip-path 0.5s;
+  transition: clip-path 0.5s;
+  transition: clip-path 0.5s, -webkit-clip-path 0.5s;
+}
+.image-container .image:hover img:nth-of-type(2) {
+  -webkit-clip-path: var(--clip-end);
+  clip-path: var(--clip-end);
 }
 </style>

@@ -1,20 +1,20 @@
 <template>
-  <div>
-    <!-- <div class="merch_card_div">
-      <div v-for="(pic, index) in gallery" :key="index" class="merch_card">
-        <img :src="getImgUrl(pic)" v-bind:alt="pic" />
-      </div>
-    </div> -->
-
-    <el-carousel :interval="4000" type="card">
+  <div class="merch_card_div">
+    <el-carousel type="card" trigger="click" :interval="1200000">
       <el-carousel-item v-for="(pic, index) in gallery" :key="index">
-        <div class="merch_card">
+        <figure class="snip1295">
           <img :src="getImgUrl(pic)" v-bind:alt="pic" />
-        </div>
+          <div class="border one">
+            <div></div>
+          </div>
+          <div class="border two">
+            <div></div>
+          </div>
+        </figure>
       </el-carousel-item>
     </el-carousel>
 
-    <div class="mt-40 flex-center">
+    <div class="mt-70 flex-center">
       <button class="mr-10 btn_flex_btn round rgb">
         Metaverse
       </button>
@@ -57,30 +57,138 @@ export default {
 
 <style lang="scss" scoped>
 .merch_card_div {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  width: 100%;
-  margin-bottom: 20px;
-  -webkit-overflow-scrolling: touch;
-
-  ::-webkit-scrollbar {
-    display: none;
-  }
+  width: 80%;
+  margin: 0 auto;
 }
 
 .merch_card {
-  flex: 0 0 auto;
-  // margin-right: 40px;
-  // margin-bottom: 30px;
-
+  width: 610px;
   // :hover {
   //   cursor: pointer;
   // }
 
-  img {
-    width: 410px;
-    border-radius: 5px;
+  .merch_card_img {
+    width: 610px;
+    border-radius: 2px;
+    // transition: transform 0.2s;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-box-sizing: padding-box;
+    box-sizing: padding-box;
   }
+  .merch_card_img:hover {
+    transform: scale(1.3);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+}
+.snip1295 {
+  position: relative;
+  overflow: hidden;
+  max-width: 615px;
+  width: 100%;
+  padding: 8px;
+  box-shadow: none !important;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-box-sizing: padding-box;
+  box-sizing: padding-box;
+}
+.snip1295 img {
+  width: 600px;
+  vertical-align: top;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.snip1295 .border {
+  position: absolute;
+  opacity: 0.45;
+}
+
+.snip1295 .border:after {
+  // border-right: 5px solid yellow;
+  position: absolute;
+  content: '';
+  display: block;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.snip1295 .border div:after {
+  border: none;
+  position: absolute;
+  content: '';
+  display: block;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.snip1295 .border div:before {
+  border-left: 5px solid red;
+  position: absolute;
+  content: '';
+  display: block;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.snip1295 .border:before {
+  border-top: 5px solid yellow;
+  position: absolute;
+  content: '';
+  display: block;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.snip1295 .border:before,
+.snip1295 .border:after {
+  width: 0;
+  height: 5px;
+}
+.snip1295 .border div:before,
+.snip1295 .border div:after {
+  width: 5px;
+  height: 0;
+}
+.snip1295 .border.one {
+  left: 0;
+  top: 0;
+  right: 12px;
+  bottom: 12px;
+}
+.snip1295 .border.one:before,
+.snip1295 .border.one div:before {
+  left: 0;
+  top: 0;
+}
+.snip1295 .border.one:after,
+.snip1295 .border.one div:after {
+  bottom: 0;
+  right: 0;
+}
+.snip1295 .border.two {
+  left: 12px;
+  top: 12px;
+  right: 0;
+  bottom: 0;
+}
+.snip1295 .border.two:before,
+.snip1295 .border.two div:before {
+  right: 0;
+  top: 0;
+}
+.snip1295 .border.two:after,
+.snip1295 .border.two div:after {
+  bottom: 0;
+  left: 0;
+}
+
+.snip1295:hover .border:before,
+.snip1295.hover .border:before,
+.snip1295:hover .border:after,
+.snip1295.hover .border:after {
+  width: 100%;
+}
+.snip1295:hover .border div:before,
+.snip1295.hover .border div:before,
+.snip1295:hover .border div:after,
+.snip1295.hover .border div:after {
+  height: 100%;
 }
 </style>

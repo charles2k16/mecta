@@ -1,10 +1,65 @@
 <template>
-  <div class="wrap py-100">
+  <div class="wrap py-100 bg_roadmap">
     <div class="roadmap_div">
-      <div class="clips">
-        <div class="poligon">
-          <img src="http://lorempixel.com/g/600/400/" />
+      <div class="step_one d-flex">
+        <div class="vl"></div>
+        <h2>ROAD MAP</h2>
+      </div>
+      <div class="d-flex mt-20">
+        <div class="tube"></div>
+        <h3 class="step_h3">.01 DIGITAL COLLECTIBLES STAGE</h3>
+      </div>
+      <div class="d-flex mt-10">
+        <div class="vl_steps"></div>
+
+        <p class="lead_text_inf tt_col mt-20">
+          During this stage NFTs of LAND, Mech, Mech Drivers, and Components
+          will be issued according to a set plan defining the supply of various
+          rarity levels of NFTs ranging from more common to super rare NFTs.
+        </p>
+      </div>
+      <div class="d-flex mt-20">
+        <div class="tube"></div>
+        <h3 class="step_h3">.02 COLLABORATIVE CONTENT DEVELOPMEN</h3>
+      </div>
+      <div class="step_2 d-flex mt-10">
+        <div class="vl_steps2"></div>
+
+        <div>
+          <p class="lead_text_inf tt_col2 mt-20">
+            Token holders will vote on:
+          </p>
+          <ul class="a">
+            <li>the best mech designs to be 3D modeled and minted into NFTs</li>
+            <li style="margin-bottom: 10px;">
+              the most inspirational mechanical/robotics engineering papers for
+              designers works to be based on.
+            </li>
+          </ul>
+
+          <p class="lead_text_inf tt_col mt-40">
+            Eventual outcome with the most valuable NFTs - ERC 1155 which
+            contain multiple unique tokens. For example, an ERC 1155 token that
+            contains a mech design inspired by 2 mechanical/robotics engineering
+            papers and 2 creators signature.
+          </p>
         </div>
+      </div>
+
+      <div class="d-flex mt-20">
+        <div class="tube"></div>
+        <h3 class="step_h3">.03 GAME DEVELOPMENT STAGE</h3>
+      </div>
+      <div class="d-flex mt-10">
+        <div>
+          <div class="vl_steps"></div>
+        </div>
+
+        <p class="lead_text_inf tt_col mt-20">
+          Play-to-earn games will be developed. Stats will be added to Mech and
+          Components (different parts or equipments) for players to assemble and
+          improve Mechs base performance for mech-themed games.
+        </p>
       </div>
     </div>
   </div>
@@ -17,203 +72,74 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.bg_roadmap {
+  background-image: url('../../assets/images/cm/cm_leg_geometry_02_color.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 38% 59%;
+}
 .roadmap_div {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1rem;
-  background: #212121;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 3rem 0;
+  width: 600px;
 }
-.poligon {
-  display: inline-block;
-  position: relative;
-  width: 150px;
-  height: 150px;
-  background: red;
-  box-sizing: border-box;
-  -webkit-clip-path: polygon(
-    92.32051% 40%,
-    93.79385% 43.1596%,
-    94.69616% 46.52704%,
-    95% 50%,
-    94.69616% 53.47296%,
-    93.79385% 56.8404%,
-    92.32051% 60%,
-    79.82051% 81.65064%,
-    77.82089% 84.50639%,
-    75.35575% 86.97152%,
-    72.5% 88.97114%,
-    69.3404% 90.44449%,
-    65.97296% 91.34679%,
-    62.5% 91.65064%,
-    37.5% 91.65064%,
-    34.02704% 91.34679%,
-    30.6596% 90.44449%,
-    27.5% 88.97114%,
-    24.64425% 86.97152%,
-    22.17911% 84.50639%,
-    20.17949% 81.65064%,
-    7.67949% 60%,
-    6.20615% 56.8404%,
-    5.30384% 53.47296%,
-    5% 50%,
-    5.30384% 46.52704%,
-    6.20615% 43.1596%,
-    7.67949% 40%,
-    20.17949% 18.34936%,
-    22.17911% 15.49361%,
-    24.64425% 13.02848%,
-    27.5% 11.02886%,
-    30.6596% 9.55551%,
-    34.02704% 8.65321%,
-    37.5% 8.34936%,
-    62.5% 8.34936%,
-    65.97296% 8.65321%,
-    69.3404% 9.55551%,
-    72.5% 11.02886%,
-    75.35575% 13.02848%,
-    77.82089% 15.49361%,
-    79.82051% 18.34936%
-  );
-  clip-path: polygon(
-    92.32051% 40%,
-    93.79385% 43.1596%,
-    94.69616% 46.52704%,
-    95% 50%,
-    94.69616% 53.47296%,
-    93.79385% 56.8404%,
-    92.32051% 60%,
-    79.82051% 81.65064%,
-    77.82089% 84.50639%,
-    75.35575% 86.97152%,
-    72.5% 88.97114%,
-    69.3404% 90.44449%,
-    65.97296% 91.34679%,
-    62.5% 91.65064%,
-    37.5% 91.65064%,
-    34.02704% 91.34679%,
-    30.6596% 90.44449%,
-    27.5% 88.97114%,
-    24.64425% 86.97152%,
-    22.17911% 84.50639%,
-    20.17949% 81.65064%,
-    7.67949% 60%,
-    6.20615% 56.8404%,
-    5.30384% 53.47296%,
-    5% 50%,
-    5.30384% 46.52704%,
-    6.20615% 43.1596%,
-    7.67949% 40%,
-    20.17949% 18.34936%,
-    22.17911% 15.49361%,
-    24.64425% 13.02848%,
-    27.5% 11.02886%,
-    30.6596% 9.55551%,
-    34.02704% 8.65321%,
-    37.5% 8.34936%,
-    62.5% 8.34936%,
-    65.97296% 8.65321%,
-    69.3404% 9.55551%,
-    72.5% 11.02886%,
-    75.35575% 13.02848%,
-    77.82089% 15.49361%,
-    79.82051% 18.34936%
-  );
+.step_one {
+  .vl {
+    border-left: 7px solid rgb(103, 23, 168);
+    height: 60px;
+    margin-right: 70px;
+    margin-left: 12px;
+  }
+  h2 {
+    color: #bda3ff;
+    font-weight: bold;
+    font-size: 28px;
+  }
 }
-.poligon img {
-  position: absolute;
-  top: 2px; /* equal to border thickness */
-  left: 2px; /* equal to border thickness */
-  width: 146px; /* container height - (border thickness * 2) */
-  height: 146px; /* container height - (border thickness * 2) */
-  -webkit-clip-path: polygon(
-    92.32051% 40%,
-    93.79385% 43.1596%,
-    94.69616% 46.52704%,
-    95% 50%,
-    94.69616% 53.47296%,
-    93.79385% 56.8404%,
-    92.32051% 60%,
-    79.82051% 81.65064%,
-    77.82089% 84.50639%,
-    75.35575% 86.97152%,
-    72.5% 88.97114%,
-    69.3404% 90.44449%,
-    65.97296% 91.34679%,
-    62.5% 91.65064%,
-    37.5% 91.65064%,
-    34.02704% 91.34679%,
-    30.6596% 90.44449%,
-    27.5% 88.97114%,
-    24.64425% 86.97152%,
-    22.17911% 84.50639%,
-    20.17949% 81.65064%,
-    7.67949% 60%,
-    6.20615% 56.8404%,
-    5.30384% 53.47296%,
-    5% 50%,
-    5.30384% 46.52704%,
-    6.20615% 43.1596%,
-    7.67949% 40%,
-    20.17949% 18.34936%,
-    22.17911% 15.49361%,
-    24.64425% 13.02848%,
-    27.5% 11.02886%,
-    30.6596% 9.55551%,
-    34.02704% 8.65321%,
-    37.5% 8.34936%,
-    62.5% 8.34936%,
-    65.97296% 8.65321%,
-    69.3404% 9.55551%,
-    72.5% 11.02886%,
-    75.35575% 13.02848%,
-    77.82089% 15.49361%,
-    79.82051% 18.34936%
-  );
-  clip-path: polygon(
-    92.32051% 40%,
-    93.79385% 43.1596%,
-    94.69616% 46.52704%,
-    95% 50%,
-    94.69616% 53.47296%,
-    93.79385% 56.8404%,
-    92.32051% 60%,
-    79.82051% 81.65064%,
-    77.82089% 84.50639%,
-    75.35575% 86.97152%,
-    72.5% 88.97114%,
-    69.3404% 90.44449%,
-    65.97296% 91.34679%,
-    62.5% 91.65064%,
-    37.5% 91.65064%,
-    34.02704% 91.34679%,
-    30.6596% 90.44449%,
-    27.5% 88.97114%,
-    24.64425% 86.97152%,
-    22.17911% 84.50639%,
-    20.17949% 81.65064%,
-    7.67949% 60%,
-    6.20615% 56.8404%,
-    5.30384% 53.47296%,
-    5% 50%,
-    5.30384% 46.52704%,
-    6.20615% 43.1596%,
-    7.67949% 40%,
-    20.17949% 18.34936%,
-    22.17911% 15.49361%,
-    24.64425% 13.02848%,
-    27.5% 11.02886%,
-    30.6596% 9.55551%,
-    34.02704% 8.65321%,
-    37.5% 8.34936%,
-    62.5% 8.34936%,
-    65.97296% 8.65321%,
-    69.3404% 9.55551%,
-    72.5% 11.02886%,
-    75.35575% 13.02848%,
-    77.82089% 15.49361%,
-    79.82051% 18.34936%
-  );
+.tube {
+  background: #b7b7b7ff;
+  height: 30px;
+  width: 30px;
+  margin-right: 60px;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+.step_h3 {
+  color: #efefef;
+  font-weight: bold;
+}
+.tt_col {
+  color: #b7b7b7;
+  margin-top: -10px;
+}
+.vl_steps {
+  border-left: 2px solid #b7b7b7ff;
+  height: 120px;
+  margin-right: 75px;
+  margin-left: 14px;
+  margin-top: 13px;
+}
+.step_2 {
+  .vl_steps2 {
+    border-left: 2px solid #b7b7b7ff;
+    height: 230px;
+    margin-right: 75px;
+    margin-left: 14px;
+    margin-top: 13px;
+  }
+
+  .tt_col2 {
+    color: #b7b7b7;
+    margin-top: -3px;
+  }
+
+  ul {
+    margin-left: 30px;
+  }
+  ul.a {
+    list-style-type: circle;
+    color: #b7b7b7ff;
+  }
 }
 </style>
