@@ -1,110 +1,94 @@
 <template>
   <div class="tabs_div">
+    <!-- <canvas id="scene"></canvas> -->
     <el-tabs type="card" class="el-tab_div">
       <el-tab-pane>
         <span slot="label">WEAPON</span>
-        <div style="paddinng: 50px;">
-          <div class="mt-20 merch_tab_bg">
-            <h5>Genesis Unit</h5>
-            <div class="mt-50 flex-justify-evenly-center">
-              <div class="merch_nft">
-                <img
-                  src="../../assets/images/tk_box1.png"
-                  alt=""
-                  width="170px"
-                />
-                <div class="center mt--10">
-                  <span class="merch_tk_stars">
-                    <i class="el-icon-star-on"></i>
-                    <i class="el-icon-star-on"></i>
-                    <i class="el-icon-star-on"></i>
-                    <i class="el-icon-star-off"></i>
-                  </span>
-                </div>
 
-                <div class="center mt-20">
-                  <span class="d-block">1 x [3-star] or better</span>
-
-                  <button class="merch_tab_btn mt-10">
-                    <b> BUY</b> <br />
-                    <span>0.3 eth</span>
-                  </button>
-                </div>
+        <div class="merch_tab_bg">
+          <h5>Genesis Unit</h5>
+          <div class="mt-50 flex-justify-evenly-center">
+            <div class="merch_nft">
+              <img src="../../assets/images/tk_box1.png" alt="" width="170px" />
+              <div class="center mt--10">
+                <span class="merch_tk_stars">
+                  <i class="el-icon-star-on"></i>
+                  <i class="el-icon-star-on"></i>
+                  <i class="el-icon-star-on"></i>
+                  <i class="el-icon-star-off"></i>
+                </span>
               </div>
-              <div class="merch_nft">
-                <img
-                  src="../../assets/images/tk_box1.png"
-                  alt=""
-                  width="170px"
-                />
-                <div class="center mt--10">
-                  <span class="merch_tk_stars">
-                    <i class="el-icon-star-on"></i>
-                    <i class="el-icon-star-on"></i>
-                    <i class="el-icon-star-on"></i>
-                    <i class="el-icon-star-off"></i>
-                  </span>
-                </div>
 
-                <div class="center mt-20">
-                  <span class="d-block">1 x [3-star] or better</span>
+              <div class="center mt-20">
+                <span class="d-block star_txt">1 x [3-star] or better</span>
 
-                  <button class="merch_tab_btn mt-10">
-                    <b> BUY</b> <br />
-                    <span>0.3 eth</span>
-                  </button>
-                </div>
+                <button class="merch_tab_btn mt-10">
+                  <b> BUY</b> <br />
+                  <span>0.3 eth</span>
+                </button>
               </div>
             </div>
-
-            <div class="mt-100 flex-justify-evenly-center">
-              <div class="merch_nft">
-                <img
-                  src="../../assets/images/tk_box1.png"
-                  alt=""
-                  width="170px"
-                />
-                <div class="center mt--10">
-                  <span class="merch_tk_stars">
-                    <i class="el-icon-star-on"></i>
-                    <i class="el-icon-star-on"></i>
-                    <i class="el-icon-star-on"></i>
-                    <i class="el-icon-star-off"></i>
-                  </span>
-                </div>
-
-                <div class="center mt-20">
-                  <span class="d-block">1 x [3-star] or better</span>
-
-                  <button class="merch_tab_btn mt-10">
-                    <b> BUY</b> <br />
-                    <span>0.3 eth</span>
-                  </button>
-                </div>
+            <div class="merch_nft">
+              <img src="../../assets/images/tk_box1.png" alt="" width="170px" />
+              <div class="center mt--10">
+                <span class="merch_tk_stars">
+                  <i class="el-icon-star-on"></i>
+                  <i class="el-icon-star-on"></i>
+                  <i class="el-icon-star-on"></i>
+                  <i class="el-icon-star-off"></i>
+                </span>
               </div>
-              <div class="merch_nft">
-                <img
-                  src="../../assets/images/tk_box1.png"
-                  alt=""
-                  width="170px"
-                />
-                <div class="center mt--10">
-                  <span class="merch_tk_stars">
-                    <i class="el-icon-star-on"></i>
-                    <i class="el-icon-star-on"></i>
-                    <i class="el-icon-star-on"></i>
-                    <i class="el-icon-star-off"></i>
-                  </span>
-                </div>
 
-                <div class="center mt-20">
-                  <span class="d-block">1 x [3-star] or better</span>
+              <div class="center mt-20">
+                <span class="d-block star_txt">1 x [3-star] or better</span>
 
-                  <button class="merch_tab_btn mt-10">
-                    <b> BUY</b> <br />
-                    <span>0.3 eth</span>
-                  </button>
-                </div>
+                <button class="merch_tab_btn mt-10">
+                  <b> BUY</b> <br />
+                  <span>0.3 eth</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-100 flex-justify-evenly-center">
+            <div class="merch_nft">
+              <img src="../../assets/images/tk_box1.png" alt="" width="170px" />
+              <div class="center mt--10">
+                <span class="merch_tk_stars">
+                  <i class="el-icon-star-on"></i>
+                  <i class="el-icon-star-on"></i>
+                  <i class="el-icon-star-on"></i>
+                  <i class="el-icon-star-off"></i>
+                </span>
+              </div>
+
+              <div class="center mt-20">
+                <span class="d-block star_txt">1 x [3-star] or better</span>
+
+                <button class="merch_tab_btn mt-10">
+                  <b> BUY</b> <br />
+                  <span>0.3 eth</span>
+                </button>
+              </div>
+            </div>
+            <div class="merch_nft">
+              <img src="../../assets/images/tk_box1.png" alt="" width="170px" />
+              <div class="center mt--10">
+                <span class="merch_tk_stars">
+                  <i class="el-icon-star-on"></i>
+                  <i class="el-icon-star-on"></i>
+                  <i class="el-icon-star-on"></i>
+                  <i class="el-icon-star-off"></i>
+                </span>
+              </div>
+
+              <div class="center mt-20">
+                <span class="d-block star_txt">1 x [3-star] or better</span>
+
+                <button class="merch_tab_btn mt-10">
+                  <b> BUY</b> <br />
+                  <span>0.3 eth</span>
+                </button>
               </div>
             </div>
           </div>
@@ -130,57 +114,10 @@ export default {
 
 <style lang="scss" scoped>
 .tabs_div {
-  padding: 1px;
-  box-sizing: border-box;
-  position: relative;
-  background: grey;
-  -webkit-clip-path: polygon(
-    0 0,
-    96% 0,
-    100% 5%,
-    100% 100%,
-    83% 100%,
-    4% 100%,
-    0 94%,
-    0 20%
-  );
-  clip-path: polygon(
-    0 0,
-    96% 0,
-    100% 5%,
-    100% 100%,
-    83% 100%,
-    4% 100%,
-    0 94%,
-    0 20%
-  );
-}
-.el-tab_div {
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  background: #0c0f20;
-  -webkit-clip-path: polygon(
-    0 0,
-    96% 0,
-    100% 5%,
-    100% 100%,
-    83% 100%,
-    4% 100%,
-    0 94%,
-    0 20%
-  );
-  clip-path: polygon(
-    0 0,
-    96% 0,
-    100% 5%,
-    100% 100%,
-    83% 100%,
-    4% 100%,
-    0 94%,
-    0 20%
-  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 38% 38%;
+  background-image: url('../../assets/images/cm/cm_cockpit.png');
 }
 .merch_nft {
   cursor: url(https://abs.twimg.com/emoji/v2/72x72/1f525.png) 36 36, auto;
@@ -203,9 +140,13 @@ export default {
     }
   }
 
+  .star_txt {
+    color: #d9d9d9;
+  }
+
   .merch_tab_btn {
-    width: 200px;
-    background: #363644;
+    width: 170px;
+    background: #363644db;
     border: 1px solid #363644;
     color: whitesmoke;
 

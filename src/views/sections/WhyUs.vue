@@ -73,12 +73,16 @@
         </div>
       </el-col>
       <el-col :md="12">
-        <div>
+        <!-- <div>
           <img
             src="../../assets/images/cm/cm_particle_sphere.jpg"
             alt="sphere"
             height="300px"
           />
+        </div> -->
+        <ThreeTest />
+        <div>
+          <div id="canvas"></div>
         </div>
       </el-col>
     </el-row>
@@ -86,8 +90,13 @@
 </template>
 
 <script>
+import ThreeTest from '@/components/ThreeTest';
+
 export default {
   name: 'WhyUs',
+  components: {
+    ThreeTest,
+  },
 };
 </script>
 

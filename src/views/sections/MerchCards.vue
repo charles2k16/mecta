@@ -104,7 +104,6 @@ export default {
 }
 
 .snip1295 .border:after {
-  // border-right: 5px solid yellow;
   position: absolute;
   content: '';
   display: block;
@@ -112,7 +111,6 @@ export default {
   transition: all 0.4s ease-in-out;
 }
 .snip1295 .border div:after {
-  border: none;
   position: absolute;
   content: '';
   display: block;
@@ -120,7 +118,7 @@ export default {
   transition: all 0.4s ease-in-out;
 }
 .snip1295 .border div:before {
-  border-left: 5px solid red;
+  border-left: 5px solid #b989fd;
   position: absolute;
   content: '';
   display: block;
@@ -128,7 +126,7 @@ export default {
   transition: all 0.4s ease-in-out;
 }
 .snip1295 .border:before {
-  border-top: 5px solid yellow;
+  border-top: 5px solid #b989fd;
   position: absolute;
   content: '';
   display: block;

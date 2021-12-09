@@ -7,19 +7,27 @@
             <button class="mr-10 btn_flex_btn purple">
               Register
             </button>
-            <button class="btn_flex_btn trans">
+            <button class="btn_flex_btn trans" @click="showVideo == true">
               Trailer
             </button>
           </div>
         </div>
       </vs-col>
     </vs-row>
+
+    <el-dialog title="" :visible.sync="showVideo" fullscreen center>
+    </el-dialog>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Header',
+  data() {
+    return {
+      showVideo: false,
+    };
+  },
 };
 </script>
 
