@@ -60,22 +60,3 @@ export default {
   },
 };
 </script>
-<style>
-/* .cursor .outline {
-  position: fixed;
-  pointer-events: none;
-  z-index: 10;
-  transform: translate(-50%, -50%);
-  opacity: 1;
-  transition: opacity 0.3s;
-}
-.cursor .dot_wrapper {
-  position: fixed;
-  z-index: 10;
-  pointer-events: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translate(-50%, -50%);
-} */
-</style>

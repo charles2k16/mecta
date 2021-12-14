@@ -50,13 +50,12 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
 // }
 
 .el-tabs--card>.el-tabs__header .el-tabs__item.is-active {
-  border-bottom-color: rgb(132, 9, 156) !important;
-  border-bottom-width: 5px;
-  // border-top-color: red !important;
- background: linear-gradient(90deg,
-   rgba(70, 171, 234, 1) 10%,
-   rgba(231, 78, 237, 1) 100%);
-  // border: 1px solid red !important;
+  border-bottom-color: rgb(62, 61, 71) !important;
+  // border-bottom-width: 3px;
+//  background: linear-gradient(90deg,
+//    rgba(70, 171, 234, 1) 10%,
+//    rgba(231, 78, 237, 1) 100%);
+    background: rgba(0, 0, 0, 0.4);
   color: white;
   position: relative;
   clip-path: polygon(0 0, 91% 0, 100% 32%, 100% 100%, 83% 100%, 0 100%, 0 94%, 0 20%);
@@ -70,10 +69,10 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
   border-bottom: none !important;
 }
 .el-tabs__item {
-  padding: 10px 50px !important;
-  height: 60px !important;
+  padding: 2px 40px !important;
+  height: 50px !important;
   box-sizing: border-box;
-  line-height: 40px !important;
+  line-height: 50px;
   font-size: 18px !important;
   color: block;
 }
@@ -100,6 +99,7 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
 }
 .el-tabs__content {
     background: rgba(0, 0, 0, 0.4);
+    padding: 50px;
     -webkit-clip-path: polygon(0 0,
       97% 0,
       100% 4%,
@@ -118,5 +118,5 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
       0% 20%);
 }
 .el-tabs__nav-wrap {
-  margin-bottom: -13px;
+  margin-bottom: -15px;
 }

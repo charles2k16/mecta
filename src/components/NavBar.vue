@@ -17,7 +17,7 @@
                 <i class="fab fa-discord"></i>
               </a>
             </li>
-            <li>
+            <li style="margin-right: -12px">
               <a href="#">
                 <i class="fab fa-telegram-plane"></i>
               </a>
@@ -67,7 +67,7 @@ export default {
     }
 
     .h_staking {
-      border: 1px solid #434343;
+      border: 2px solid #434343;
       background: #161616ff;
       border-radius: 20px;
       padding: 1px 0 1px 15px;

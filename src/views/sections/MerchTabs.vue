@@ -6,7 +6,8 @@
         <span slot="label">WEAPON</span>
 
         <div class="merch_tab_bg">
-          <h5>Genesis Unit</h5>
+          <br />
+          <h3 class="ml-20" style="color:grey;">Genesis Unit</h3>
           <div class="mt-50 flex-justify-evenly-center">
             <div class="merch_nft">
               <img src="../../assets/images/tk_box1.png" alt="" width="170px" />
@@ -20,6 +21,7 @@
               </div>
 
               <div class="center mt-20">
+                4
                 <span class="d-block star_txt">1 x [3-star] or better</span>
 
                 <button class="merch_tab_btn mt-10">
@@ -120,8 +122,13 @@ export default {
   background-image: url('../../assets/images/cm/cm_cockpit.png');
 }
 .merch_nft {
+  padding: 20px;
+  border: 1px solid transparent;
   cursor: url(https://abs.twimg.com/emoji/v2/72x72/1f525.png) 36 36, auto;
 
+  &:hover {
+    border: 1px solid red;
+  }
   .merch_tk_stars {
     margin-top: -500px;
     border-radius: 30px;
@@ -148,6 +155,9 @@ export default {
     width: 170px;
     background: #363644db;
     border: 1px solid #363644;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
     color: whitesmoke;
 
     span {

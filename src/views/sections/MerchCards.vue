@@ -22,6 +22,35 @@
         Discord Chat
       </button>
     </div>
+
+    <section class="demo-3">
+      <h2>Frame</h2>
+      <div class="grid">
+        <div class="box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <line class="top" x1="0" y1="0" x2="900" y2="0" />
+            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
+            <line class="bottom" x1="300" y1="460" x2="-600" y2="460" />
+            <line class="right" x1="300" y1="0" x2="300" y2="1380" />
+          </svg>
+          <h3>B</h3>
+          <span>2012</span>
+          <span>Marmalade, Honey</span>
+        </div>
+        <div class="box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <line class="top" x1="0" y1="0" x2="900" y2="0" />
+            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
+            <line class="bottom" x1="300" y1="460" x2="-600" y2="460" />
+            <line class="right" x1="300" y1="0" x2="300" y2="1380" />
+          </svg>
+          <h3>U</h3>
+          <span>2013</span>
+          <span>Beans, Chickweed</span>
+        </div>
+      </div>
+      <!-- /grid -->
+    </section>
   </div>
 </template>
 
