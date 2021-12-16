@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Titillium';
+  src: url('../fonts/tittinium/TitilliumWeb-Regular.ttf');
+}
+@font-face {
+  font-family: 'TitilliumBold';
+  src: url('../fonts/tittinium/TitilliumWeb-SemiBold.ttf');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -229,7 +238,6 @@ hr.sales_hr {
   width: 100%;
 }
 .hero {
-  background: #212121ff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -241,7 +249,6 @@ hr.sales_hr {
 .why_merch {
   padding-top: 30px;
   padding-bottom: 100px;
-  background: #212121ff;
   display: block;
   align-items: center;
   margin: 0 auto;
@@ -316,15 +323,15 @@ button {
 .btn_flex_btn:hover::before {
   top: 3px;
   left: 3px;
-  border-bottom: 3px solid rgb(76, 232, 190);
-  border-right: 3px solid rgb(76, 232, 190);
+  border-bottom: 4px solid rgba(234, 0, 217);
+  border-right: 4px solid rgba(234, 0, 217);
   z-index: -1;
 }
 .btn_flex_btn:hover::after {
   bottom: 5px;
   right: 5px;
-  border-top: 3px solid rgb(145, 72, 206);
-  border-left: 3px solid rgb(145, 72, 206);
+  border-top: 4px solid rgb(10, 189, 198);
+  border-left: 4px solid rgb(10, 189, 198);
   z-index: -1;
 }
 .btn_flex_btn:hover {
@@ -352,7 +359,48 @@ button {
     rgba(7, 13, 22, 1) 81%
   );
 }
+.whitepaper_btn::before,
+.whitepaper_btn::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 0.25s ease-out;
+  z-index: -1;
+}
+.whitepaper_btn::before {
+  top: -3px;
+  left: -3px;
+}
+.whitepaper_btn::after {
+  bottom: -5px;
+  right: -5px;
+}
+.whitepaper_btn:hover::before {
+  top: 3px;
+  left: 3px;
+  border-bottom: 3px solid;
+  border-right: 3px solid;
+  border-width: 3px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #414141, #707070);
+  z-index: -1;
+}
 
+.whitepaper_btn:hover::after {
+  bottom: 5px;
+  right: 5px;
+  border-top: 3px solid;
+  border-left: 3px solid;
+  border-width: 3px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #3c3c3c, #8b8b8b);
+  z-index: -1;
+}
+.whitepaper_btn:hover {
+  cursor: pointer;
+  /* text-shadow: rgb(145 72 206) -1px 0px, rgb(76 232 190) 1px 0px; */
+}
 .merch_tab_bg {
   padding-bottom: 100px;
   /* background: #2b2b39; */

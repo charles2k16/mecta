@@ -41,7 +41,7 @@ import {
 //import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js'
 //import { ColladaLoader } from 'three/examples/jsm/loaders/ColladaLoader.js'
 let objS = {
-  stats: null,
+  // stats: null,
   controls: null,
   renderer: null,
   camera: null,
@@ -78,7 +78,7 @@ export default {
     console.log('boom');
     console.log(this.reqId);
     window.cancelAnimationFrame(this.reqId);
-    document.body.removeChild(objS.stats.domElement); //把stats删了
+    // document.body.removeChild(objS.stats.domElement); //把stats删了
     objS = null;
   },
   methods: {
@@ -174,7 +174,7 @@ export default {
     },
 
     animate() {
-      objS.stats.update();
+      // objS.stats.update();
       objS.controls.update();
       //objS.renderer.render(objS.scene, objS.camera); //渲染
       objS.composer.render();

@@ -26,7 +26,7 @@
         </div>
 
         <div>
-          <button class="btn_flex_btn whitepaper_btn">Read Whitepaper</button>
+          <button class="whitepaper_btn">Read Whitepaper</button>
         </div>
       </div>
     </div>
@@ -84,10 +84,27 @@ export default {
 }
 
 .whitepaper_btn {
-  background: #424242ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: TitilliumBold;
+  font-weight: 800;
+  height: 43px;
+  background: rgb(66, 66, 66);
+  background: linear-gradient(
+    180deg,
+    rgba(66, 66, 66, 1) 27%,
+    rgba(1, 1, 1, 1) 79%
+  );
+  border: 0px;
+  text-shadow: rgba(0, 0, 0, 0.3) 0px 2px 3px;
+  // transition: text-shadow 0.4s ease-in-out 0s;
   color: #d9d9d9;
   font-size: 14px;
   padding: 1px 20px;
+  position: relative;
+  z-index: 1;
 }
 
 ul {

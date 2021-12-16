@@ -1,18 +1,20 @@
 <template>
   <div class="main_container">
     <NavBar />
-    <div class="hero">
-      <div>
-        <div class="wrap">
-          <Header />
+    <div style="background:#212121ff;">
+      <div class="hero">
+        <div>
+          <div class="wrap">
+            <Header />
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="why_merch">
-      <WhyUs />
+      <div class="why_merch">
+        <WhyUs />
 
-      <MerchCards />
+        <MerchCards />
+      </div>
     </div>
 
     <div class="merch_img_div py-100">

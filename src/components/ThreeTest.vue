@@ -21,8 +21,11 @@ export default {
 <style scoped>
 #demo-three {
   width: 100%;
-  height: 700px;
+  height: 900px;
+  position: absolute;
   /* left: 130px; */
   top: 0;
+  left: 0;
+  z-index: -9999;
 }
 </style>

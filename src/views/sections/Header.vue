@@ -3,11 +3,17 @@
     <vs-row>
       <vs-col :w="12" :xs="12" :sm="12">
         <div>
-          <div class="mt-150 hero_btn_group">
-            <button class="mr-10 btn_flex_btn purple">
+          <div class="hero_btn_group">
+            <button class="btn_flex_btn purple">
               Register
             </button>
             <button class="btn_flex_btn trans" @click="showVideo == true">
+              <img
+                src="../../assets/images/white_play_02.png"
+                alt="play"
+                width="16px"
+                style="margin-right:10px;"
+              />
               Trailer
             </button>
           </div>
@@ -33,31 +39,36 @@ export default {
 
 <style lang="scss" scoped>
 .hero_btn_group {
+  margin-top: 350px;
   display: flex;
   justify-content: center;
+  margin-left: 30px;
 
   .btn_flex_btn {
     flex-shrink: 0;
   }
 }
 .btn_flex_btn.purple {
+  margin-right: 50px;
   border-top: 1px solid;
   border-left: 1px solid;
   border-width: 2px;
   border-image-slice: 1;
   border-image-source: linear-gradient(
-    76.91deg,
-    rgb(76, 232, 190) -125.56%,
-    rgb(133, 67, 194) 116.11%
+    90deg,
+    rgba(144, 106, 196, 1) 27%,
+    rgba(74, 135, 242, 1) 79%
   );
+  background: rgb(144, 106, 196);
   background: linear-gradient(
-    76.91deg,
-    rgb(76, 232, 190) -125.56%,
-    rgb(133, 67, 194) 116.11%
+    90deg,
+    rgba(144, 106, 196, 1) 27%,
+    rgba(74, 135, 242, 1) 79%
   );
 }
 .btn_flex_btn.trans {
   background: transparent;
   border: 2px solid white;
+  padding: 1px 25px;
 }
 </style>
