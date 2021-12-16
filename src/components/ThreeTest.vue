@@ -1,177 +1,28 @@
 <template>
-  <!-- Top Navigation -->
-  <div class="codrops-top clearfix">
-    <header class="codrops-header">
-      <h1>
-        Border Animation Effect
-        <span
-          >Recreating the effect seen on
-          <a href="http://carlphilippebrenner.com/">carlphilippebrenner.com</a>
-          with SVG</span
-        >
-      </h1>
-      <p>Highly experimental, tested in Google Chrome and Firefox</p>
-    </header>
-    <section class="demo-1">
-      <div class="grid">
-        <div class="box">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-            <line class="bottom" x1="300" y1="460" x2="-600" y2="460" />
-            <line class="right" x1="300" y1="0" x2="300" y2="1380" />
-          </svg>
-          <h3>D</h3>
-          <span>2012</span>
-          <span>Broccoli, Asparagus, Curry</span>
-        </div>
-        <div class="box">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-            <line class="bottom" x1="300" y1="460" x2="-600" y2="460" />
-            <line class="right" x1="300" y1="0" x2="300" y2="1380" />
-          </svg>
-          <h3>A</h3>
-          <span>2013</span>
-          <span>Arugula, Chickweed</span>
-        </div>
-        <div class="box">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-            <line class="bottom" x1="300" y1="460" x2="-600" y2="460" />
-            <line class="right" x1="300" y1="0" x2="300" y2="1380" />
-          </svg>
-          <h3>S</h3>
-          <span>2014</span>
-          <span>Strawberry, Lemon</span>
-        </div>
-      </div>
-      <!-- /grid -->
-    </section>
-    <section class="demo-2">
-      <h2>Color animation</h2>
-      <div class="grid">
-        <div class="box">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-            <line class="bottom" x1="300" y1="460" x2="-600" y2="460" />
-            <line class="right" x1="300" y1="0" x2="300" y2="1380" />
-          </svg>
-          <h3>J</h3>
-          <span>2012</span>
-          <span>Walnut, Pineapple</span>
-        </div>
-        <div class="box">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-            <line class="bottom" x1="300" y1="460" x2="-600" y2="460" />
-            <line class="right" x1="300" y1="0" x2="300" y2="1380" />
-          </svg>
-          <h3>I</h3>
-          <span>2013</span>
-          <span>Curry, Beancurd</span>
-        </div>
-        <div class="box">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-            <line class="bottom" x1="300" y1="460" x2="-600" y2="460" />
-            <line class="right" x1="300" y1="0" x2="300" y2="1380" />
-          </svg>
-          <h3>C</h3>
-          <span>2014</span>
-          <span>Lettuce, Asparagus</span>
-        </div>
-      </div>
-      <!-- /grid -->
-    </section>
-    <section class="demo-3">
-      <h2>Frame</h2>
-      <div class="grid">
-        <div class="box">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-            <line class="bottom" x1="300" y1="460" x2="-600" y2="460" />
-            <line class="right" x1="300" y1="0" x2="300" y2="1380" />
-          </svg>
-          <h3>B</h3>
-          <span>2012</span>
-          <span>Marmalade, Honey</span>
-        </div>
-        <div class="box">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-            <line class="bottom" x1="300" y1="460" x2="-600" y2="460" />
-            <line class="right" x1="300" y1="0" x2="300" y2="1380" />
-          </svg>
-          <h3>U</h3>
-          <span>2013</span>
-          <span>Beans, Chickweed</span>
-        </div>
-        <div class="box">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-            <line class="bottom" x1="300" y1="460" x2="-600" y2="460" />
-            <line class="right" x1="300" y1="0" x2="300" y2="1380" />
-          </svg>
-          <h3>Q</h3>
-          <span>2014</span>
-          <span>Broccoli, Lettuce</span>
-        </div>
-      </div>
-      <!-- /grid -->
-    </section>
-    <section class="demo-4">
-      <h2>Border spin</h2>
-      <div class="grid">
-        <div class="box">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-            <line class="bottom" x1="300" y1="460" x2="-600" y2="460" />
-            <line class="right" x1="300" y1="0" x2="300" y2="1380" />
-          </svg>
-          <h3>C</h3>
-          <span>2012</span>
-          <span>Berry, Spinach</span>
-        </div>
-        <div class="box">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-            <line class="bottom" x1="300" y1="460" x2="-600" y2="460" />
-            <line class="right" x1="300" y1="0" x2="300" y2="1380" />
-          </svg>
-          <h3>A</h3>
-          <span>2013</span>
-          <span>Arugula, Chickweed</span>
-        </div>
-        <div class="box">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-            <line class="bottom" x1="300" y1="460" x2="-600" y2="460" />
-            <line class="right" x1="300" y1="0" x2="300" y2="1380" />
-          </svg>
-          <h3>J</h3>
-          <span>2014</span>
-          <span>Broccoli, Asparagus, Lettuce</span>
-        </div>
-      </div>
-      <!-- /grid -->
-    </section>
+  <div class="three">
+    <canvas id="demo-three" @click="getE"></canvas>
   </div>
 </template>
-
 <script>
+import { initThree } from './threejs/3demo.js';
+
 export default {
-  name: 'ThreeTest',
+  name: 'three',
+  data() {
+    return {};
+  },
+  mounted() {
+    initThree('#demo-three');
+  },
+  beforeDestroy() {},
+  methods: {},
 };
 </script>
+<style scoped>
+#demo-three {
+  width: 100%;
+  height: 700px;
+  /* left: 130px; */
+  top: 0;
+}
+</style>
