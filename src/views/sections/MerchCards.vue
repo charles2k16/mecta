@@ -147,8 +147,6 @@ export default {
 .snip1295 .border.one div:after {
   bottom: 0;
   right: 0;
-  border: 2px solid #7047f5;
-  // border-right: none;
 }
 .snip1295 .border.two {
   left: 12px;
@@ -166,8 +164,8 @@ export default {
 .snip1295 .border.two div:after {
   bottom: 0;
   left: 0;
-  border: 1px solid white;
-  // border-left: none;
+  border-bottom: 2px solid rgb(179, 179, 179);
+  border-left: 1px solid rgb(179, 179, 179);
 }
 
 .snip1295:hover .border:before,
