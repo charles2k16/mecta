@@ -32,7 +32,6 @@ export default {
     return {
       gallery: [
         'CM_gallery_Avatar.png',
-        'CM_gallery_RedMech_FRAME.png',
         'CM_gallery_MiningMech_backview.png',
         'CM_gallery_Pilot.png',
         'CM_Gallery_RedMech_backview.png',
@@ -86,7 +85,8 @@ export default {
   overflow: hidden;
   max-width: 615px;
   width: 100%;
-  padding: 8px;
+  height: 100%;
+  padding: 4px;
   box-shadow: none !important;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
@@ -103,30 +103,10 @@ export default {
   opacity: 0.45;
 }
 
-.snip1295 .border:after {
-  position: absolute;
-  content: '';
-  display: block;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-.snip1295 .border div:after {
-  position: absolute;
-  content: '';
-  display: block;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-.snip1295 .border div:before {
-  border-left: 5px solid #b989fd;
-  position: absolute;
-  content: '';
-  display: block;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
+.snip1295 .border:after,
+.snip1295 .border div:after,
+.snip1295 .border div:before,
 .snip1295 .border:before {
-  border-top: 5px solid #b989fd;
   position: absolute;
   content: '';
   display: block;
@@ -136,13 +116,13 @@ export default {
 
 .snip1295 .border:before,
 .snip1295 .border:after {
-  width: 0;
-  height: 5px;
+  width: 0px;
+  height: 0px;
 }
 .snip1295 .border div:before,
 .snip1295 .border div:after {
-  width: 5px;
-  height: 0;
+  width: 0px;
+  height: 0px;
 }
 .snip1295 .border.one {
   left: 0;
@@ -152,13 +132,23 @@ export default {
 }
 .snip1295 .border.one:before,
 .snip1295 .border.one div:before {
-  left: 0;
-  top: 0;
+  // left: 0;
+  // top: 0;
+  border: 2px solid #7047f5;
+  // border-top-color: #7047f5;
+  // border-left-color: #7047f5;
+  // border-style: solid;
+  // border-top-width: 4px;
+  // border-left-width: 4px;
+  // border-bottom-width: 0px;
+  // border-right-width: 0px;
 }
 .snip1295 .border.one:after,
 .snip1295 .border.one div:after {
   bottom: 0;
   right: 0;
+  border: 2px solid #7047f5;
+  // border-right: none;
 }
 .snip1295 .border.two {
   left: 12px;
@@ -170,11 +160,14 @@ export default {
 .snip1295 .border.two div:before {
   right: 0;
   top: 0;
+  border: 1px solid white;
 }
 .snip1295 .border.two:after,
 .snip1295 .border.two div:after {
   bottom: 0;
   left: 0;
+  border: 1px solid white;
+  // border-left: none;
 }
 
 .snip1295:hover .border:before,

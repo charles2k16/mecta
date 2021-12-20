@@ -22,10 +22,15 @@ export default {
 #demo-three {
   width: 100%;
   height: 900px;
-  position: absolute;
+
+  /* background: black; */
+  /* position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1; */
+
   /* left: 130px; */
   top: 0;
   left: 0;
-  z-index: -9999;
 }
 </style>

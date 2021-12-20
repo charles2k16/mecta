@@ -2,7 +2,12 @@
   <div>
     <div class="header_nav">
       <div class="nav flex-justify-between-center">
-        <h2>CRYPTOMECH</h2>
+        <img
+          src="../assets/images/mecta_logo_white.png"
+          alt="logo"
+          height="25px"
+          style="margin-top:-5px;"
+        />
 
         <div class="flex-justify-between-center h_staking">
           <h3>Staking</h3>
@@ -97,7 +102,7 @@ export default {
     rgba(66, 66, 66, 1) 27%,
     rgba(1, 1, 1, 1) 79%
   );
-  border: 0px;
+  // border: 0px;
   text-shadow: rgba(0, 0, 0, 0.3) 0px 2px 3px;
   // transition: text-shadow 0.4s ease-in-out 0s;
   color: #d9d9d9;
@@ -105,6 +110,16 @@ export default {
   padding: 1px 20px;
   position: relative;
   z-index: 1;
+
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-width: 2px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    180deg,
+    rgba(66, 66, 66, 1) 27%,
+    rgba(1, 1, 1, 1) 79%
+  );
 }
 
 ul {

@@ -174,6 +174,10 @@ hr.sales_hr {
   padding-top: 100px;
   padding-bottom: 100px;
 }
+.py-150 {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
 .flex-justify-between-center {
   display: flex;
   justify-content: space-between;
@@ -369,16 +373,16 @@ button {
   z-index: -1;
 }
 .whitepaper_btn::before {
-  top: -3px;
-  left: -3px;
+  top: -4px;
+  left: -4px;
 }
 .whitepaper_btn::after {
   bottom: -5px;
   right: -5px;
 }
 .whitepaper_btn:hover::before {
-  top: 3px;
-  left: 3px;
+  top: 4px;
+  left: 4px;
   border-bottom: 3px solid;
   border-right: 3px solid;
   border-width: 3px;

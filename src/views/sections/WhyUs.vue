@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="wrap py-100">
-      <el-row :gutter="50">
+    <div class="wrap py-150">
+      <el-row :gutter="70">
         <el-col :md="12">
           <div class="why_bg_rgb">
             <h2 class="white">IT PAYS TO PLAY</h2>
@@ -12,7 +12,7 @@
             />
           </div>
 
-          <p class="lead_text_inf mt-20">
+          <p class="lead_text_inf mt-30">
             After landing on Planet X, gather resources around you to build your
             camp. With the starter units and a bit of creativity, you can rival
             nearby colonies and fight for their land resources. Use your units
@@ -28,25 +28,25 @@
             <img
               src="../../assets/images/cm/cm_cockpit.png"
               alt="cockpit"
-              height="360px"
+              width="100%"
             />
           </div>
         </el-col>
       </el-row>
 
-      <el-row :gutter="50" class="mt-100">
+      <el-row :gutter="70" class="mt-150">
         <el-col :md="12">
           <div>
             <img
               src="../../assets/images/cm/cm_mechlab.png"
               alt="mechlab"
-              height="370px"
+              width="100%"
             />
           </div>
         </el-col>
         <el-col :md="12">
           <div class="why_bg_rgb flex-justify-around-center">
-            <h2 class="white">MIND GAME</h2>
+            <h2 class="white">MECH LAB</h2>
             <img
               src="../../assets/images/cm/cm_text_icon_lab.png"
               alt="lab"
@@ -54,15 +54,20 @@
             />
           </div>
 
-          <p class="lead_text_inf mt-20">
+          <p class="lead_text_inf mt-30">
             Witness the newest applications of real science and breakthroughs in
             terraforming robots
-            <br /><br />
-            Vote on new mechs that will be created, designers will work from the
-            most inspirational mechanical / robotics engineering papers.
-            <br /><br />
-            Learn about our design process and the top notch team behind each
-            mech.
+
+            <span>
+              Vote on new mechs that will be created, designers will work from
+              the most inspirational mechanical / robotics engineering
+              papers.</span
+            >
+
+            <span>
+              Learn about our design process and the top notch team behind each
+              mech.</span
+            >
           </p>
         </el-col>
       </el-row>
@@ -83,19 +88,19 @@
           </div>
         </el-col>
       </el-row>
-      <ThreeTestModel />
     </div>
+    <!-- <ThreeTest /> -->
   </div>
 </template>
 
 <script>
-import ThreeTestModel from '@/components/ThreeTestModel';
+// import ThreeTest from '@/components/ThreeTest';
 
 export default {
   name: 'WhyUs',
-  components: {
-    ThreeTestModel,
-  },
+  // components: {
+  //   ThreeTest,
+  // },
 };
 </script>
 
@@ -103,10 +108,12 @@ export default {
 .why_bg_rgb {
   background-image: url('../../assets/images/cm/cm_text_deco_s.png');
   background-repeat: no-repeat;
-  height: 90px;
+  height: 70px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  background-size: 50% 70px;
+  padding-left: 40px;
 
   h2 {
     font-size: 30px;
@@ -116,6 +123,16 @@ export default {
   }
   .iptp_img {
     height: 25px;
+  }
+}
+
+.lead_text_inf {
+  font-size: 22px;
+  line-height: 33px;
+
+  span {
+    display: block;
+    margin-top: 20px;
   }
 }
 </style>
