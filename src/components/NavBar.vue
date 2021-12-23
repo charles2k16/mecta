@@ -11,6 +11,7 @@
 
         <div class="flex-justify-between-center h_staking">
           <h3>Staking</h3>
+          <span class="soon">Coming soon</span>
           <ul>
             <li>
               <a href="#">
@@ -22,7 +23,7 @@
                 <i class="fab fa-discord"></i>
               </a>
             </li>
-            <li style="margin-right: -12px">
+            <li style="margin-right: -9px">
               <a href="#">
                 <i class="fab fa-telegram-plane"></i>
               </a>
@@ -65,7 +66,7 @@ export default {
     width: 940px;
     margin-right: auto;
     margin-left: auto;
-    height: 80px;
+    height: 90px;
 
     h2 {
       color: white;
@@ -75,14 +76,33 @@ export default {
       border: 2px solid #434343;
       background: #161616ff;
       border-radius: 20px;
-      padding: 1px 0 1px 15px;
+      padding: 2px 1px 1px 20px;
       display: flex;
+      width: 280px;
+      margin-left: 50px;
+
+      .soon {
+        background: #434343ff;
+        margin-top: -50px;
+        margin-left: -190px;
+        border-radius: 20px;
+        text-align: center;
+        font-size: 13px;
+        padding: 2px 10px;
+        color: #999999;
+      }
 
       h3 {
-        font-size: 14px;
-        margin-right: 15px;
+        font-size: 15px;
+        margin-right: 60px;
         color: #a895ff;
         font-weight: bold;
+
+        &:hover {
+          font-size: 16px;
+          color: whitesmoke;
+          cursor: pointer;
+        }
       }
     }
   }
@@ -102,15 +122,12 @@ export default {
     rgba(66, 66, 66, 1) 27%,
     rgba(1, 1, 1, 1) 79%
   );
-  // border: 0px;
   text-shadow: rgba(0, 0, 0, 0.3) 0px 2px 3px;
-  // transition: text-shadow 0.4s ease-in-out 0s;
   color: #d9d9d9;
   font-size: 14px;
   padding: 1px 20px;
   position: relative;
   z-index: 1;
-
   border-top: 1px solid;
   border-left: 1px solid;
   border-width: 2px;
@@ -133,7 +150,7 @@ ul li {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
 ul li a {
@@ -157,18 +174,18 @@ ul li a::before {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: #ffee10;
+  background: #85a3ff;
   transition: 0.5s;
   transform: scale(0.9);
   z-index: -1;
 }
 ul li a:hover::before {
   transform: scale(1.1);
-  box-shadow: 0 0 15px #ffee10;
+  box-shadow: 0 0 15px #85a3ff;
 }
 ul li a:hover {
-  color: #ffee10;
-  box-shadow: 0 0 5px #ffee10;
-  text-shadow: 0 0 5px #ffee10;
+  color: #85a3ff;
+  box-shadow: 0 0 5px #85a3ff;
+  text-shadow: 0 0 5px #85a3ff;
 }
 </style>

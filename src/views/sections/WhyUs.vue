@@ -72,18 +72,27 @@
         </el-col>
       </el-row>
 
-      <el-row :gutter="50" class="mt-100">
+      <el-row :gutter="50" class="mt-120">
         <el-col :md="12">
           <div style="height:300px" class="flex-align-center ">
-            <h1 class="white">PARTICIPATE IN OUR VERY FIRST NFT PRESALE NOW</h1>
+            <img
+              src="../../assets/images/Slash_icon.png"
+              alt="slash"
+              height="80px"
+              style="margin-right:35px;"
+            />
+            <h1 class="white milkey_h">
+              PARTICIPATE IN OUR VERY FIRST NFT PRESALE NOW
+            </h1>
           </div>
         </el-col>
         <el-col :md="12">
-          <div>
+          <div class="flex-center">
             <img
               src="../../assets/images/cm/cm_particle_sphere.jpg"
               alt="sphere"
               height="300px"
+              style="margin-left:20px;"
             />
           </div>
         </el-col>
@@ -118,11 +127,13 @@ export default {
   h2 {
     font-size: 30px;
   }
-  img {
-    width: 50px;
-  }
   .iptp_img {
-    height: 25px;
+    width: 60px;
+    margin-right: 35px;
+  }
+  .mindg_img {
+    width: 60px;
+    margin-right: 110px;
   }
 }
 
@@ -134,5 +145,8 @@ export default {
     display: block;
     margin-top: 20px;
   }
+}
+.milkey_h {
+  font-size: 29px;
 }
 </style>

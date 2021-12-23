@@ -1,6 +1,6 @@
 <template>
   <div class="merch_card_div">
-    <el-carousel type="card" trigger="click" :interval="1200000">
+    <el-carousel type="card" trigger="click" :interval="1200000" arrow="never">
       <el-carousel-item v-for="(pic, index) in gallery" :key="index">
         <figure class="snip1295">
           <img :src="getImgUrl(pic)" v-bind:alt="pic" />
@@ -14,11 +14,11 @@
       </el-carousel-item>
     </el-carousel>
 
-    <div class="mt-70 flex-center">
-      <button class="mr-10 btn_flex_btn round rgb">
-        Metaverse
+    <div class="mt-70 flex-center button_grp">
+      <button class="btn_flex_round rgb pulse mr-mb">
+        <a href="#nftconn">Metaverse</a>
       </button>
-      <button class="btn_flex_btn round dark">
+      <button class="btn_flex_round slide dark">
         Discord Chat
       </button>
     </div>
@@ -55,37 +55,67 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.merch_card_div {
-  width: 80%;
-  margin: 0 auto;
+// Animate the size, outside
+.pulse:hover,
+.pulse:target,
+.pulse:focus {
+  animation: pulse 1s;
+  transform: translateY(-0.25em);
+  box-shadow: 0 0 0 2em rgba(#fff, 0);
 }
 
-.merch_card {
-  width: 610px;
-  // :hover {
-  //   cursor: pointer;
-  // }
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
 
-  .merch_card_img {
-    width: 610px;
-    border-radius: 2px;
-    // transition: transform 0.2s;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-box-sizing: padding-box;
-    box-sizing: padding-box;
+// And from the left
+.slide:hover,
+.slide:focus {
+  box-shadow: inset 12.9em 0 0 0 var(--hover);
+  transform: translateY(-0.25em);
+}
+$colors: (
+  pulse: #9774cc,
+  slide: #000000,
+);
+
+@each $button, $color in $colors {
+  .#{$button} {
+    --color: #{$color};
+    --hover: #{adjust-hue($color, 45deg)};
   }
-  .merch_card_img:hover {
-    transform: scale(1.3);
-    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+button {
+  transition: 0.25s;
+  &:hover,
+  &:focus {
+    border-color: var(--hover);
+    color: #fff;
   }
+}
+
+// Basic button styles
+
+.button_grp {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.mr-mb {
+  margin-right: 180px;
+}
+.merch_card_div {
+  width: 95%;
+  margin: 0 auto 0 60px;
 }
 .snip1295 {
   position: relative;
   overflow: hidden;
-  max-width: 615px;
-  width: 100%;
-  height: 100%;
+  // max-width: 815px;
+  // height: 900px;
   padding: 4px;
   box-shadow: none !important;
   -webkit-transform: translateZ(0);
@@ -94,13 +124,12 @@ export default {
   box-sizing: padding-box;
 }
 .snip1295 img {
-  width: 600px;
+  width: 750px;
   vertical-align: top;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 .snip1295 .border {
   position: absolute;
-  opacity: 0.45;
 }
 
 .snip1295 .border:after,
@@ -112,6 +141,7 @@ export default {
   display: block;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+  // border: none !important;
 }
 
 .snip1295 .border:before,
@@ -125,23 +155,20 @@ export default {
   height: 0px;
 }
 .snip1295 .border.one {
-  left: 0;
-  top: 0;
-  right: 12px;
-  bottom: 12px;
+  left: -2px;
+  top: -2px;
+  right: 55px;
+  bottom: 41px;
 }
 .snip1295 .border.one:before,
 .snip1295 .border.one div:before {
-  // left: 0;
-  // top: 0;
-  border: 2px solid #7047f5;
-  // border-top-color: #7047f5;
-  // border-left-color: #7047f5;
-  // border-style: solid;
-  // border-top-width: 4px;
-  // border-left-width: 4px;
-  // border-bottom-width: 0px;
-  // border-right-width: 0px;
+  left: 0;
+  top: 0;
+  border-top: 6px solid;
+  border-left: 6px solid;
+  border-width: 7px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #b48efa, #6e3dcf);
 }
 .snip1295 .border.one:after,
 .snip1295 .border.one div:after {
@@ -149,35 +176,47 @@ export default {
   right: 0;
 }
 .snip1295 .border.two {
-  left: 12px;
-  top: 12px;
-  right: 0;
-  bottom: 0;
+  left: 15px;
+  top: 15px;
+  right: 35px;
+  bottom: 41px;
 }
 .snip1295 .border.two:before,
 .snip1295 .border.two div:before {
   right: 0;
   top: 0;
-  border: 1px solid white;
+  border-top: 1px solid;
+  border-right: 2px solid;
+  border-width: 2px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #333338, white);
 }
 .snip1295 .border.two:after,
 .snip1295 .border.two div:after {
   bottom: 0;
   left: 0;
-  border-bottom: 2px solid rgb(179, 179, 179);
-  border-left: 1px solid rgb(179, 179, 179);
+  border-bottom: 1px solid;
+  border-left: 0.1px solid;
+  border-width: 1px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #333338, rgb(240, 239, 239));
 }
 
 .snip1295:hover .border:before,
-.snip1295.hover .border:before,
-.snip1295:hover .border:after,
-.snip1295.hover .border:after {
+.snip1295:hover .border:after {
   width: 100%;
 }
 .snip1295:hover .border div:before,
-.snip1295.hover .border div:before,
-.snip1295:hover .border div:after,
-.snip1295.hover .border div:after {
+.snip1295:hover .border div:after {
+  height: 100%;
+}
+
+.el-carousel__item--card.is-active .snip1295 .border:before,
+.el-carousel__item--card.is-active .snip1295 .border:after {
+  width: 100%;
+}
+.el-carousel__item--card.is-active .snip1295 .border div:before,
+.el-carousel__item--card.is-active .snip1295 .border div:after {
   height: 100%;
 }
 </style>

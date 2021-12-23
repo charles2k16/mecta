@@ -7,10 +7,12 @@
   src: url('../fonts/tittinium/TitilliumWeb-SemiBold.ttf');
 }
 
-* {
+*,
+::after,
+::before {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 h3 {
   font-weight: 510;
@@ -24,14 +26,9 @@ body {
   cursor: none;
 }
 
-*,
-::after,
-::before {
-  box-sizing: border-box;
-}
-
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 hr.sales_hr {
@@ -131,7 +128,6 @@ hr.sales_hr {
 
 .mr-10 {
   margin-right: 20px;
-  color: #5772ec;
 }
 
 .ml-10 {
@@ -158,6 +154,9 @@ hr.sales_hr {
 .mr-20 {
   margin-right: 30px;
 }
+.mr-90 {
+  margin-right: 90px;
+}
 .pt-50 {
   padding-top: 50px;
 }
@@ -173,6 +172,10 @@ hr.sales_hr {
 .py-100 {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+.py-50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .py-150 {
   padding-top: 150px;
@@ -266,8 +269,11 @@ hr.sales_hr {
   background-color: transparent;
 }
 .merch_img_div {
-  padding-bottom: 30px;
-  background-image: linear-gradient(160deg, #380f3d 39%, #24233d 65%);
+  /* padding-bottom: 30px; */
+  background-image: linear-gradient(160deg, #212121ff 39%, #24233d 65%);
+  /* position: relative;
+  width: 100px;
+  height: 100px; */
 }
 .roadmap_bg {
   background-color: #212121ff;
@@ -283,6 +289,7 @@ button {
   font-size: 15px;
   letter-spacing: 0.1em;
   border-color: none;
+  font-family: TitilliumBold;
 }
 .lead_text_inf {
   font-size: 1.1rem;
@@ -307,6 +314,26 @@ button {
   position: relative;
   z-index: 1;
 }
+.btn_flex_btn2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 24px;
+  text-decoration: none;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.3) 0px 2px 3px;
+  border-radius: 0px;
+  transition: text-shadow 0.4s ease-in-out 0s;
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  border: 2px solid white;
+  padding: 1px 25px;
+}
+.btn_flex_btn2::before,
+.btn_flex_btn2::after,
 .btn_flex_btn::before,
 .btn_flex_btn::after {
   content: '';
@@ -316,10 +343,13 @@ button {
   transition: all 0.25s ease-out;
   z-index: -1;
 }
+
+.btn_flex_btn2::before,
 .btn_flex_btn::before {
   top: -3px;
   left: -3px;
 }
+.btn_flex_btn2::after,
 .btn_flex_btn::after {
   bottom: -5px;
   right: -5px;
@@ -338,30 +368,65 @@ button {
   border-left: 4px solid rgb(10, 189, 198);
   z-index: -1;
 }
+.btn_flex_btn2:hover,
 .btn_flex_btn:hover {
   cursor: pointer;
   text-shadow: rgb(145 72 206) -1px 0px, rgb(76 232 190) 1px 0px;
 }
-.btn_flex_btn.round {
+.btn_flex_round {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  color: white;
+  /* text-shadow: rgba(0, 0, 0, 0.3) 0px 2px 3px; */
+  border: 0px;
+  /* transition: text-shadow 0.4s ease-in-out 0s; */
+  /* position: relative;
+  z-index: 1; */
   border-radius: 30px;
-  font-size: 13px;
+  font-size: 14px;
+  width: 180px;
 }
-.btn_flex_btn.rgb {
-  background: rgb(103, 189, 218);
+.btn_flex_round.rgb {
+  background: rgb(234, 0, 217);
   background: linear-gradient(
     90deg,
-    rgba(103, 189, 218, 1) 24%,
-    rgba(159, 84, 237, 0.788953081232493) 48%,
-    rgba(221, 85, 221, 1) 81%
+    rgba(234, 0, 217, 1) 0%,
+    rgba(10, 189, 198, 1) 100%
   );
 }
-.btn_flex_btn.dark {
-  background: rgb(68, 117, 182);
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+.btn_flex_round.dark {
+  background: rgb(67, 67, 67);
   background: linear-gradient(
     90deg,
-    rgba(68, 117, 182, 1) 24%,
-    rgba(7, 13, 22, 1) 81%
+    rgba(67, 67, 67, 1) 0%,
+    rgba(67, 67, 67, 0.861782212885154) 100%
   );
+}
+.btn_flex_btn2:hover::before {
+  top: 5px;
+  left: 5px;
+  border-bottom: 5px solid rgb(250, 250, 250);
+  border-right: 5px solid rgb(247, 247, 247);
+  z-index: -1;
+}
+.btn_flex_btn2:hover::after {
+  bottom: 5px;
+  right: 5px;
+  border-top: 4px solid rgb(255, 255, 255);
+  border-left: 4px solid rgb(252, 252, 252);
+  z-index: -1;
 }
 .whitepaper_btn::before,
 .whitepaper_btn::after {
@@ -404,6 +469,19 @@ button {
 .whitepaper_btn:hover {
   cursor: pointer;
   /* text-shadow: rgb(145 72 206) -1px 0px, rgb(76 232 190) 1px 0px; */
+}
+.nft_connectbg {
+  background: rgb(17, 17, 17);
+  clip-path: polygon(
+    0 0,
+    87% 0,
+    91% 4%,
+    100% 4%,
+    100% 100%,
+    9% 100%,
+    5% 96%,
+    0 96%
+  );
 }
 .merch_tab_bg {
   padding-bottom: 100px;

@@ -17,14 +17,22 @@
       </div>
     </div>
 
-    <div class="merch_img_div py-100">
-      <div class="wrap">
+    <div class="merch_img_div">
+      <ThreeTest />
+      <div
+        class="wrap"
+        style="z-index: 2; position:relative; margin-top:-1250px;"
+      >
         <MerchTabs />
+      </div>
 
+      <div class="wrap">
         <MerchSkins />
       </div>
     </div>
-
+    <div class="nft_connectbg py-50" style="margin-top: -300px;" id="nftconn">
+      <NftConnect />
+    </div>
     <div class="roadmap_bg">
       <RoadMap />
     </div>
@@ -42,6 +50,8 @@ import MerchCards from './sections/MerchCards.vue';
 import MerchTabs from './sections/MerchTabs.vue';
 import RoadMap from './sections/RoadMap.vue';
 import MerchSkins from './sections/MerchSkins.vue';
+import ThreeTest from '@/components/ThreeTest';
+import NftConnect from './sections/NftConnect.vue';
 
 export default {
   name: 'Home',
@@ -54,6 +64,8 @@ export default {
     MerchTabs,
     RoadMap,
     MerchSkins,
+    ThreeTest,
+    NftConnect,
   },
   data() {
     return {

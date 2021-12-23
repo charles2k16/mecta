@@ -21,7 +21,7 @@
       </el-col>
     </el-row>
 
-    <div class="mt-70 py-100">
+    <div class="mt-70">
       <el-row :gutter="50">
         <!-- <el-col v-for="skin in 8" :key="skin" :xs="12" :sm="12" :md="6">
           <div class="skins">

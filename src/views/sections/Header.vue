@@ -7,7 +7,7 @@
             <button class="btn_flex_btn purple">
               Register
             </button>
-            <button class="btn_flex_btn trans" @click="showVideo == true">
+            <button class="btn_flex_btn2 trans" @click="showVideo == true">
               <img
                 src="../../assets/images/white_play_02.png"
                 alt="play"
@@ -65,10 +65,5 @@ export default {
     rgba(144, 106, 196, 1) 27%,
     rgba(74, 135, 242, 1) 79%
   );
-}
-.btn_flex_btn.trans {
-  background: transparent;
-  border: 2px solid white;
-  padding: 1px 25px;
 }
 </style>
