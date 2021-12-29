@@ -74,9 +74,15 @@
                 </svg>
                 <div class="innfo_nft">
                   <img
-                    src="../../assets/images/tk_box1.png"
+                    src="../../assets/images/cm/F17.png"
                     alt=""
                     class="nft_im"
+                    id="nft_im"
+                  />
+                  <img
+                    src="../../assets/images/cm/BlindBox_Black2.gif"
+                    alt="gif"
+                    class="video_p"
                   />
                   <div class="center mt--10">
                     <span class="merch_tk_stars">
@@ -113,9 +119,15 @@
                 </svg>
                 <div class="innfo_nft">
                   <img
-                    src="../../assets/images/tk_box1.png"
+                    src="../../assets/images/cm/F17.png"
                     alt=""
                     class="nft_im"
+                    id="nft_im"
+                  />
+                  <img
+                    src="../../assets/images/cm/BlindBox_Black2.gif"
+                    alt="gif"
+                    class="video_p"
                   />
                   <div class="center mt--10">
                     <span class="merch_tk_stars">
@@ -149,9 +161,15 @@
                 </svg>
                 <div class="innfo_nft">
                   <img
-                    src="../../assets/images/tk_box1.png"
+                    src="../../assets/images/cm/F17.png"
                     alt=""
                     class="nft_im"
+                    id="nft_im"
+                  />
+                  <img
+                    src="../../assets/images/cm/BlindBox_Black2.gif"
+                    alt="gif"
+                    class="video_p"
                   />
                   <div class="center mt--10">
                     <span class="merch_tk_stars">
@@ -172,8 +190,6 @@
                   </div>
                 </div>
               </div>
-
-              <!-- /grid -->
             </section>
           </div>
         </el-tab-pane>
@@ -294,7 +310,7 @@ export default {
 
   .merch_tab_btn {
     width: 170px;
-    height: 48px;
+    height: 50px;
     letter-spacing: 0.1em;
     font-size: 15px;
     word-spacing: normal;
@@ -309,7 +325,7 @@ export default {
     span {
       display: block;
       color: grey;
-      margin-top: -3px;
+      margin-top: 2px;
     }
   }
 }
