@@ -16,10 +16,10 @@
 
     <div class="mt-70 flex-center button_grp">
       <button class="btn_flex_round rgb pulse mr-mb">
-        <a href="#nftconn">Metaverse</a>
+        <a href="https://www.google.com" target="_blank">Metaverse</a>
       </button>
       <button class="btn_flex_round slide dark">
-        Discord Chat
+        <a href="https://www.google.com" target="_blank"> Discord Chat</a>
       </button>
     </div>
   </div>
@@ -55,13 +55,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// Animate the size, outside
-.pulse:hover,
-.pulse:target,
-.pulse:focus {
+.pulse:hover {
   animation: pulse 1s;
   transform: translateY(-0.25em);
   box-shadow: 0 0 0 2em rgba(#fff, 0);
+}
+.slide:hover {
+  box-shadow: inset 12.9em 0 0 0 var(--hover);
+  transform: translateY(-0.25em);
+}
+.pulse:active {
+  transform: translateX(-0.25em);
+  box-shadow: 0 0 0 6em rgba(rgb(173, 54, 54), 0);
+}
+.slide:active {
+  animation: pulse 1s;
+  transform: translateX(-0.25em);
+  box-shadow: 0 0 0 6em rgba(rgb(173, 54, 54), 0);
 }
 
 @keyframes pulse {
@@ -70,12 +80,6 @@ export default {
   }
 }
 
-// And from the left
-.slide:hover,
-.slide:focus {
-  box-shadow: inset 12.9em 0 0 0 var(--hover);
-  transform: translateY(-0.25em);
-}
 $colors: (
   pulse: #9774cc,
   slide: #000000,
@@ -96,9 +100,6 @@ button {
     color: #fff;
   }
 }
-
-// Basic button styles
-
 .button_grp {
   display: flex;
   justify-content: center;

@@ -21,7 +21,7 @@ export default {
 <style scoped>
 #demo-three {
   width: 100%;
-  height: 1500px;
+  height: 2500px;
   /* position: absolute; */
   top: 0;
   left: 0;

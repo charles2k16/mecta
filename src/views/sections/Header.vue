@@ -7,7 +7,7 @@
             <button class="btn_flex_btn purple">
               Register
             </button>
-            <button class="btn_flex_btn2 trans" @click="showVideo == true">
+            <button class="btn_flex_btn2 trans" @click="showVideo = true">
               <img
                 src="../../assets/images/white_play_02.png"
                 alt="play"
@@ -21,7 +21,18 @@
       </vs-col>
     </vs-row>
 
-    <el-dialog title="" :visible.sync="showVideo" fullscreen center>
+    <el-dialog :visible.sync="showVideo" fullscreen>
+      <div>
+        <iframe
+          width="100%"
+          style="height: 100vh;"
+          src="https://www.youtube.com/embed/IrEqexa0yOA?autoplay=1&vq=1440&loop=1&playlist=IrEqexa0yOA"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
     </el-dialog>
   </div>
 </template>

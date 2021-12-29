@@ -29,7 +29,7 @@ export default {
     this.onMouseMove();
   },
   unmounted() {
-    document.removeEventListener('mousemove', this.onMouseMove);
+    document.removeEventListener('mousemove', this.onMouseMove());
   },
   methods: {
     onMouseMove() {
