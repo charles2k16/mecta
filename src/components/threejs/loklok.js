@@ -14,33 +14,36 @@ export function initThree(domEl, domLayer) {
     scene.background = v;
   });
 
+  let divLayer = document.querySelector(domLayer);
+  let divRect = divLayer.getBoundingClientRect();
   var camera = new THREE.PerspectiveCamera(
     75,
-    window.innerWidth / window.innerHeight,
+    window.innerWidth / divRect.height,
     0.1,
     1000
   );
 
   var renderer = new THREE.WebGLRenderer({ alpha: true });
   renderer.setClearAlpha(0.0);
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.setPixelRatio(window.devicePixelRatio || 1.0);
+  renderer.setSize(window.innerWidth, divRect.height);
+  // renderer.setPixelRatio(window.devicePixelRatio || 1.0);
+  renderer.setPixelRatio(1.0);
   document.querySelector(domEl).appendChild(renderer.domElement);
 
   camera.position.z = 30;
 
-  let dpi = window.devicePixelRatio;
+  let dpi = 1.0;
   // var effectFXAA = new THREE.ShaderPass( THREE.FXAAShader );
   // effectFXAA.uniforms[ 'resolution' ].value.set( 1 / window.innerWidth, 1 / window.innerHeight );
   var bloomPass = new UnrealBloomPass(
-    new THREE.Vector2(window.innerWidth * dpi, window.innerHeight * dpi),
+    new THREE.Vector2(window.innerWidth * dpi, divRect.height * dpi),
     1.5,
     0.4,
     0.85
   ); //1.0, 9, 0.5, 512);
   bloomPass.renderToScreen = true;
   var composer = new EffectComposer(renderer);
-  composer.setSize(window.innerWidth * dpi, window.innerHeight * dpi);
+  composer.setSize(window.innerWidth * dpi, divRect.height * dpi);
   var renderScene = new RenderPass(scene, camera);
   composer.addPass(renderScene);
   // composer.addPass( effectFXAA );
@@ -60,9 +63,13 @@ export function initThree(domEl, domLayer) {
   window.addEventListener(
     'resize',
     () => {
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      renderer.setPixelRatio(window.devicePixelRatio || 1.0);
-      camera.aspect = window.innerWidth / window.innerHeight;
+      let divLayer = document.querySelector(domLayer);
+      let divRect = divLayer.getBoundingClientRect();
+
+      renderer.setSize(window.innerWidth, divRect.height);
+      renderer.setPixelRatio(1.0);
+      // renderer.setPixelRatio(window.devicePixelRatio || 1.0);
+      camera.aspect = window.innerWidth / divRect.height;
       camera.updateProjectionMatrix();
     },
     false
@@ -97,24 +104,16 @@ export function initThree(domEl, domLayer) {
   let displayV = `uniform sampler2D posTex;
 uniform float pointSize;
 uniform sampler2D indexerTexture;
-
 varying vec2 vUv;
-
 uniform float time;
-
 void main() {
     vec4 info = texture2D(indexerTexture, uv);
-
     vec4 pos = texture2D(posTex, uv);
-
     vec4 mvPosition = modelViewMatrix * vec4(pos.xyz, 1.0);
     vec4 outputPos = projectionMatrix * mvPosition;
-
     // outputPos.y = outputPos.y + sin(outputPos.y + time * 50.0) * sin(outputPos.y + time * 50.0);
     // outputPos.x = outputPos.x + cos(outputPos.x + time * 50.0) * sin(outputPos.x + time * 50.0);
-
     vUv = uv;
-
     gl_Position = outputPos;
     gl_PointSize = pointSize;
 }
@@ -122,44 +121,31 @@ void main() {
 
   let displayF = `
 // uniform sampler2D posTex;
-
 uniform sampler2D picture;
 uniform float opacity;
-
 uniform float time;
-
 varying vec2 vUv;
-
 void main() {
     // vec4 posColor = texture2D(posTex, vUv);
-
     vec4 imgColor = texture2D(picture, vUv);
-
     vec4 outputColor = imgColor;
     outputColor.a = outputColor.a * opacity;
-
     // outputColor.xyz *= posColor.xyz;
-    
     outputColor.rgb = mix(outputColor.rgb + 0.2, vec3(1.0), smoothstep(0.0, 1.0, abs(sin(time * 5.0))));
-
     gl_FragColor = outputColor;
 }
 `;
   var defaultPingPong = `//
-//THANK YOU for your support <3 
+//THANK YOU for your support <3
 //
-
 #include <common>
 precision highp sampler2D;
-
 //
 //  Classic Perlin 3D Noise
 //  by Stefan Gustavson
 //
-
 vec4 permute(vec4 x){return mod(((x*34.0)+1.0)*x, 289.0);}
 vec2 fade(vec2 t) {return t*t*t*(t*(t*6.0-15.0)+10.0);}
-
 float cnoise(vec2 P){
   vec4 Pi = floor(P.xyxy) + vec4(0.0, 0.0, 1.0, 1.0);
   vec4 Pf = fract(P.xyxy) - vec4(0.0, 0.0, 1.0, 1.0);
@@ -192,13 +178,11 @@ float cnoise(vec2 P){
   float n_xy = mix(n_x.x, n_x.y, fade_xy.y);
   return 2.3 * n_xy;
 }
-
 #define M_PI 3.1415926535897932384626433832795
 float atan2(in float y, in float x) {
   bool xgty = (abs(x) > abs(y));
   return mix(M_PI/2.0 - atan(x,y), atan(y,x), float(xgty));
 }
-
 vec3 ballify (vec3 pos, float r) {
   float az = atan2(pos.y, pos.x);
   float el = atan2(pos.z, sqrt(pos.x * pos.x + pos.y * pos.y));
@@ -208,7 +192,6 @@ vec3 ballify (vec3 pos, float r) {
     r * sin(el)
   );
 }
-
 vec3 fromBall(float r, float az, float el) {
   return vec3(
     r * cos(el) * cos(az),
@@ -216,12 +199,10 @@ vec3 fromBall(float r, float az, float el) {
     r * sin(el)
   );
 }
-
 void toBall(vec3 pos, out float az, out float el) {
   az = atan2(pos.y, pos.x);
   el = atan2(pos.z, sqrt(pos.x * pos.x + pos.y * pos.y));
 }
-
 mat3 rotateZ(float rad) {
     float c = cos(rad);
     float s = sin(rad);
@@ -231,7 +212,6 @@ mat3 rotateZ(float rad) {
         0.0, 0.0, 1.0
     );
 }
-
 mat3 rotateY(float rad) {
     float c = cos(rad);
     float s = sin(rad);
@@ -241,7 +221,6 @@ mat3 rotateY(float rad) {
         s, 0.0, c
     );
 }
-
 mat3 rotateX(float rad) {
     float c = cos(rad);
     float s = sin(rad);
@@ -251,7 +230,6 @@ mat3 rotateX(float rad) {
         0.0, -s, c
     );
 }
-
 // float Gravity(float z) {
 //   float G, eZ;
 //   const float ER = 6378150.0;
@@ -260,7 +238,6 @@ mat3 rotateX(float rad) {
 //   G = 9.81 * ER2 / (eZ * eZ);
 //   return G;
 // }
-
 float constrain(float val, float min, float max) {
     if (val < min) {
         return min;
@@ -270,66 +247,47 @@ float constrain(float val, float min, float max) {
         return val;
     }
 }
-
 vec3 getDiff (vec3 lastPos, vec3 mouse) {
   vec3 diff = lastPos.xyz - mouse;
   float distance = constrain(length(diff), 1.0, 5.0);
   float strength = 1.0 / (distance * distance);
-
   diff = normalize(diff);
   diff = diff * strength * -1.0;
-
   return diff;
 }
-
 vec3 resDiff (in vec3 lastPos, in vec3 mouse) {
   vec3 diff = lastPos - mouse;
   diff = normalize(diff) * -1.0;
   return diff;
 }
-
 uniform float time;
 uniform sampler2D lastTexture;
 uniform sampler2D indexerTexture;
-
 uniform vec3 mouse;
-
 void main () {
-
   // @v@
   // @.@
-
   vec2 uv = gl_FragCoord.xy / resolution.xy;
-
   vec4 indexer = texture2D(indexerTexture, uv);
   vec4 lastPos = texture2D(lastTexture, uv);
-
   float i = indexer.x;
   float e = indexer.y;
   float u = indexer.z;
-
   vec3 nextPos = vec3(lastPos);
-
   float x = 0.5 - rand(uv + .1);
   float y = 0.5 - rand(uv + .2);
   float z = 0.5 - rand(uv + .3);
-  
   vec3 ball1 = ballify(vec3(x, y, z), 1.0);
-  
   nextPos = ballify(ball1 + nextPos, 17.0);
   nextPos.z += tan(nextPos.z + time * 20.0);
   nextPos.z += sin(nextPos.y + time * 20.0);
   nextPos.z += sin(nextPos.x + time * 20.0);
-  
   nextPos.z *= tan(nextPos.y + time * 20.0);
   nextPos.z *= tan(nextPos.x + time * 20.0);
-  
   nextPos += getDiff(nextPos, mouse * 17.0) * 50.0;
-    
   // remix code end here//
   gl_FragColor = vec4(nextPos, 1.0);
 }
-
 `;
 
   var loadPingPong = () => {
@@ -374,10 +332,9 @@ void main () {
     window.addEventListener(
       'mousemove',
       evt => {
-        let x = (evt.pageX - window.innerWidth * 0.5) / window.innerWidth;
-        let y = (evt.pageY - window.innerHeight * 0.5) / window.innerHeight;
+        let x = (evt?.clientX / window.innerWidth) * 2 - 1;
+        let y = -(evt?.clientY / window.innerHeight) * 2 + 1;
         let z = 0.0;
-        y *= -1;
 
         pingMat.uniforms.mouse.value.copy({ x, y, z });
         pongMat.uniforms.mouse.value.copy({ x, y, z });
@@ -415,14 +372,18 @@ void main () {
       'touchmove',
       evt => {
         evt.preventDefault();
-        let x =
-          (evt.touches[0].pageX - window.innerWidth * 0.5) / window.innerWidth;
-        let y =
-          (evt.touches[0].pageY - window.innerHeight * 0.5) /
-          window.innerHeight;
+        // let x =
+        //   (evt.touches[0].clientX - window.innerWidth * 0.5) /
+        //   window.innerWidth;
+        // let y =
+        //   (evt.touches[0].clientY - window.innerHeight * 0.5) /
+        //   window.innerHeight;
+
+        let x = (evt?.touches[0]?.clientX / window.innerWidth) * 2 - 1;
+        let y = -(evt?.touches[0]?.clientY / window.innerHeight) * 2 + 1;
         let z = 0.0;
 
-        y *= -1;
+        // y *= -1;
 
         pingMat.uniforms.mouse.value.copy({ x, y, z });
         pongMat.uniforms.mouse.value.copy({ x, y, z });

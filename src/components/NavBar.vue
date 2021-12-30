@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="header_nav">
+    <el-header>
       <div class="nav flex-justify-between-center">
         <img
           src="../assets/images/mecta_logo_white.png"
@@ -37,7 +37,7 @@
           </button>
         </div>
       </div>
-    </div>
+    </el-header>
   </div>
 </template>
 
@@ -66,8 +66,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.header_nav {
+.el-header {
   background: #110e23ff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 90px !important;
 
   .nav {
     width: 940px;
@@ -134,7 +140,6 @@ export default {
   font-size: 15px;
   padding: 1px 20px;
   position: relative;
-  z-index: 1;
   border-top: 1px solid;
   border-left: 1px solid;
   border-width: 2px;

@@ -88,28 +88,22 @@
         </el-col>
         <el-col :md="12">
           <div class="flex-center">
-            <img
-              src="../../assets/images/cm/cm_particle_sphere.jpg"
-              alt="sphere"
-              height="300px"
-              style="margin-left:20px;"
-            />
+            <Sphere />
           </div>
         </el-col>
       </el-row>
     </div>
-    <!-- <ThreeTest /> -->
   </div>
 </template>
 
 <script>
-// import ThreeTest from '@/components/ThreeTest';
+import Sphere from '@/components/Sphere';
 
 export default {
   name: 'WhyUs',
-  // components: {
-  //   ThreeTest,
-  // },
+  components: {
+    Sphere,
+  },
 };
 </script>
 
