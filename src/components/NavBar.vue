@@ -32,7 +32,9 @@
         </div>
 
         <div>
-          <button class="whitepaper_btn">Read Whitepaper</button>
+          <button class="whitepaper_btn" @click.prevent="openPdf">
+            Read Whitepaper
+          </button>
         </div>
       </div>
     </div>
@@ -54,6 +56,11 @@ export default {
         : this.$route.name == 'Presale'
         ? 'Presale'
         : 'Foundary';
+  },
+  methods: {
+    openPdf() {
+      console.log('open pdf');
+    },
   },
 };
 </script>
@@ -124,7 +131,7 @@ export default {
   );
   text-shadow: rgba(0, 0, 0, 0.3) 0px 2px 3px;
   color: #d9d9d9;
-  font-size: 14px;
+  font-size: 15px;
   padding: 1px 20px;
   position: relative;
   z-index: 1;

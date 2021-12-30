@@ -713,10 +713,10 @@ hr.sales_hr {
   right: -2px;
 }
 .short_rule {
-  width: 15px;
+  width: 14px;
   height: 1px;
   background-color: #494949;
   transform: rotate(215deg);
-  margin-left: 148px;
+  margin-left: 122px;
   margin-bottom: -5px;
 }

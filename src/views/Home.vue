@@ -112,9 +112,9 @@
         <MerchCards />
       </div>
     </div>
-
+    <!-- 2400 -->
     <div class="merch_img_div">
-      <ThreeTest />
+      <ThreeEclipse />
       <div
         class="wrap"
         style="z-index: 2; position:relative; margin-top:-2400px;"
@@ -144,7 +144,7 @@ import MerchCards from './sections/MerchCards.vue';
 import MerchTabs from './sections/MerchTabs.vue';
 import RoadMap from './sections/RoadMap.vue';
 import MerchSkins from './sections/MerchSkins.vue';
-import ThreeTest from '@/components/ThreeTest';
+import ThreeEclipse from '@/components/ThreeEclipse';
 import NftConnect from './sections/NftConnect.vue';
 
 export default {
@@ -158,7 +158,7 @@ export default {
     MerchTabs,
     RoadMap,
     MerchSkins,
-    ThreeTest,
+    ThreeEclipse,
     NftConnect,
   },
   data() {
@@ -173,11 +173,15 @@ export default {
   methods: {
     getAudioElement() {
       const audio = new Audio(
-        'https://ia800905.us.archive.org/19/items/FREE_background_music_dhalius/backsound.mp3'
+        'https://ia800905.us.archive.org/19/items/FREE_background_music_dhalius/FaceBangSonic.mp3'
       );
-      console.dir(audio);
+
+      audio.volume = 0.2;
 
       const playBtn = document.querySelector('.toggle-play');
+      const nextBtn = document.querySelector('.next');
+      // const prevBtn = document.querySelector('.prev');
+
       playBtn.addEventListener(
         'click',
         () => {
@@ -190,6 +194,18 @@ export default {
             playBtn.classList.add('play');
             audio.pause();
           }
+        },
+        false
+      );
+
+      nextBtn.addEventListener(
+        'click',
+        () => {
+          audio.pause();
+          audio.src =
+            'https://ia800905.us.archive.org/19/items/FREE_background_music_dhalius/backsound.mp3';
+          audio.load();
+          audio.play();
         },
         false
       );

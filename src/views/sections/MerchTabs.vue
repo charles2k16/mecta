@@ -10,8 +10,8 @@
       <el-tabs type="card" class="el-tab_div">
         <el-tab-pane>
           <span slot="label"
-            >WEAPON <br />
-            <span class="tab_line"></span>
+            >MECH
+            <!-- <div class="tab_line"></div> -->
           </span>
           <div class="hr_line"></div>
           <div class="merch_tab_bg">
@@ -195,10 +195,11 @@
         </el-tab-pane>
         <el-tab-pane>
           <span slot="label">TOKEN PRE-SALE</span>
-          TOKEN PRE-SALE</el-tab-pane
-        >
+          TOKEN PRE-SALE
+        </el-tab-pane>
         <el-tab-pane>
-          <span slot="label">AUCTIONNS</span>
+          <span slot="label">AUCTIONS</span>
+          <div class="hr_line"></div>
           AUCTIONS
         </el-tab-pane>
       </el-tabs>
@@ -214,34 +215,14 @@
 <script>
 export default {
   name: 'MerchTabs',
-  // mounted() {
-  //   this.mouseOverAction();
-  // },
-  // methods: {
-  //   mouseOverAction() {
-  //     const img = document.querySelector('.box .innfo_nft .nft_im');
-  //     const vid = document.querySelector('.box .innfo_nft .video_p');
-
-  //     img.addEventListener('mouseover', () => {
-  //       img.classList.add('none');
-  //       vid.classList.remove('none');
-
-  //       vid.classList.add('show');
-
-  //       console.log('error here');
-  //     });
-
-  //     console.log(img);
-  //   },
-  // },
 };
 </script>
 
 <style lang="scss" scoped>
 .corner {
-  width: 49px;
+  width: 50px;
   float: right;
-  margin-top: 51px;
+  margin-top: 47px;
   margin-left: -50px;
 }
 .corner2 {
@@ -254,14 +235,16 @@ export default {
 .hr_line {
   height: 1px;
   background: #494949;
-  width: 300px;
+  width: 305px;
   float: right;
   margin-top: -50px;
   margin-right: -14px;
 }
 .gen {
   color: grey;
+  padding-bottom: 10px;
   padding-top: 10px;
+  font-size: 15px;
 }
 .merch_nft {
   .innfo_nft {

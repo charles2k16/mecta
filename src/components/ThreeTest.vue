@@ -14,8 +14,6 @@ export default {
   mounted() {
     initThree('#demo-three');
   },
-  beforeDestroy() {},
-  methods: {},
 };
 </script>
 <style scoped>
