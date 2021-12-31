@@ -3,6 +3,7 @@ import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
 import { GPUComputationRenderer } from 'three/examples/jsm/misc/GPUComputationRenderer.js';
+import { Color } from 'three';
 
 export function initThree(domEl, domLayer) {
   var scene = new THREE.Scene();
@@ -89,7 +90,7 @@ export function initThree(domEl, domLayer) {
   }
 
   var ticker = 0;
-  let SIZE = 192;
+  let SIZE = 400;
 
   var gpuCompute = new GPUComputationRenderer(SIZE, SIZE, renderer);
 
@@ -120,18 +121,21 @@ void main() {
 `;
 
   let displayF = `
-// uniform sampler2D posTex;
+uniform sampler2D posTex;
 uniform sampler2D picture;
 uniform float opacity;
+uniform vec3 colorA;
+uniform vec3 colorB;
 uniform float time;
 varying vec2 vUv;
 void main() {
-    // vec4 posColor = texture2D(posTex, vUv);
+    vec4 posColor = texture2D(posTex, vUv);
     vec4 imgColor = texture2D(picture, vUv);
     vec4 outputColor = imgColor;
     outputColor.a = outputColor.a * opacity;
     // outputColor.xyz *= posColor.xyz;
     outputColor.rgb = mix(outputColor.rgb + 0.2, vec3(1.0), smoothstep(0.0, 1.0, abs(sin(time * 5.0))));
+    outputColor.rgb = mix(colorA, colorB, length(posColor.xyz) / 30.0);
     gl_FragColor = outputColor;
 }
 `;
@@ -286,22 +290,22 @@ void main () {
   nextPos.z *= tan(nextPos.x + time * 20.0);
   nextPos += getDiff(nextPos, mouse * 17.0) * 50.0;
   // remix code end here//
-  gl_FragColor = vec4(nextPos, 1.0);
+  gl_FragColor = vec4(nextPos * 0.75, 1.0);
 }
 `;
 
-  var loadPingPong = () => {
-    let sKey = 'ls.fun.pingpong';
-    var ls = window.localStorage;
-    let lsm = ls.getItem(sKey);
-    if (!lsm) {
-      ls.setItem(sKey, defaultPingPong);
-    }
-    lsm = ls.getItem(sKey);
-    return lsm;
-  };
+  // var loadPingPong = () => {
+  //   let sKey = "ls.fun.pingpong";
+  //   var ls = window.localStorage;
+  //   let lsm = ls.getItem(sKey);
+  //   if (!lsm) {
+  //     ls.setItem(sKey, defaultPingPong);
+  //   }
+  //   lsm = ls.getItem(sKey);
+  //   return lsm;
+  // };
 
-  let pingPongShader = loadPingPong();
+  let pingPongShader = defaultPingPong;
 
   let mouseV3 = new THREE.Vector3(0.0, 0.0, 0.0);
 
@@ -425,6 +429,8 @@ void main () {
       opacity: { value: 0.5 },
       posTex: { value: null },
 
+      colorA: { value: new Color('#4e75e3') },
+      colorB: { value: new Color('#6adbe8') },
       indexerTexture: { value: indexerTexture },
 
       picture: {
@@ -444,7 +450,6 @@ void main () {
   points.matrixAutoUpdate = false;
   points.updateMatrix();
   points.frustumCulled = false;
-
   scene.add(points);
 
   let rAFID = 0;
