@@ -236,6 +236,14 @@ hr.sales_hr {
 .white {
   color: rgb(245, 245, 245);
 }
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.nav-bg {
+  background: #110e23ff;
+}
 .d-block {
   display: block;
 }

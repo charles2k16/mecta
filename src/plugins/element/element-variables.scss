@@ -77,8 +77,11 @@ clip-path: polygon(20% 0%, 80% 0%, 91% 0, 100% 18%, 100% 100%, 0 100%, 0 35%, 0 
 }
 .el-dialog {
   background: #0c0c0c;
-      cursor: pointer;
+    cursor: pointer;
 }
 .el-dialog__title {
   color: #fdfbfb;
+}
+.el-dialog__headerbtn .el-dialog__close {
+  font-size: 40px;
 }

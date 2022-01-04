@@ -26,6 +26,21 @@
 export default {
   name: 'App',
   mounted() {
+    window.onscroll = function() {
+      scrollFix();
+    };
+    var header = document.getElementById('navbar');
+    var sticky = header.offsetTop;
+
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function scrollFix() {
+      console.log('scrolled');
+      if (window.pageYOffset > sticky) {
+        header.classList.add('sticky');
+      } else {
+        header.classList.remove('sticky');
+      }
+    }
     this.onMouseMove();
   },
   unmounted() {

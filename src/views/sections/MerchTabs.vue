@@ -8,7 +8,7 @@
       />
       <div class="short_rule"></div>
       <el-tabs type="card" class="el-tab_div">
-        <el-tab-pane>
+        <el-tab-pane name="mech">
           <span slot="label"
             >MECH
             <!-- <div class="tab_line"></div> -->
@@ -193,14 +193,18 @@
             </section>
           </div>
         </el-tab-pane>
-        <el-tab-pane>
-          <span slot="label">TOKEN PRE-SALE</span>
-          TOKEN PRE-SALE
+        <el-tab-pane name="token" disabled>
+          <div slot="label">
+            <span class="soon">Coming soon</span>
+            <span class="tab_label"> TOKEN PRE-SALE</span>
+          </div>
         </el-tab-pane>
-        <el-tab-pane>
-          <span slot="label">AUCTIONS</span>
+        <el-tab-pane name="auctions" disabled>
+          <div slot="label">
+            <span class="soon">Coming soon</span>
+            <span class="tab_label"> AUCTIONS</span>
+          </div>
           <div class="hr_line"></div>
-          AUCTIONS
         </el-tab-pane>
       </el-tabs>
       <img
@@ -215,14 +219,34 @@
 <script>
 export default {
   name: 'MerchTabs',
+  methods: {
+    chageTabs(tab) {
+      console.log(tab.name);
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+.soon {
+  background: #434343ff;
+  margin-left: -25px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 13px;
+  padding: 1px 9px;
+  color: #999999;
+}
+.tab_label {
+  margin-top: -33px;
+  display: block;
+  color: rgb(146, 143, 143);
+  font-size: 15px;
+}
 .corner {
-  width: 50px;
+  width: 48px;
   float: right;
-  margin-top: 47px;
+  margin-top: 63px;
   margin-left: -50px;
 }
 .corner2 {

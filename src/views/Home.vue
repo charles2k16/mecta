@@ -172,15 +172,18 @@ export default {
   },
   methods: {
     getAudioElement() {
-      const audio = new Audio(
-        'https://ia800905.us.archive.org/19/items/FREE_background_music_dhalius/FaceBangSonic.mp3'
-      );
+      const audioFiles = [
+        'https://ia800905.us.archive.org/19/items/FREE_background_music_dhalius/FaceBangSonic.mp3',
+        'https://ia800905.us.archive.org/19/items/FREE_background_music_dhalius/backsound.mp3',
+      ];
+
+      const audio = new Audio(audioFiles[0]);
 
       audio.volume = 0.2;
 
       const playBtn = document.querySelector('.toggle-play');
       const nextBtn = document.querySelector('.next');
-      // const prevBtn = document.querySelector('.prev');
+      const prevBtn = document.querySelector('.prev');
 
       playBtn.addEventListener(
         'click',
@@ -202,8 +205,18 @@ export default {
         'click',
         () => {
           audio.pause();
-          audio.src =
-            'https://ia800905.us.archive.org/19/items/FREE_background_music_dhalius/backsound.mp3';
+          audio.src = audioFiles[1];
+          audio.load();
+          audio.play();
+        },
+        false
+      );
+
+      prevBtn.addEventListener(
+        'click',
+        () => {
+          audio.pause();
+          audio.src = audioFiles[0];
           audio.load();
           audio.play();
         },

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-header>
+    <div class="nav_header" id="navbar">
       <div class="nav flex-justify-between-center">
         <img
           src="../assets/images/mecta_logo_white.png"
@@ -32,12 +32,14 @@
         </div>
 
         <div>
-          <button class="whitepaper_btn" @click.prevent="openPdf">
-            Read Whitepaper
+          <button class="whitepaper_btn">
+            <a href="/mECH_Token_whitepaper_V.1_ER.pdf" target="_blank"
+              >Read Whitepaper</a
+            >
           </button>
         </div>
       </div>
-    </el-header>
+    </div>
   </div>
 </template>
 
@@ -58,22 +60,20 @@ export default {
         : 'Foundary';
   },
   methods: {
-    openPdf() {
-      console.log('open pdf');
-    },
+    openPdf() {},
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.el-header {
+.nav_header {
   background: #110e23ff;
-  position: -webkit-sticky;
-  position: sticky;
+  // position: -webkit-sticky;
+  // position: sticky;
   top: 0;
   z-index: 1000;
-  width: 100%;
-  height: 90px !important;
+  // width: 100%;
+  height: 90px;
 
   .nav {
     width: 940px;
