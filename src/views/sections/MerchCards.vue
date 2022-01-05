@@ -115,8 +115,6 @@ button {
 .snip1295 {
   position: relative;
   overflow: hidden;
-  // max-width: 815px;
-  // height: 900px;
   padding: 4px;
   box-shadow: none !important;
   -webkit-transform: translateZ(0);
@@ -125,9 +123,8 @@ button {
   box-sizing: padding-box;
 }
 .snip1295 img {
-  // max-width: 750px;
-  width: 95%;
-  height: 100%;
+  width: 94%;
+  height: 90%;
   vertical-align: top;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
@@ -160,8 +157,8 @@ button {
 .snip1295 .border.one {
   left: -2px;
   top: -2px;
-  right: 55px;
-  bottom: 41px;
+  right: 90px;
+  bottom: 80px;
 }
 .snip1295 .border.one:before,
 .snip1295 .border.one div:before {
@@ -175,34 +172,32 @@ button {
 }
 .snip1295 .border.one:after,
 .snip1295 .border.one div:after {
-  bottom: 0;
+  bottom: 10px;
   right: 0;
 }
 .snip1295 .border.two {
-  left: 15px;
-  top: 15px;
+  left: 60px;
+  top: 40px;
   right: 35px;
   bottom: 41px;
 }
 .snip1295 .border.two:before,
 .snip1295 .border.two div:before {
-  right: 0;
-  top: 0;
-  border-top: 1px solid;
-  border-right: 2px solid;
-  border-width: 2px;
+  right: 15px;
+  top: 10px;
+  border-right: 5px solid;
+  border-width: 5px;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to right, #333338, white);
+  border-image-source: linear-gradient(to right, #b48efa, #6e3dcf);
 }
 .snip1295 .border.two:after,
 .snip1295 .border.two div:after {
-  bottom: 0;
-  left: 0;
-  border-bottom: 1px solid;
-  border-left: 0.1px solid;
-  border-width: 1px;
+  bottom: -5px;
+  left: -15px;
+  border-bottom: 5px solid;
+  border-width: 5px;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to right, #333338, rgb(240, 239, 239));
+  border-image-source: linear-gradient(to right, #b48efa, #6e3dcf);
 }
 
 .snip1295:hover .border:before,

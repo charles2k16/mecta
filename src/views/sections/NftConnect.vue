@@ -2,7 +2,7 @@
   <div class="conn_bg">
     <div>
       <div class="connect_div">
-        <el-dropdown>
+        <el-dropdown trigger="click">
           <span
             ><div class="conn_btn">
               <span>CONNECT TO WALLET</span>
@@ -50,6 +50,7 @@ export default {
     rgba(10, 189, 198, 1) 100%
   );
   height: 50px;
+  width: 215px;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -60,6 +60,7 @@ clip-path: polygon(20% 0%, 80% 0%, 91% 0, 100% 18%, 100% 100%, 0 100%, 0 35%, 0 
 }
 .el-carousel__container {
   height: 390px;
+  aspect-ratio: inherit;
 }
 .el-carousel__item--card.is-in-stage {
   opacity: 0.8;
@@ -84,4 +85,5 @@ clip-path: polygon(20% 0%, 80% 0%, 91% 0, 100% 18%, 100% 100%, 0 100%, 0 35%, 0 
 }
 .el-dialog__headerbtn .el-dialog__close {
   font-size: 40px;
+  color: red;
 }
