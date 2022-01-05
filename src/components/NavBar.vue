@@ -5,11 +5,11 @@
         <img
           src="../assets/images/mecta_logo_white.png"
           alt="logo"
-          height="25px"
           style="margin-top:-5px;"
+          class="logo"
         />
 
-        <div class="flex-justify-between-center h_staking">
+        <div class="flex-justify-between-center h_staking hidden-sm-and-down">
           <h3>Staking</h3>
           <span class="soon">Coming soon</span>
           <ul>
@@ -66,6 +66,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.logo {
+  height: 24px;
+}
 .nav_header {
   background: #110e23ff;
   // position: -webkit-sticky;
@@ -76,7 +79,8 @@ export default {
   height: 90px;
 
   .nav {
-    width: 940px;
+    max-width: 940px;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
     height: 90px;

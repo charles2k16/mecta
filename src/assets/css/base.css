@@ -273,7 +273,8 @@ hr.sales_hr {
   width: 100%;
 }
 .wrap {
-  width: 940px;
+  max-width: 940px;
+  width: 100%;
   height: auto;
   margin-right: auto;
   margin-left: auto;
@@ -726,5 +727,5 @@ hr.sales_hr {
   background-color: #494949;
   transform: rotate(215deg);
   margin-left: 122px;
-  margin-bottom: -5px;
+  margin-bottom: -22px;
 }

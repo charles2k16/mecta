@@ -1,9 +1,6 @@
-import Vue from "vue";
+import Vue from 'vue';
 import ElementUI from 'element-ui';
-import "./element-variables.scss";
+import 'element-ui/lib/theme-chalk/display.css';
+import './element-variables.scss';
 
 Vue.use(ElementUI);
-
-
-
-

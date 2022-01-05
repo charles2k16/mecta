@@ -19,7 +19,7 @@ export default {
 };
 </script>
 <style scoped>
-.webgl-bg {
+.layers {
   top: 0px;
   left: 0px;
   width: 100%;

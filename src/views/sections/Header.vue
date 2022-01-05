@@ -1,7 +1,7 @@
 <template>
   <div>
-    <vs-row>
-      <vs-col :w="12" :xs="12" :sm="12">
+    <el-row>
+      <el-col :md="24" :xs="24" :sm="24">
         <div>
           <div class="hero_btn_group">
             <button class="btn_flex_btn purple">
@@ -18,28 +18,23 @@
             </button>
           </div>
         </div>
-      </vs-col>
-    </vs-row>
+      </el-col>
+    </el-row>
 
-    <el-dialog :visible.sync="showVideo" fullscreen>
-      <div>
-        <iframe
-          width="100%"
-          style="height: 100vh;"
-          src="https://www.youtube.com/embed/IrEqexa0yOA?autoplay=1&vq=1440&loop=1&playlist=IrEqexa0yOA"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
+    <el-dialog :visible.sync="showVideo" fullscreen destroy-on-close>
+      <Trailer v-if="showVideo" />
     </el-dialog>
   </div>
 </template>
 
 <script>
+import Trailer from '../../components/Trailer.vue';
+
 export default {
   name: 'Header',
+  components: {
+    Trailer,
+  },
   data() {
     return {
       showVideo: false,

@@ -125,7 +125,9 @@ button {
   box-sizing: padding-box;
 }
 .snip1295 img {
-  width: 750px;
+  // max-width: 750px;
+  width: 95%;
+  height: 100%;
   vertical-align: top;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }

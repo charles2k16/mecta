@@ -7,7 +7,7 @@ import { Color } from 'three';
 
 export function initThree(domEl, domLayer) {
   var scene = new THREE.Scene();
-  let svgCode = `data:image/svg+xml,%0A%3Csvg width='557px' height='634px' viewBox='0 0 557 634' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3ClinearGradient x1='50%25' y1='0%25' x2='50%25' y2='100%25' id='linearGradient-vi6a-k3y2a-1'%3E%3Cstop stop-color='%2324242C' offset='0%25'%3E%3C/stop%3E%3Cstop stop-color='%23343353' offset='100%25'%3E%3C/stop%3E%3C/linearGradient%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Crect id='Rectangle' fill='url(%23linearGradient-vi6a-k3y2a-1)' x='0' y='0' width='557' height='634'%3E%3C/rect%3E%3C/g%3E%3C/svg%3E`;
+  let svgCode = `data:image/svg+xml,%0A%3Csvg max-width='557px' height='634px' width='100%' viewBox='0 0 557 634' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3ClinearGradient x1='50%25' y1='0%25' x2='50%25' y2='100%25' id='linearGradient-vi6a-k3y2a-1'%3E%3Cstop stop-color='%2324242C' offset='0%25'%3E%3C/stop%3E%3Cstop stop-color='%23343353' offset='100%25'%3E%3C/stop%3E%3C/linearGradient%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Crect id='Rectangle' fill='url(%23linearGradient-vi6a-k3y2a-1)' x='0' y='0' width='557' height='634'%3E%3C/rect%3E%3C/g%3E%3C/svg%3E`;
 
   let svgURL = `${svgCode}`;
 

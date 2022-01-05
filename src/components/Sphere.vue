@@ -17,7 +17,8 @@ export default {
 </script>
 <style scoped>
 .sphere-container {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   height: 300px;
 }
 </style>

@@ -1,13 +1,12 @@
 <template>
   <div class="mt-150">
     <el-row :gutter="20">
-      <el-col :md="12">
-        <div
-          style="width:400px;height:300px; border:1px solid black; background: black"
-        ></div
-      ></el-col>
+      <el-col :md="12" :sm="24" :xs="24">
+        <img :src="skinItem" class="skinImage" />
+        ></el-col
+      >
 
-      <el-col :md="12">
+      <el-col :md="12" :sm="24" :xs="24">
         <div class="merch_skin_div">
           <h2>Description:</h2>
 
@@ -23,18 +22,12 @@
 
     <div class="mt-70">
       <el-row :gutter="50">
-        <!-- <el-col v-for="skin in 8" :key="skin" :xs="12" :sm="12" :md="6">
-          <div class="skins">
-            <img
-              src="https://i.picsum.photos/id/21/200/200.jpg?hmac=a2iQ6UhOjpU6jn7QSsCpk1CiiKTxmW1R4UivDsv-n8o"
-              alt="pic"
-            />
-          </div> -->
-        <el-col :xs="24" :sm="24" :md="24">
+        <el-col :xs="12" :sm="24" :md="24">
           <div class="image-container">
             <div
               v-for="(skin, index) in skins"
               :key="index"
+              @click="changeSkin(skin)"
               class="image"
               style="--clip-start: ellipse(0 0 at 0 0); --clip-end: ellipse(150% 150% at 0 0);"
             >
@@ -52,6 +45,8 @@ export default {
   name: 'MerchSkins',
   data() {
     return {
+      skinItem:
+        'https://i.picsum.photos/id/21/200/200.jpg?hmac=a2iQ6UhOjpU6jn7QSsCpk1CiiKTxmW1R4UivDsv-n8o',
       skins: [
         'https://i.picsum.photos/id/21/200/200.jpg?hmac=a2iQ6UhOjpU6jn7QSsCpk1CiiKTxmW1R4UivDsv-n8o',
         'https://i.picsum.photos/id/988/200/200.jpg?hmac=-lwK-i6PssD9WlUeVPDIhOxDVxlzJKeM4MgEx_fIqJg',
@@ -66,10 +61,36 @@ export default {
       ],
     };
   },
+  methods: {
+    changeSkin(item) {
+      const img = document.querySelector('.skinImage');
+
+      img.classList.add('anim');
+      this.skinItem = item;
+      // img.classList.remove('anim');
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+.skinImage {
+  width: 320px;
+  -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+  transition-duration: 2s;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+  outline: 0;
+}
+.anim {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
 .merch_skin_div {
   h2 {
     color: whitesmoke;

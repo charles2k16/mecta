@@ -1,14 +1,30 @@
 <template>
   <div class="conn_bg">
-    <div class="flex-center">
+    <div>
       <div class="connect_div">
-        <div class="conn_btn">
-          <span>CONNECT TO WALLET</span>
-        </div>
-        <div class="legendary_nft">
+        <el-dropdown>
+          <span
+            ><div class="conn_btn">
+              <span>CONNECT TO WALLET</span>
+            </div></span
+          >
+
+          <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item
+              ><div class="legendary_nft">
+                <span>Legendary NFT 1</span>
+              </div></el-dropdown-item
+            >
+            <el-dropdown-item>Action 2</el-dropdown-item>
+            <el-dropdown-item>Action 3</el-dropdown-item>
+            <el-dropdown-item>Action 4</el-dropdown-item>
+            <el-dropdown-item>Action 5</el-dropdown-item>
+          </el-dropdown-menu>
+        </el-dropdown>
+        <!-- <div class="legendary_nft">
           <span>Legendary NFT 1</span>
         </div>
-        <div class="Epic NFT 1"></div>
+        <div class="Epic NFT 1"></div> -->
       </div>
     </div>
   </div>
