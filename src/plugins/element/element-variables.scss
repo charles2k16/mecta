@@ -63,16 +63,16 @@ clip-path: polygon(20% 0%, 80% 0%, 91% 0, 100% 18%, 100% 100%, 0 100%, 0 35%, 0 
   aspect-ratio: inherit;
 }
 .el-carousel__item--card.is-in-stage {
-  opacity: 0.8;
+  opacity: 1;
 }
 .el-tabs__content {
-    border-bottom: 1px solid #494949;
-    border-left: 1px solid #494949 !important;
-    border-right: 1px solid #494949;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 50px 60px;
-    clip-path: polygon(20% 0%, 80% 0%, 95% 0, 100% 4%, 100% 100%, 5% 100%, 0 95%, 0 0);
-  }
+  border-bottom: 1px solid #494949;
+  border-left: 1px solid #494949 !important;
+  border-right: 1px solid #494949;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 50px 60px;
+  clip-path: polygon(20% 0%, 80% 0%, 95% 0, 100% 4%, 100% 100%, 5% 100%, 0 95%, 0 0);
+}
 .el-tabs__nav-wrap {
   margin-bottom: -15px;
 }

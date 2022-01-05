@@ -1,3 +1,6 @@
+:root {
+  --borderWidth: 3px;
+}
 @font-face {
   font-family: 'Titillium';
   src: url('../fonts/tittinium/TitilliumWeb-Regular.ttf');
@@ -728,4 +731,5 @@ hr.sales_hr {
   transform: rotate(215deg);
   margin-left: 122px;
   margin-bottom: -22px;
+  /* color: #2d3561; */
 }

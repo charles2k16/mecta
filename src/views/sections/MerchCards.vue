@@ -2,15 +2,7 @@
   <div class="merch_card_div">
     <el-carousel type="card" trigger="click" :interval="1200000" arrow="never">
       <el-carousel-item v-for="(pic, index) in gallery" :key="index">
-        <figure class="snip1295">
-          <img :src="getImgUrl(pic)" v-bind:alt="pic" />
-          <div class="border one">
-            <div></div>
-          </div>
-          <div class="border two">
-            <div></div>
-          </div>
-        </figure>
+        <img :src="getImgUrl(pic)" v-bind:alt="pic" class="caro_img" />
       </el-carousel-item>
     </el-carousel>
 
@@ -112,109 +104,23 @@ button {
   width: 95%;
   margin: 0 auto 0 60px;
 }
-.snip1295 {
-  position: relative;
-  overflow: hidden;
-  padding: 4px;
-  box-shadow: none !important;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-box-sizing: padding-box;
-  box-sizing: padding-box;
-}
-.snip1295 img {
-  width: 94%;
-  height: 90%;
-  vertical-align: top;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-}
-.snip1295 .border {
-  position: absolute;
-}
 
-.snip1295 .border:after,
-.snip1295 .border div:after,
-.snip1295 .border div:before,
-.snip1295 .border:before {
-  position: absolute;
-  content: '';
-  display: block;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  // border: none !important;
+.caro_img {
+  width: 90%;
+  height: 350px;
 }
-
-.snip1295 .border:before,
-.snip1295 .border:after {
-  width: 0px;
-  height: 0px;
+.el-carousel__item--card.is-in-stage .caro_img:hover {
+  border: 3px solid black;
+  padding: 2px 2px;
+  min-height: 4px;
+  border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cstyle%3Epath%7Banimation:stroke 8s infinite linear%3B%7D%40keyframes stroke%7Bto%7Bstroke-dashoffset:776%3B%7D%7D%3C/style%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%232d3561' /%3E%3Cstop offset='25%25' stop-color='%23c05c7e' /%3E%3Cstop offset='50%25' stop-color='%23f3826f' /%3E%3Cstop offset='100%25' stop-color='%23ffb961' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3' stroke-dasharray='388'/%3E %3C/svg%3E")
+    1;
 }
-.snip1295 .border div:before,
-.snip1295 .border div:after {
-  width: 0px;
-  height: 0px;
-}
-.snip1295 .border.one {
-  left: -2px;
-  top: -2px;
-  right: 90px;
-  bottom: 80px;
-}
-.snip1295 .border.one:before,
-.snip1295 .border.one div:before {
-  left: 0;
-  top: 0;
-  border-top: 6px solid;
-  border-left: 6px solid;
-  border-width: 7px;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to right, #b48efa, #6e3dcf);
-}
-.snip1295 .border.one:after,
-.snip1295 .border.one div:after {
-  bottom: 10px;
-  right: 0;
-}
-.snip1295 .border.two {
-  left: 60px;
-  top: 40px;
-  right: 35px;
-  bottom: 41px;
-}
-.snip1295 .border.two:before,
-.snip1295 .border.two div:before {
-  right: 15px;
-  top: 10px;
-  border-right: 5px solid;
-  border-width: 5px;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to right, #b48efa, #6e3dcf);
-}
-.snip1295 .border.two:after,
-.snip1295 .border.two div:after {
-  bottom: -5px;
-  left: -15px;
-  border-bottom: 5px solid;
-  border-width: 5px;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to right, #b48efa, #6e3dcf);
-}
-
-.snip1295:hover .border:before,
-.snip1295:hover .border:after {
-  width: 100%;
-}
-.snip1295:hover .border div:before,
-.snip1295:hover .border div:after {
-  height: 100%;
-}
-
-.el-carousel__item--card.is-active .snip1295 .border:before,
-.el-carousel__item--card.is-active .snip1295 .border:after {
-  width: 100%;
-}
-.el-carousel__item--card.is-active .snip1295 .border div:before,
-.el-carousel__item--card.is-active .snip1295 .border div:after {
-  height: 100%;
+.el-carousel__item--card.is-active .caro_img {
+  border: 3px solid black;
+  padding: 2px 2px;
+  min-height: 4px;
+  border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cstyle%3Epath%7Banimation:stroke 8s infinite linear%3B%7D%40keyframes stroke%7Bto%7Bstroke-dashoffset:776%3B%7D%7D%3C/style%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%232d3561' /%3E%3Cstop offset='25%25' stop-color='%23c05c7e' /%3E%3Cstop offset='50%25' stop-color='%23f3826f' /%3E%3Cstop offset='100%25' stop-color='%23ffb961' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3' stroke-dasharray='388'/%3E %3C/svg%3E")
+    1;
 }
 </style>
