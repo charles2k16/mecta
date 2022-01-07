@@ -2,9 +2,14 @@
   <div class="mt-150">
     <el-row :gutter="20">
       <el-col :md="12" :sm="24" :xs="24">
-        <img :src="skinItem" class="skinImage" />
-        ></el-col
-      >
+        <div style="height: 370px;">
+          <img
+            v-show="anim"
+            :src="skinItem"
+            class="skinImage animate__animated animate__fadeInLeft"
+          />
+        </div>
+      </el-col>
 
       <el-col :md="12" :sm="24" :xs="24">
         <div class="merch_skin_div">
@@ -45,6 +50,7 @@ export default {
   name: 'MerchSkins',
   data() {
     return {
+      anim: true,
       skinItem:
         'https://i.picsum.photos/id/21/200/200.jpg?hmac=a2iQ6UhOjpU6jn7QSsCpk1CiiKTxmW1R4UivDsv-n8o',
       skins: [
@@ -63,10 +69,17 @@ export default {
   },
   methods: {
     changeSkin(item) {
-      const img = document.querySelector('.skinImage');
+      // const img = document.querySelector('.skinImage');
+      // img.classList.add('animate__bounceOutLeft');
+      this.anim = false;
 
-      img.classList.add('anim');
-      this.skinItem = item;
+      setTimeout(() => {
+        this.skinItem = item;
+        this.anim = true;
+      }, 100);
+
+      // this.skinItem = item;
+
       // img.classList.remove('anim');
     },
   },
@@ -76,21 +89,8 @@ export default {
 <style lang="scss" scoped>
 .skinImage {
   width: 320px;
-  -webkit-transition-duration: 2s;
-  -moz-transition-duration: 2s;
-  -o-transition-duration: 2s;
-  transition-duration: 2s;
-  -webkit-transition-property: -webkit-transform;
-  -moz-transition-property: -moz-transform;
-  -o-transition-property: -o-transform;
-  transition-property: transform;
-  outline: 0;
 }
-.anim {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
+
 .merch_skin_div {
   h2 {
     color: whitesmoke;

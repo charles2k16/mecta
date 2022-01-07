@@ -21,10 +21,6 @@
             <el-dropdown-item>Action 5</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
-        <!-- <div class="legendary_nft">
-          <span>Legendary NFT 1</span>
-        </div>
-        <div class="Epic NFT 1"></div> -->
       </div>
     </div>
   </div>
@@ -93,6 +89,7 @@ export default {
   // background: #ffffff36;
   width: 280px;
   height: 350px;
+  margin: 0 auto;
   font-family: TitilliumBold;
 }
 </style>

@@ -76,7 +76,7 @@ export default {
   background-image: url('../../assets/images/cm/cm_leg_geometry_02_color.png');
   background-repeat: no-repeat;
   background-position: right;
-  background-size: 38% 59%;
+  background-size: 38% 70%;
 }
 .roadmap_div {
   display: flex;

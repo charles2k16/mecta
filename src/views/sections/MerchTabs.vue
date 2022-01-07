@@ -6,7 +6,7 @@
       class="corner"
     />
     <div class="short_rule"></div>
-    <el-tabs type="card">
+    <el-tabs type="card" v-model="activeTab">
       <el-tab-pane name="mech">
         <span slot="label"
           >MECH
@@ -17,7 +17,7 @@
           <h3 class="ml-20 gen">
             Genesis Unit
           </h3>
-          <section class="demo-3 flex-justify-evenly-center">
+          <section class="mt-20 demo-3 flex-justify-evenly-center">
             <div class="box merch_nft">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -217,6 +217,11 @@
 <script>
 export default {
   name: 'MerchTabs',
+  data() {
+    return {
+      activeTab: 'mech',
+    };
+  },
   methods: {
     chageTabs(tab) {
       console.log(tab.name);
@@ -244,7 +249,7 @@ export default {
 .corner {
   width: 48px;
   float: right;
-  margin-top: 63px;
+  margin-top: 46px;
   margin-left: -50px;
 }
 .corner2 {
@@ -264,9 +269,9 @@ export default {
 }
 .gen {
   color: grey;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  font-size: 15px;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  font-size: 16px;
 }
 .merch_nft {
   .innfo_nft {

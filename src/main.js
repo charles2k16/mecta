@@ -4,11 +4,11 @@ import mixin from './mixins';
 import router from './router';
 import store from './store/';
 import '@fortawesome/fontawesome-free/css/all.css';
+import 'animate.css';
 
 import '@/assets/css/base.css';
 import '@/assets/css/display.css';
 import '@/plugins/element/index.js';
-import '@/plugins/vuesax';
 
 Vue.mixin(mixin);
 

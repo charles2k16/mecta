@@ -20,12 +20,12 @@
         <el-col :md="12" :xs="24" :sm="24">
           <div class="flex-justify-around-center mt-20">
             <div class="flex-row-center comm_icons">
-              <el-avatar size="60" class="medium_avatar">
+              <el-avatar :size="60" class="medium_avatar">
                 <a href="https://soliddefi.medium.com/" target="_blank">
                   <img
                     src="../../assets/images/medium_icon.png"
                     alt="medium"
-                    style="width:25px !important"
+                    style="width:26px !important"
                   />
                 </a>
               </el-avatar>
@@ -40,12 +40,8 @@
 
             <div class="flex-row-center comm_icons">
               <a href="https://t.me/soliddefi" target="_blank">
-                <el-avatar class="tele_avatar" size="60">
-                  <img
-                    src="../../assets/images/telegram2.png"
-                    alt="telegram"
-                    style="width:28px !important"
-                  />
+                <el-avatar :size="60" class="tele_avatar">
+                  <img src="../../assets/images/telegram2.png" alt="telegram" />
                 </el-avatar>
               </a>
               <p class="mt-30 center p_link">
@@ -58,7 +54,7 @@
 
             <div class="flex-row-center comm_icons">
               <a href="https://twitter.com/soliddefi" target="_blank">
-                <el-avatar size="60" class="twit_avatar">
+                <el-avatar :size="60" class="twit_avatar">
                   <img src="../../assets/images/twitter.png" alt="twitter" />
                 </el-avatar>
               </a>
@@ -73,7 +69,7 @@
         </el-col>
       </el-row>
     </div>
-    <div class="">
+    <!-- <div class="">
       <div class="wrap">
         <div class="d-flex-center footer_div">
           <p>
@@ -81,13 +77,62 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <style lang="scss" scoped>
+.lead_head_text1 {
+  color: whitesmoke;
+  font-size: 41px;
+  line-height: 3.5rem;
+  font-weight: bold;
+}
+.lead_text {
+  font-size: 1rem;
+  text-align: justify;
+  line-height: 1.9rem;
+  color: rgb(214, 213, 213);
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+.p_link {
+  color: rgb(175, 174, 174);
+  font-size: 1rem;
+  line-height: 1.9rem;
+}
 .footer_container {
-  background: #110e23ff;
+  background: rgb(48, 49, 73);
+  background: linear-gradient(
+    153deg,
+    rgba(48, 49, 73, 1) 25%,
+    rgba(23, 27, 31, 1) 68%
+  );
+  padding-top: 30px;
+  padding-bottom: 80px;
+}
+.tele_avatar {
+  background: #7d33fc !important;
+  box-shadow: 10px 10px 15px #080f14, -10px -10px 15px #424961;
+  border: 3px solid rgb(48, 49, 73);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 27px;
+    height: 30px;
+  }
+}
+.twit_avatar {
+  background: #55acee !important;
+  padding: 3px;
+  box-shadow: 10px 10px 15px #080f14, -10px -10px 15px #424961;
+  border: 3px solid rgb(48, 49, 73);
+}
+.medium_avatar {
+  background: #091116 !important;
+  box-shadow: 10px 10px 15px #080f14, -10px -10px 15px #424961;
+  border: 3px solid rgb(48, 49, 73);
 }
 .footer_div {
   height: 60px;
