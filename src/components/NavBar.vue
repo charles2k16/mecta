@@ -23,7 +23,7 @@
                 <i class="fab fa-discord"></i>
               </a>
             </li>
-            <li style="margin-right: -9px">
+            <li style="margin-right: -11px">
               <a href="#">
                 <i class="fab fa-telegram-plane"></i>
               </a>
@@ -92,11 +92,11 @@ export default {
     .h_staking {
       border: 2px solid #434343;
       background: #161616ff;
-      border-radius: 20px;
+      border-radius: 50px;
       padding: 2px 1px 1px 20px;
       display: flex;
       width: 280px;
-      margin-left: 50px;
+      margin-right: -70px;
 
       .soon {
         background: #434343ff;

@@ -1,83 +1,94 @@
 <template>
-  <div class="footer_container">
-    <div class="wrap">
-      <el-row class="mt-50">
-        <el-col :md="12" :xs="24" :sm="24">
-          <div>
-            <h2 class="lead_head_text1">
-              Join our <br />
-              Community
-            </h2>
-            <p class="lead_text mt-15">
-              Be the first to know about SOLID token news.
+  <div>
+    <div class="footer_container">
+      <div class="wrap">
+        <el-row class="mt-50">
+          <el-col :md="12" :xs="24" :sm="24">
+            <div>
+              <h2 class="lead_head_text1">
+                Join our <br />
+                Community
+              </h2>
+              <p class="lead_text mt-15">
+                Be the first to know about Mecta news.
 
-              <br />
-              Don't miss the opportunity to join the community!
-            </p>
-          </div>
-        </el-col>
-
-        <el-col :md="12" :xs="24" :sm="24">
-          <div class="flex-justify-around-center mt-20">
-            <div class="flex-row-center comm_icons">
-              <el-avatar :size="60" class="medium_avatar">
-                <a href="https://soliddefi.medium.com/" target="_blank">
-                  <img
-                    src="../../assets/images/medium_icon.png"
-                    alt="medium"
-                    style="width:26px !important"
-                  />
-                </a>
-              </el-avatar>
-
-              <p class="mt-30 center p_link">
-                <a href="https://soliddefi.medium.com/" target="_blank">
-                  Read more on <br />
-                  Medium
-                </a>
+                <br />
+                Don't miss the opportunity to join the community!
               </p>
             </div>
+          </el-col>
 
-            <div class="flex-row-center comm_icons">
-              <a href="https://t.me/soliddefi" target="_blank">
-                <el-avatar :size="60" class="tele_avatar">
-                  <img src="../../assets/images/telegram2.png" alt="telegram" />
+          <el-col :md="12" :xs="24" :sm="24">
+            <div class="flex-justify-around-center mt-20">
+              <div class="flex-row-center comm_icons">
+                <el-avatar :size="60" class="medium_avatar">
+                  <a
+                    href="https://medium.com/@Mecta/say-hi-to-the-world-of-mecta-7a7f4b118dd5"
+                    target="_blank"
+                  >
+                    <img
+                      src="../../assets/images/medium_icon.png"
+                      alt="medium"
+                      style="width:26px !important"
+                    />
+                  </a>
                 </el-avatar>
-              </a>
-              <p class="mt-30 center p_link">
+
+                <p class="mt-30 center p_link">
+                  <a
+                    href="https://medium.com/@Mecta/say-hi-to-the-world-of-mecta-7a7f4b118dd5"
+                    target="_blank"
+                  >
+                    Read more on <br />
+                    Medium
+                  </a>
+                </p>
+              </div>
+
+              <div class="flex-row-center comm_icons">
                 <a href="https://t.me/soliddefi" target="_blank">
-                  Join us on <br />
-                  Telegram</a
-                >
-              </p>
-            </div>
-
-            <div class="flex-row-center comm_icons">
-              <a href="https://twitter.com/soliddefi" target="_blank">
-                <el-avatar :size="60" class="twit_avatar">
-                  <img src="../../assets/images/twitter.png" alt="twitter" />
-                </el-avatar>
-              </a>
-              <p class="mt-30 center p_link">
-                <a href="https://twitter.com/soliddefi" target="_blank">
-                  Follow us on <br />
-                  Twitter
+                  <el-avatar :size="60" class="tele_avatar">
+                    <img
+                      src="../../assets/images/telegram2.png"
+                      alt="telegram"
+                    />
+                  </el-avatar>
                 </a>
-              </p>
+                <p class="mt-30 center p_link">
+                  <a href="https://t.me/soliddefi" target="_blank">
+                    Join us on <br />
+                    Telegram</a
+                  >
+                </p>
+              </div>
+
+              <div class="flex-row-center comm_icons">
+                <a href="https://twitter.com/soliddefi" target="_blank">
+                  <el-avatar :size="60" class="twit_avatar">
+                    <img src="../../assets/images/twitter.png" alt="twitter" />
+                  </el-avatar>
+                </a>
+                <p class="mt-30 center p_link">
+                  <a href="https://twitter.com/soliddefi" target="_blank">
+                    Follow us on <br />
+                    Twitter
+                  </a>
+                </p>
+              </div>
             </div>
-          </div>
-        </el-col>
-      </el-row>
+          </el-col>
+        </el-row>
+      </div>
     </div>
-    <!-- <div class="">
+    <div class="footer">
       <div class="wrap">
         <div class="d-flex-center footer_div">
           <p>
-            Copyright © 2021 Crypto Mech Token. All rights reserved
+            Copyright © 2022 Mecta Token. All rights reserved
           </p>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -133,6 +144,9 @@
   background: #091116 !important;
   box-shadow: 10px 10px 15px #080f14, -10px -10px 15px #424961;
   border: 3px solid rgb(48, 49, 73);
+}
+.footer {
+  background: #110e23ff;
 }
 .footer_div {
   height: 60px;

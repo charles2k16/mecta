@@ -489,6 +489,7 @@ hr.sales_hr {
   /* text-shadow: rgb(145 72 206) -1px 0px, rgb(76 232 190) 1px 0px; */
 }
 .nft_connectbg {
+  margin-top: -400px;
   background: rgb(17, 17, 17);
   clip-path: polygon(
     0 0,

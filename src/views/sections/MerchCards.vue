@@ -10,7 +10,7 @@
       <button class="btn_flex_round rgb pulse mr-mb">
         <a href="https://www.google.com" target="_blank">Metaverse</a>
       </button>
-      <button class="btn_flex_round dark pulse">
+      <button class="btn_flex_round dark pulse2">
         <a href="https://www.google.com" target="_blank"> Discord Chat</a>
       </button>
     </div>
@@ -57,7 +57,22 @@ export default {
   box-shadow: 0 0 0 6em rgba(rgb(173, 54, 54), 0);
 }
 
+.pulse2:hover {
+  animation: pulse2 1s;
+  transform: translateY(-0.25em);
+  box-shadow: 0 0 0 2em rgba(#fff, 0);
+}
+.pulse2:active {
+  transform: translateX(-0.25em);
+  box-shadow: 0 0 0 6em rgba(rgb(173, 54, 54), 0);
+}
+
 @keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+@keyframes pulse2 {
   0% {
     box-shadow: 0 0 0 0 var(--hover);
   }
@@ -65,7 +80,7 @@ export default {
 
 $colors: (
   pulse: #9774cc,
-  slide: #000000,
+  pulse2: #444343,
 );
 
 @each $button, $color in $colors {

@@ -15,10 +15,6 @@
                 <span>Legendary NFT 1</span>
               </div></el-dropdown-item
             >
-            <el-dropdown-item>Action 2</el-dropdown-item>
-            <el-dropdown-item>Action 3</el-dropdown-item>
-            <el-dropdown-item>Action 4</el-dropdown-item>
-            <el-dropdown-item>Action 5</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
       </div>

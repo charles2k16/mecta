@@ -5,7 +5,7 @@
         <div style="height: 370px;">
           <img
             v-show="anim"
-            :src="skinItem"
+            :src="skinItem.image"
             class="skinImage animate__animated animate__fadeInLeft"
           />
         </div>
@@ -15,9 +15,8 @@
         <div class="merch_skin_div">
           <h2>Description:</h2>
 
-          <p class="mt-10">
-            Witness the newest applications of real science and breakthroughs in
-            terraforming robots
+          <p class="mt-10 animate__animated animate__fadeInRight" v-show="anim">
+            {{ skinItem.description }}
           </p>
 
           <h2 class="mt-40">Skin rarity:</h2>
@@ -36,7 +35,7 @@
               class="image"
               style="--clip-start: ellipse(0 0 at 0 0); --clip-end: ellipse(150% 150% at 0 0);"
             >
-              <img :src="skin" /><img :src="skin" />
+              <img :src="skin.image" /><img :src="skin.image" />
             </div>
           </div>
         </el-col>
@@ -51,19 +50,73 @@ export default {
   data() {
     return {
       anim: true,
-      skinItem:
-        'https://i.picsum.photos/id/21/200/200.jpg?hmac=a2iQ6UhOjpU6jn7QSsCpk1CiiKTxmW1R4UivDsv-n8o',
+      skinItem: {
+        image:
+          'https://i.picsum.photos/id/21/200/200.jpg?hmac=a2iQ6UhOjpU6jn7QSsCpk1CiiKTxmW1R4UivDsv-n8o',
+        description:
+          'lorem description with task lorem description with task lorem description with task',
+      },
       skins: [
-        'https://i.picsum.photos/id/21/200/200.jpg?hmac=a2iQ6UhOjpU6jn7QSsCpk1CiiKTxmW1R4UivDsv-n8o',
-        'https://i.picsum.photos/id/988/200/200.jpg?hmac=-lwK-i6PssD9WlUeVPDIhOxDVxlzJKeM4MgEx_fIqJg',
-        'https://i.picsum.photos/id/119/200/200.jpg?hmac=JGrHG7yCKfebsm5jJSWw7F7x2oxeYnm5YE_74PhnRME',
-        'https://i.picsum.photos/id/604/200/200.jpg?hmac=qgFjxODI1hMBMfHo68VvLeji-zvG9y-iPYhyW0EkvOs',
-        'https://i.picsum.photos/id/253/200/200.jpg?hmac=_dceojr9yz5ZIKoye8I9HOqPCBHfn-jT9aRYdoLx1kQ',
-        'https://i.picsum.photos/id/988/200/200.jpg?hmac=-lwK-i6PssD9WlUeVPDIhOxDVxlzJKeM4MgEx_fIqJg',
-        'https://i.picsum.photos/id/119/200/200.jpg?hmac=JGrHG7yCKfebsm5jJSWw7F7x2oxeYnm5YE_74PhnRME',
-        'https://i.picsum.photos/id/604/200/200.jpg?hmac=qgFjxODI1hMBMfHo68VvLeji-zvG9y-iPYhyW0EkvOs',
-        'https://i.picsum.photos/id/21/200/200.jpg?hmac=a2iQ6UhOjpU6jn7QSsCpk1CiiKTxmW1R4UivDsv-n8o',
-        'https://i.picsum.photos/id/988/200/200.jpg?hmac=-lwK-i6PssD9WlUeVPDIhOxDVxlzJKeM4MgEx_fIqJg',
+        {
+          image:
+            'https://i.picsum.photos/id/21/200/200.jpg?hmac=a2iQ6UhOjpU6jn7QSsCpk1CiiKTxmW1R4UivDsv-n8o',
+          description:
+            'lorem description with task lorem description with task lorem description with task',
+        },
+        {
+          image:
+            'https://i.picsum.photos/id/988/200/200.jpg?hmac=-lwK-i6PssD9WlUeVPDIhOxDVxlzJKeM4MgEx_fIqJg',
+          description:
+            'lorem description with task lorem description with task lorem description with task',
+        },
+        {
+          image:
+            'https://i.picsum.photos/id/119/200/200.jpg?hmac=JGrHG7yCKfebsm5jJSWw7F7x2oxeYnm5YE_74PhnRME',
+          description:
+            'lorem description with task lorem description with task lorem description with task',
+        },
+        {
+          image:
+            'https://i.picsum.photos/id/604/200/200.jpg?hmac=qgFjxODI1hMBMfHo68VvLeji-zvG9y-iPYhyW0EkvOs',
+          description:
+            'lorem description with task lorem description with task lorem description with task',
+        },
+        {
+          image:
+            'https://i.picsum.photos/id/253/200/200.jpg?hmac=_dceojr9yz5ZIKoye8I9HOqPCBHfn-jT9aRYdoLx1kQ',
+          description:
+            'lorem description with task lorem description with task lorem description with task',
+        },
+        {
+          image:
+            'https://i.picsum.photos/id/988/200/200.jpg?hmac=-lwK-i6PssD9WlUeVPDIhOxDVxlzJKeM4MgEx_fIqJg',
+          description:
+            'lorem description with task lorem description with task lorem description with task',
+        },
+        {
+          image:
+            'https://i.picsum.photos/id/119/200/200.jpg?hmac=JGrHG7yCKfebsm5jJSWw7F7x2oxeYnm5YE_74PhnRME',
+          description:
+            'lorem description with task lorem description with task lorem description with task',
+        },
+        {
+          image:
+            'https://i.picsum.photos/id/604/200/200.jpg?hmac=qgFjxODI1hMBMfHo68VvLeji-zvG9y-iPYhyW0EkvOs',
+          description:
+            'lorem description with task lorem description with task lorem description with task',
+        },
+        {
+          image:
+            'https://i.picsum.photos/id/988/200/200.jpg?hmac=-lwK-i6PssD9WlUeVPDIhOxDVxlzJKeM4MgEx_fIqJg',
+          description:
+            'lorem description with task lorem description with task lorem description with task',
+        },
+        {
+          image:
+            'https://i.picsum.photos/id/988/200/200.jpg?hmac=-lwK-i6PssD9WlUeVPDIhOxDVxlzJKeM4MgEx_fIqJg',
+          description:
+            'lorem description with task lorem description with task lorem description with task',
+        },
       ],
     };
   },

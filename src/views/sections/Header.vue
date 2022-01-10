@@ -55,7 +55,7 @@ export default {
   }
 }
 .btn_flex_btn.purple {
-  margin-right: 50px;
+  margin-right: 90px;
   border-top: 1px solid;
   border-left: 1px solid;
   border-width: 2px;

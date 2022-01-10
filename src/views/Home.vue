@@ -124,7 +124,7 @@
         <MerchSkins />
       </div>
     </div>
-    <div class="nft_connectbg py-50" style="margin-top: -400px;" id="nftconn">
+    <div class="nft_connectbg py-50" id="nftconn">
       <NftConnect />
     </div>
     <div class="roadmap_bg">
