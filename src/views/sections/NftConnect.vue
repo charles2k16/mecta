@@ -1,22 +1,23 @@
 <template>
   <div class="conn_bg">
-    <div>
+    <div class="flex-row-center">
       <div class="connect_div">
-        <el-dropdown trigger="click">
-          <span
-            ><div class="conn_btn">
-              <span>CONNECT TO WALLET</span>
-            </div></span
-          >
+        <div class="conn_btn">
+          <span>CONNECT TO WALLET</span>
+        </div>
+        <div class="toggle_dropdown">
+          <div class="legendary_nft active">
+            <span>Legendary NFT 1</span>
+          </div>
 
-          <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item
-              ><div class="legendary_nft">
-                <span>Legendary NFT 1</span>
-              </div></el-dropdown-item
-            >
-          </el-dropdown-menu>
-        </el-dropdown>
+          <div class="legendary_nft unhover">
+            <span>Legendary NFT 2</span>
+          </div>
+
+          <div class="legendary_nft unhover">
+            <span>Legendary NFT 3</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -33,6 +34,7 @@ export default {
   background-image: url('../../assets/images/cm_metaverse_portal.png');
   background-size: cover;
   height: 800px;
+  font-family: TitilliumBold;
 }
 .conn_btn {
   background: rgb(234, 0, 217);
@@ -62,13 +64,12 @@ export default {
   }
 }
 .legendary_nft {
-  background: rgb(12, 12, 12);
+  // background: grey;
   color: whitesmoke;
-  height: 50px;
+  height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 215px;
   margin: 20px auto;
   clip-path: polygon(
     20% 0%,
@@ -80,12 +81,24 @@ export default {
     0 35%,
     0 0
   );
+
+  &.active {
+    background: rgb(12, 12, 12);
+    height: 50px;
+    width: 165px;
+  }
+
+  &.unhover {
+    background: grey;
+    width: 145px;
+  }
 }
 .connect_div {
-  // background: #ffffff36;
-  width: 280px;
-  height: 350px;
-  margin: 0 auto;
-  font-family: TitilliumBold;
+  background: #ffffff36;
+  width: 215px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>

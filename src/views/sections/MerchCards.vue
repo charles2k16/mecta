@@ -107,8 +107,8 @@ button {
   margin-right: 180px;
 }
 .merch_card_div {
-  width: 95%;
-  margin: 0 auto 0 40px;
+  width: 100%;
+  // margin: 0 auto 0 20px;
 }
 
 .caro_img {

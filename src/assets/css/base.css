@@ -263,8 +263,9 @@ hr.sales_hr {
   justify-content: center;
   align-items: center;
   background-image: url('../images/cm/cm_header.png');
-  height: 950px;
+  height: 100%;
   width: 100%;
+  padding-bottom: 500px;
   background-size: cover;
 }
 .why_merch {
@@ -733,3 +734,8 @@ hr.sales_hr {
   margin-bottom: -22px;
   /* color: #2d3561; */
 }
+
+/* .conn_bg .flex-row-center .connect_div .toggle_dropdown div {
+  background: rgb(12, 12, 12);
+  height: 50px;
+} */

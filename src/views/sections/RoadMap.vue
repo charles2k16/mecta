@@ -83,7 +83,8 @@ export default {
   flex-direction: column;
   align-items: flex-start;
   padding: 3rem 0;
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
 }
 .step_one {
   .vl {
