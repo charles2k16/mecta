@@ -113,6 +113,12 @@ export default {
     background: grey;
     width: 145px;
   }
+
+  &:hover {
+    background: rgb(12, 12, 12);
+    height: 50px;
+    width: 165px;
+  }
 }
 .toggle_dropdown {
   display: none;
