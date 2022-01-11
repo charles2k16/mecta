@@ -115,16 +115,13 @@
     <!-- 2400 -->
     <div class="merch_img_div">
       <ThreeEclipse />
-      <div
-        class="wrap"
-        style="z-index: 2; position:relative; margin-top:-2400px;"
-      >
+      <div class="wrap" style="position:relative; margin-top:-2400px;">
         <MerchTabs />
 
         <MerchSkins />
       </div>
     </div>
-    <div class="nft_connectbg py-50" id="nftconn">
+    <div class="nft_connectbg py-100">
       <NftConnect />
     </div>
     <div class="roadmap_bg">

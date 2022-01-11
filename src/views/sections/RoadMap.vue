@@ -1,5 +1,8 @@
 <template>
   <div class="wrap py-100 bg_roadmap">
+    <div style="margin-left:400px;">
+      <el-button @click="connectToWallet">we move</el-button>
+    </div>
     <div class="roadmap_div">
       <div class="step_one d-flex">
         <div class="vl"></div>
@@ -68,6 +71,11 @@
 <script>
 export default {
   name: 'RoadMap',
+  methods: {
+    connectToWallet() {
+      console.log('toggleDiv');
+    },
+  },
 };
 </script>
 
