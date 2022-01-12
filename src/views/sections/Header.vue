@@ -45,7 +45,8 @@ export default {
 
 <style lang="scss" scoped>
 .hero_btn_group {
-  margin-top: 550px;
+  margin-top: 650px;
+  margin-bottom: 250px;
   display: flex;
   justify-content: center;
   margin-left: 30px;

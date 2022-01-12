@@ -96,7 +96,7 @@ export default {
       padding: 2px 1px 1px 20px;
       display: flex;
       width: 280px;
-      margin-right: -70px;
+      margin-right: -30px;
 
       .soon {
         background: #434343ff;
