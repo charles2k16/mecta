@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="wrap py-150">
+    <div class="wrap py-100">
       <el-row :gutter="70">
         <el-col :md="12" :sm="24" :xs="24">
           <div class="why_bg_rgb">

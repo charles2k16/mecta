@@ -10,7 +10,7 @@
             <span>CONNECT TO WALLET</span>
           </div>
           <div class="toggle_dropdown animate__animated">
-            <div class="legendary_nft active">
+            <!-- <div class="legendary_nft active">
               <span>Legendary NFT 1</span>
             </div>
 
@@ -20,7 +20,14 @@
 
             <div class="legendary_nft unhover">
               <span>Legendary NFT 3</span>
-            </div>
+            </div> -->
+            <br /><br /><br />
+            <div v-loading="true"></div>
+            <br />
+            <p class="center">
+              Lengendary NFT <br />
+              Coming Soon
+            </p>
           </div>
         </div>
       </div>
