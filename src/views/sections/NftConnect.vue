@@ -21,12 +21,12 @@
             <div class="legendary_nft unhover">
               <span>Legendary NFT 3</span>
             </div> -->
-            <br /><br /><br />
-            <div v-loading="true"></div>
-            <br />
+            <br /><br />
+            <LoadingAnim />
+            <br /><br />
             <p class="center">
-              Lengendary NFT <br />
-              Coming Soon
+              Loading your NFT <br />
+              into your Garage
             </p>
           </div>
         </div>
@@ -36,8 +36,13 @@
 </template>
 
 <script>
+import LoadingAnim from '../../components/LoadingAnim.vue';
+
 export default {
   name: 'NftConnect',
+  components: {
+    LoadingAnim,
+  },
   data() {
     return {
       conLoding: false,
@@ -45,11 +50,11 @@ export default {
   },
   methods: {
     connectToWallet() {
-      console.log('toggleDiv');
       const toggleDiv = document.querySelector('.toggle_dropdown');
       const connect_div = document.querySelector('.connect_div');
+      const connect_btn = document.querySelector('.conn_btn');
 
-      console.log(toggleDiv);
+      connect_btn.classList.add('active');
       connect_div.classList.add('bg');
       toggleDiv.classList.add('animate__fadeInDown');
       toggleDiv.style.display = 'block';
@@ -66,12 +71,8 @@ export default {
   font-family: TitilliumBold;
 }
 .conn_btn {
-  background: rgb(234, 0, 217);
-  background: linear-gradient(
-    90deg,
-    rgba(234, 0, 217, 1) 0%,
-    rgba(10, 189, 198, 1) 100%
-  );
+  background: #525252;
+
   height: 50px;
   width: 215px;
   display: flex;
@@ -87,6 +88,24 @@ export default {
     3% 29%,
     0 0
   );
+
+  &:hover {
+    background: rgb(234, 0, 217);
+    background: linear-gradient(
+      90deg,
+      rgba(234, 0, 217, 1) 0%,
+      rgba(10, 189, 198, 1) 100%
+    );
+  }
+
+  &.active {
+    background: rgb(234, 0, 217);
+    background: linear-gradient(
+      90deg,
+      rgba(234, 0, 217, 1) 0%,
+      rgba(10, 189, 198, 1) 100%
+    );
+  }
 
   span {
     color: whitesmoke;

@@ -34,8 +34,8 @@
         </el-col>
       </el-row>
 
-      <el-row :gutter="70" class="mt-150">
-        <el-col :md="12" :sm="24" :xs="24">
+      <el-row :gutter="70" class="mt-150" type="flex">
+        <el-col :span="12">
           <div>
             <img
               src="../../assets/images/cm/cm_mechlab.png"
@@ -44,7 +44,7 @@
             />
           </div>
         </el-col>
-        <el-col :md="12" :sm="24" :xs="24">
+        <el-col :span="12">
           <div class="why_bg_rgb flex-justify-around-center">
             <h2 class="white">MECH LAB</h2>
             <img
@@ -72,7 +72,7 @@
         </el-col>
       </el-row>
 
-      <el-row :gutter="50" class="mt-120">
+      <el-row :gutter="50" class="mt-100">
         <el-col :md="12" :sm="24" :xs="24">
           <div style="height:300px" class="flex-align-center ">
             <img
@@ -119,7 +119,7 @@ export default {
   padding-left: 40px;
 
   h2 {
-    font-size: 30px;
+    font-size: 1.7rem;
   }
   .iptp_img {
     width: 60px;

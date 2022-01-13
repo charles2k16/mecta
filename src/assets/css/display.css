@@ -8,13 +8,34 @@
     margin: 0px !important;
   }
   .logo {
-    height: 19px;
+    height: 17px;
   }
   .el-carousel__container {
     height: 300px !important;
   }
   .el-tabs__content {
     padding: 20px 10px !important;
+  }
+  .nav_header {
+    padding: 0 5px;
+  }
+  .btn_flex_btn.purple {
+    margin-right: 25px !important;
+  }
+  .why_bg_rgb {
+    padding-left: 25px !important;
+  }
+  .iptp_img {
+    width: 60px;
+    margin-right: 15px !important;
+  }
+  .el-row--flex {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    flex-direction: column-reverse !important;
+  }
+  .el-row--flex .el-col-12 {
+    width: 100%;
   }
 
   /* .tab {
@@ -47,10 +68,43 @@
 /* ----------- iPhone X ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
   .logo {
-    height: 19px;
+    height: 17px;
   }
   .el-carousel__container {
     height: 300px;
+  }
+  .nav_header {
+    padding: 0 5px;
+  }
+  .btn_flex_btn.purple {
+    margin-right: 25px !important;
+  }
+  .why_bg_rgb {
+    padding-left: 25px !important;
+  }
+  .iptp_img {
+    width: 60px;
+    margin-right: 15px !important;
+  }
+  .el-row--flex {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    flex-direction: column-reverse !important;
+  }
+  .el-row--flex .el-col-12 {
+    width: 100%;
+  }
+  .merch_card_div {
+    margin-top: 70px !important;
+  }
+  .el-carousel__container {
+    height: 150px !important;
+  }
+  .el-carousel__indicators--outside {
+    margin-top: -10px !important;
+  }
+  .mr-mb {
+    margin-right: 3px !important;
   }
 }
 

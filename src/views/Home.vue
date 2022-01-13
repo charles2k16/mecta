@@ -2,7 +2,10 @@
   <div class="main_container" style="background:#212121ff;">
     <div class="gZTHOA">
       <div class="audio-player-container" style="right:0">
-        <div class="audio-player bMHZUr" v-show="showAudio">
+        <div
+          class="audio-player bMHZUr animate__animated animate__fadeInRight"
+          v-show="showAudio"
+        >
           <div class="audio_controls jSeanL">
             <button type="button" class="next" aria-label="Next">
               <svg

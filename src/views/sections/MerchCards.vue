@@ -8,10 +8,10 @@
 
     <div class="mt-70 flex-center button_grp">
       <button class="btn_flex_round rgb pulse mr-mb">
-        <a href="https://www.google.com" target="_blank">Metaverse</a>
+        Metaverse
       </button>
       <button class="btn_flex_round dark pulse2">
-        <a href="https://www.google.com" target="_blank"> Discord Chat</a>
+        Discord Chat
       </button>
     </div>
   </div>
@@ -110,7 +110,6 @@ button {
   width: 100%;
   // margin: 0 auto 0 20px;
 }
-
 .caro_img {
   width: 100%;
 }
