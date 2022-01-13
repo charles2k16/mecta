@@ -263,9 +263,8 @@ hr.sales_hr {
   justify-content: center;
   align-items: center;
   background-image: url('../images/cm/cm_header.png');
-  background-repeat: no-repeat;
-  height: 950px;
-  width: 100%;
+  background-position: center center;
+  background-attachment: fixed;
   background-size: cover;
 }
 .why_merch {
