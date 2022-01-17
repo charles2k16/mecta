@@ -59,6 +59,16 @@
   .hr_line {
     display: none;
   }
+  .corner {
+    display: none;
+  }
+  .nft_connectbg {
+    margin-top: 420px;
+  }
+  .image-container {
+    grid-template-columns: auto auto auto !important;
+    width: 350px !important;
+  }
 
   /* .tab {
     width: 100%;
