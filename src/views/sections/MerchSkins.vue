@@ -2,7 +2,7 @@
   <div class="mt-150">
     <el-row :gutter="20">
       <el-col :md="12" :sm="24" :xs="24">
-        <div style="height: 370px;">
+        <div>
           <img
             v-show="anim"
             :src="skinItem.image"
@@ -141,7 +141,9 @@ export default {
 
 <style lang="scss" scoped>
 .skinImage {
-  width: 320px;
+  max-width: 350px;
+  width: 100%;
+  height: auto;
 }
 
 .merch_skin_div {
@@ -151,7 +153,7 @@ export default {
   }
 
   p {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     line-height: 2.7rem;
     color: #c4d0fa;
   }

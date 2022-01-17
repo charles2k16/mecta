@@ -8,16 +8,16 @@
     <div class="short_rule"></div>
     <el-tabs type="card" v-model="activeTab">
       <el-tab-pane name="mech">
-        <span slot="label"
-          >MECH
-          <!-- <div class="tab_line"></div> -->
-        </span>
+        <div slot="label">
+          <span>MECH</span>
+          <div class="tab_line"></div>
+        </div>
         <div class="hr_line"></div>
         <div class="merch_tab_bg">
           <h3 class="ml-20 gen">
             Genesis Unit
           </h3>
-          <section class="mt-20 demo-3 flex-justify-evenly-center">
+          <section class="mt-20 demo-3 flex-wrap">
             <div class="box merch_nft">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +104,7 @@
             </div>
           </section>
 
-          <section class=" demo-3 flex-justify-evenly-center">
+          <section class="demo-3 flex-wrap">
             <div class="box merch_nft">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -212,7 +212,11 @@ hr.sales_hr {
   align-items: center;
   justify-content: center;
 }
-
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 .flex-justify-between {
   display: flex;
   justify-content: space-between;
@@ -543,7 +547,8 @@ hr.sales_hr {
   background: rgb(60, 218, 28);
 }
 .box {
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   height: 460px;
   position: relative;
   display: inline-block;
@@ -733,8 +738,3 @@ hr.sales_hr {
   margin-bottom: -22px;
   /* color: #2d3561; */
 }
-
-/* .conn_bg .flex-row-center .connect_div .toggle_dropdown div:hover {
-  background: rgb(12, 12, 12);
-  height: 50px;
-} */

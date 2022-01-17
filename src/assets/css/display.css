@@ -37,6 +37,28 @@
   .el-row--flex .el-col-12 {
     width: 100%;
   }
+  .merch_card_div {
+    margin-top: 70px !important;
+  }
+  .el-carousel__container {
+    height: 150px !important;
+  }
+  .el-carousel__indicators--outside {
+    margin-top: -10px !important;
+  }
+  .mr-mb {
+    margin-right: 3px !important;
+  }
+  .gen {
+    padding-top: 40px !important;
+    padding-bottom: 20px !important;
+  }
+  .short_rule {
+    display: none;
+  }
+  .hr_line {
+    display: none;
+  }
 
   /* .tab {
     width: 100%;
@@ -105,6 +127,26 @@
   }
   .mr-mb {
     margin-right: 3px !important;
+  }
+  .gen {
+    padding-top: 40px !important;
+    padding-bottom: 20px !important;
+  }
+  .short_rule {
+    display: none;
+  }
+  .hr_line {
+    display: none;
+  }
+  .corner {
+    display: none;
+  }
+  .nft_connectbg {
+    margin-top: 420px;
+  }
+  .image-container {
+    grid-template-columns: auto auto auto !important;
+    width: 350px !important;
   }
 }
 

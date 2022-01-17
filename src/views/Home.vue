@@ -127,6 +127,7 @@
     <div class="nft_connectbg py-100">
       <NftConnect />
     </div>
+    <br />
     <div class="roadmap_bg">
       <RoadMap />
     </div>

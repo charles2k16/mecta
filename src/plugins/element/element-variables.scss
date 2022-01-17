@@ -24,12 +24,14 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
   background: rgba(0, 0, 0, 0.4);
   color: white;
   position: relative;
-clip-path: polygon(20% 0%, 80% 0%, 91% 0, 100% 18%, 100% 100%, 0 100%, 0 35%, 0 0);
-}
-.line {
-  height: 10px;
-  width: 100px;
-  background: red;
+  clip-path: polygon(20% 0%, 80% 0%, 91% 0, 100% 18%, 100% 100%, 0 100%, 0 35%, 0 0);
+
+  .tab_line {
+       height: 2px;
+       width: auto;
+       background-color: red;
+       margin-top: -7px;
+  }
 }
 .el-tabs--card>.el-tabs__header .el-tabs__item {
   border-left: none !important;
