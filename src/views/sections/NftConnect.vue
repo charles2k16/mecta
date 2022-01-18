@@ -9,7 +9,7 @@
           <div class="conn_btn" @click="connectToWallet">
             <span>CONNECT TO WALLET</span>
           </div>
-          <div class="toggle_dropdown animate__animated">
+          <div class="toggle_dropdown animate__animated flex-row-center">
             <!-- <div class="legendary_nft active">
               <span>Legendary NFT 1</span>
             </div>
@@ -22,9 +22,9 @@
               <span>Legendary NFT 3</span>
             </div> -->
             <br /><br />
-            <LoadingAnim />
+            <LoadingAnim style="margin-left: 15px;" />
             <br /><br />
-            <p class="center">
+            <p>
               Loading your NFT <br />
               into your Garage
             </p>
