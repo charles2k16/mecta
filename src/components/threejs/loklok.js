@@ -90,7 +90,7 @@ export function initThree(domEl, domLayer) {
   }
 
   var ticker = 0;
-  let SIZE = 400;
+  let SIZE = 512;
 
   var gpuCompute = new GPUComputationRenderer(SIZE, SIZE, renderer);
 
@@ -110,7 +110,7 @@ uniform float time;
 void main() {
     vec4 info = texture2D(indexerTexture, uv);
     vec4 pos = texture2D(posTex, uv);
-    vec4 mvPosition = modelViewMatrix * vec4(pos.xyz, 1.0);
+    vec4 mvPosition = modelViewMatrix * vec4(pos.xyz + vec3(0.0, 10.0, 0.0), 1.0);
     vec4 outputPos = projectionMatrix * mvPosition;
     // outputPos.y = outputPos.y + sin(outputPos.y + time * 50.0) * sin(outputPos.y + time * 50.0);
     // outputPos.x = outputPos.x + cos(outputPos.x + time * 50.0) * sin(outputPos.x + time * 50.0);
@@ -136,6 +136,7 @@ void main() {
     // outputColor.xyz *= posColor.xyz;
     outputColor.rgb = mix(outputColor.rgb + 0.2, vec3(1.0), smoothstep(0.0, 1.0, abs(sin(time * 5.0))));
     outputColor.rgb = mix(colorA, colorB, length(posColor.xyz) / 30.0);
+    outputColor.a = 0.1;
     gl_FragColor = outputColor;
 }
 `;
@@ -430,7 +431,7 @@ void main () {
       posTex: { value: null },
 
       colorA: { value: new Color('#4e75e3') },
-      colorB: { value: new Color('#6adbe8') },
+      colorB: { value: new Color('#eb48e0') },
       indexerTexture: { value: indexerTexture },
 
       picture: {
@@ -441,7 +442,7 @@ void main () {
           }
         ),
       },
-      pointSize: { value: (window.devicePixelRatio || 1.0) * 1.5 * 0.5 },
+      pointSize: { value: 0.5 },
     },
   });
 
@@ -451,6 +452,10 @@ void main () {
   points.updateMatrix();
   points.frustumCulled = false;
   scene.add(points);
+
+  // let randPts = new THREE.
+
+  // let randPt = new THREE.Points()
 
   let rAFID = 0;
   console.log(rAFID);
