@@ -268,8 +268,9 @@ hr.sales_hr {
   align-items: center;
   background-image: url('../images/cm/cm_header.png');
   background-position: center center;
-  background-attachment: fixed;
   background-size: cover;
+  width: 100%;
+  height: 940px;
 }
 .why_merch {
   padding-top: 30px;

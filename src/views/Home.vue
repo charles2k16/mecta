@@ -115,9 +115,11 @@
         <MerchCards />
       </div>
     </div>
+
     <!-- 2400 -->
     <div class="merch_img_div">
       <ThreeEclipse />
+      <!-- <Third /> -->
       <div class="wrap" style="position:relative; margin-top:-2400px;">
         <MerchTabs />
 
@@ -146,6 +148,7 @@ import MerchTabs from './sections/MerchTabs.vue';
 import RoadMap from './sections/RoadMap.vue';
 import MerchSkins from './sections/MerchSkins.vue';
 import ThreeEclipse from '@/components/ThreeEclipse';
+// import Third from '@/components/Third';
 import NftConnect from './sections/NftConnect.vue';
 
 export default {
@@ -159,6 +162,7 @@ export default {
     MerchTabs,
     RoadMap,
     MerchSkins,
+    // Third,
     ThreeEclipse,
     NftConnect,
   },

@@ -8,7 +8,7 @@
 
     <div class="mt-70 flex-center button_grp">
       <button class="btn_flex_round rgb pulse mr-mb">
-        Metaversee
+        Metaverse
       </button>
       <button class="btn_flex_round dark pulse2">
         Discord Chat
