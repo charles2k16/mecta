@@ -441,7 +441,7 @@ void main () {
           }
         ),
       },
-      pointSize: { value: (window.devicePixelRatio || 1.0) * 1.5 },
+      pointSize: { value: (window.devicePixelRatio || 1.0) * 1.5 * 0.5 },
     },
   });
 
