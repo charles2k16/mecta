@@ -5,7 +5,8 @@
         <div>
           <img
             v-show="anim"
-            :src="skinItem.image"
+            :src="getImgUrl(skinItem.image)"
+            v-bind:alt="skinItem.image"
             class="skinImage animate__animated animate__fadeInLeft"
           />
         </div>
@@ -35,7 +36,10 @@
               class="image"
               style="--clip-start: ellipse(0 0 at 0 0); --clip-end: ellipse(150% 150% at 0 0);"
             >
-              <img :src="skin.image" /><img :src="skin.image" />
+              <img :src="getImgUrl(skin.image)" v-bind:alt="skin.image" /><img
+                :src="getImgUrl(skin.image)"
+                v-bind:alt="skin.image"
+              />
             </div>
           </div>
         </el-col>
@@ -51,72 +55,69 @@ export default {
     return {
       anim: true,
       skinItem: {
-        image:
-          'https://i.picsum.photos/id/21/200/200.jpg?hmac=a2iQ6UhOjpU6jn7QSsCpk1CiiKTxmW1R4UivDsv-n8o',
+        image: 'skin1.jpg',
         description:
           'lorem description with task lorem description with task lorem description with task',
       },
       skins: [
         {
-          image:
-            'https://i.picsum.photos/id/21/200/200.jpg?hmac=a2iQ6UhOjpU6jn7QSsCpk1CiiKTxmW1R4UivDsv-n8o',
+          image: 'skin2.jpg',
           description:
             'lorem description with task lorem description with task lorem description with task',
         },
         {
-          image:
-            'https://i.picsum.photos/id/988/200/200.jpg?hmac=-lwK-i6PssD9WlUeVPDIhOxDVxlzJKeM4MgEx_fIqJg',
+          image: 'skin3.jpg',
           description:
             'lorem description with task lorem description with task lorem description with task',
         },
-        {
-          image:
-            'https://i.picsum.photos/id/119/200/200.jpg?hmac=JGrHG7yCKfebsm5jJSWw7F7x2oxeYnm5YE_74PhnRME',
-          description:
-            'lorem description with task lorem description with task lorem description with task',
-        },
-        {
-          image:
-            'https://i.picsum.photos/id/604/200/200.jpg?hmac=qgFjxODI1hMBMfHo68VvLeji-zvG9y-iPYhyW0EkvOs',
-          description:
-            'lorem description with task lorem description with task lorem description with task',
-        },
-        {
-          image:
-            'https://i.picsum.photos/id/253/200/200.jpg?hmac=_dceojr9yz5ZIKoye8I9HOqPCBHfn-jT9aRYdoLx1kQ',
-          description:
-            'lorem description with task lorem description with task lorem description with task',
-        },
-        {
-          image:
-            'https://i.picsum.photos/id/988/200/200.jpg?hmac=-lwK-i6PssD9WlUeVPDIhOxDVxlzJKeM4MgEx_fIqJg',
-          description:
-            'lorem description with task lorem description with task lorem description with task',
-        },
-        {
-          image:
-            'https://i.picsum.photos/id/119/200/200.jpg?hmac=JGrHG7yCKfebsm5jJSWw7F7x2oxeYnm5YE_74PhnRME',
-          description:
-            'lorem description with task lorem description with task lorem description with task',
-        },
-        {
-          image:
-            'https://i.picsum.photos/id/604/200/200.jpg?hmac=qgFjxODI1hMBMfHo68VvLeji-zvG9y-iPYhyW0EkvOs',
-          description:
-            'lorem description with task lorem description with task lorem description with task',
-        },
-        {
-          image:
-            'https://i.picsum.photos/id/988/200/200.jpg?hmac=-lwK-i6PssD9WlUeVPDIhOxDVxlzJKeM4MgEx_fIqJg',
-          description:
-            'lorem description with task lorem description with task lorem description with task',
-        },
-        {
-          image:
-            'https://i.picsum.photos/id/988/200/200.jpg?hmac=-lwK-i6PssD9WlUeVPDIhOxDVxlzJKeM4MgEx_fIqJg',
-          description:
-            'lorem description with task lorem description with task lorem description with task',
-        },
+        // {
+        //   image:
+        //     'https://i.picsum.photos/id/119/200/200.jpg?hmac=JGrHG7yCKfebsm5jJSWw7F7x2oxeYnm5YE_74PhnRME',
+        //   description:
+        //     'lorem description with task lorem description with task lorem description with task',
+        // },
+        // {
+        //   image:
+        //     'https://i.picsum.photos/id/604/200/200.jpg?hmac=qgFjxODI1hMBMfHo68VvLeji-zvG9y-iPYhyW0EkvOs',
+        //   description:
+        //     'lorem description with task lorem description with task lorem description with task',
+        // },
+        // {
+        //   image:
+        //     'https://i.picsum.photos/id/253/200/200.jpg?hmac=_dceojr9yz5ZIKoye8I9HOqPCBHfn-jT9aRYdoLx1kQ',
+        //   description:
+        //     'lorem description with task lorem description with task lorem description with task',
+        // },
+        // {
+        //   image:
+        //     'https://i.picsum.photos/id/988/200/200.jpg?hmac=-lwK-i6PssD9WlUeVPDIhOxDVxlzJKeM4MgEx_fIqJg',
+        //   description:
+        //     'lorem description with task lorem description with task lorem description with task',
+        // },
+        // {
+        //   image:
+        //     'https://i.picsum.photos/id/119/200/200.jpg?hmac=JGrHG7yCKfebsm5jJSWw7F7x2oxeYnm5YE_74PhnRME',
+        //   description:
+        //     'lorem description with task lorem description with task lorem description with task',
+        // },
+        // {
+        //   image:
+        //     'https://i.picsum.photos/id/604/200/200.jpg?hmac=qgFjxODI1hMBMfHo68VvLeji-zvG9y-iPYhyW0EkvOs',
+        //   description:
+        //     'lorem description with task lorem description with task lorem description with task',
+        // },
+        // {
+        //   image:
+        //     'https://i.picsum.photos/id/988/200/200.jpg?hmac=-lwK-i6PssD9WlUeVPDIhOxDVxlzJKeM4MgEx_fIqJg',
+        //   description:
+        //     'lorem description with task lorem description with task lorem description with task',
+        // },
+        // {
+        //   image:
+        //     'https://i.picsum.photos/id/988/200/200.jpg?hmac=-lwK-i6PssD9WlUeVPDIhOxDVxlzJKeM4MgEx_fIqJg',
+        //   description:
+        //     'lorem description with task lorem description with task lorem description with task',
+        // },
       ],
     };
   },
@@ -135,13 +136,16 @@ export default {
 
       // img.classList.remove('anim');
     },
+    getImgUrl(pic) {
+      return require('../../assets/images/skins/' + pic);
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
 .skinImage {
-  max-width: 350px;
+  max-width: 380px;
   width: 100%;
   height: auto;
 }

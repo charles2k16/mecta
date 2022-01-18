@@ -23,7 +23,7 @@
                 <i class="fab fa-discord"></i>
               </a>
             </li>
-            <li style="margin-right: -11px">
+            <li style="margin-right: -8px">
               <a href="#">
                 <i class="fab fa-telegram-plane"></i>
               </a>

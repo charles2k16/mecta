@@ -24,7 +24,7 @@
             <br /><br />
             <LoadingAnim style="margin-left: 15px;" />
             <br /><br />
-            <p>
+            <p class="white">
               Loading your NFT <br />
               into your Garage
             </p>
@@ -66,7 +66,9 @@ export default {
 <style lang="scss" scoped>
 .conn_bg {
   background-image: url('../../assets/images/cm_metaverse_portal.png');
+  background-position: center center;
   background-size: cover;
+  width: 100%;
   height: 800px;
   font-family: TitilliumBold;
 }
